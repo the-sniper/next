@@ -5,8 +5,8 @@ function UserList({ users }) {
   return (
     <>
       <Head>
-        <meta property="og:title" content="Title test SEO" />
-        <meta property={users[0].name} content={users[0].email} />
+        <meta property="og:title" content={users[0].name} />
+        <meta property="og:description" content={users[0].email} />
       </Head>
       <h2>Users</h2>
       <p>{users[0].id}</p>
