@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Won from "./MyBids/Won";
+import Won from "./myBids/Won";
 import BidsDashboard from "./myBids/bidsDashboard";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
