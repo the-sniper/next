@@ -212,6 +212,7 @@ const Grid = (props) => {
   return (
     <Fade in={true} timeout={600}>
       <div className="productCardGrid">
+        {console.log(product, "checkRouter")}
         {product ? (
           <>
             <div className="pcgImg">
@@ -239,7 +240,7 @@ const Grid = (props) => {
                     onClick={() =>
                       handleRedirectInternal(
                         router,
-                        `lotview/${
+                        `lotView/${
                           router?.query.auctionId || product.auction_id
                         }/${product.id}/${user.id ? user.id : 0}`
                       )

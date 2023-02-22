@@ -407,6 +407,7 @@ function Search() {
 
   return (
     <div className="search customContainer">
+      {console.log(searchLot, "checkSearch")}
       <div className="filterAction">
         <Button
           className="filterTrigger"

@@ -430,11 +430,17 @@ function ProductView({
   //     init()
   // })
 
+  const productUrl = `productView/${
+    currentLotDetails?.lotDetails?.id + "?"
+  }auctionId=${location.query.auctionId}&auctionLotId=${
+    currentLotDetails?.lotDetails?.id
+  }`;
+
   return (
     <>
-      {/* {console.log(userList, "userList")}
-      {console.log(location, "query.pid")}
-      {console.log(contextData, "contextData")} */}
+      {console.log(productUrl, "productUrl")}
+      {console.log(contextData, "contextData")}
+      {console.log(currentLotDetails, "currentLotDetails")}
 
       <Head>
         <title>
@@ -490,12 +496,10 @@ function ProductView({
                       <span className="material-icons">launch</span> View Full
                       Details
                     </Link> */}
+
                     <h4
                       onClick={() =>
-                        handleRedirectInternal(
-                          location,
-                          `productView/${currentLotDetails?.lotDetails?.id}?auctionId=${location.query.auctionId}&auctionLotId=${currentLotDetails?.lotDetails?.id}`
-                        )
+                        handleRedirectInternal(location, productUrl)
                       }
                       className="viewFull d-flex justify-content-center align-items-center"
                     >
@@ -824,6 +828,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       userList: data.response,
+      contextData: aucLotId,
     },
   };
 }
