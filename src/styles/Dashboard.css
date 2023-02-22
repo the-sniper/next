@@ -1,0 +1,176 @@
+.dashboard .MuiPaper-root {
+  color: var(--textColor);
+  background-color: #fff;
+  box-shadow: none !important;
+  margin-bottom: 30px;
+}
+
+.theme-dark .dashboard .MuiPaper-root {
+  background-color: #323a46;
+}
+
+.dashboard .MuiPaper-root .MuiButtonBase-root.MuiTab-root.Mui-selected {
+  color: var(--primColor);
+}
+
+.dashboard .MuiPaper-root .MuiTabs-indicator {
+  background-color: var(--primColor);
+}
+
+.dashboard .dashboardRt .dashActBtn .primButton {
+  width: max-content;
+  min-width: 200px;
+  margin-left: auto;
+}
+.dashboard .mySavedSearches .dashSubtitle,
+.dashboard .myNotifications .dashSubtitle {
+  font-size: 16px;
+  color: #212529;
+  line-height: 24px;
+  margin-bottom: 2rem;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.theme-dark .dashboard .mySavedSearches .dashSubtitle,
+.theme-dark .dashboard .myNotifications .dashSubtitle {
+  color: var(--textColor);
+}
+
+.mybids-page {
+  margin: 1rem 0;
+}
+
+.tcktWrpr {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tcktVw {
+  /* border: 1.5px solid #efefef; */
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  position: relative;
+  background: aliceblue;
+}
+
+.tcktVw .tcktDtls {
+  width: 100%;
+}
+
+.tcktVw .topVw {
+  padding: 20px;
+  border-bottom: 1px dashed rgb(201, 201, 201);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tcktVw .topVw h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
+.tcktVw .topVw span {
+  background: #d6e4f5;
+  padding: 5px 21px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: pre;
+}
+
+.tcktVw .tcktInfo {
+  padding: 20px;
+}
+
+.tcktVw .tcktInfo .stTmInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tcktVw .tcktInfo .stTmInfo label {
+  color: gray;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.tcktVw .tcktInfo .stTmInfo p {
+  font-size: 16px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.tcktVw .tcktStatus {
+  background: slategray;
+  max-width: 90px;
+  width: 100%;
+  border-radius: 0 7px 7px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.tcktVw::after {
+  content: "";
+  width: 35px;
+  height: 18px;
+  border-radius: 0 0 130px 130px;
+  position: absolute;
+  top: -2px;
+  right: 73px;
+  background: white;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+.tcktVw::before {
+  content: "";
+  width: 35px;
+  height: 18px;
+  border-radius: 130px 130px 0 0;
+  position: absolute;
+  bottom: -2px;
+  right: 73px;
+  background: white;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  border-top: 1px solid #efefef;
+}
+
+.tcktVw .tcktStatus p {
+  writing-mode: vertical-lr;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+}
+.tcktVw .tcktStatus .qrContianer {
+  width: 60px;
+  height: 60px;
+}
+
+.tcktVw .tcktStatus .qrContianer img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+}
+
+@media (max-width: 500px) {
+  .dashboard .mySavedSearches .dashSubtitle,
+  .dashboard .myNotifications .dashSubtitle {
+    text-align: left;
+  }
+}

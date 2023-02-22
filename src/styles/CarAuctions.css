@@ -1,0 +1,10 @@
+.carAuctions {
+  padding: 60px 0;
+}
+
+.carAuctions .caTitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #686868;
+  margin-bottom: 30px;
+}

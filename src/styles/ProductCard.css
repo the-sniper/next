@@ -1,0 +1,1554 @@
+.filterPanel {
+  position: sticky;
+  top: 15px;
+}
+
+/* GRID */
+.productCardGrid {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 10%);
+  border-radius: 5px;
+}
+
+.theme-dark .productCardGrid {
+  background: #323a46;
+}
+
+.productCardGrid .pcgImg {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+.productCardGrid .pcgImg .favoriteCheck,
+.productCardList .pclImg .favoriteCheck {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.productCardGrid .pcgImg .favoriteCheck .material-icons,
+.productCardList .pclImg .favoriteCheck .material-icons {
+  text-shadow: 0 0 13px #fc4040;
+  filter: drop-shadow(0px 0px 6px #ffcfcf);
+}
+
+.productCardGrid .pcgImg .favoriteCheck label,
+.productCardList .pclImg .favoriteCheck label {
+  color: #ff4646;
+}
+
+.productCardGrid .pcgImg .favoriteCheck input:checked + label,
+.productCardList .pclImg .favoriteCheck input:checked + label {
+  color: #ff4646;
+}
+
+.productCardGrid .primButton.small button,
+.productCardGrid .secButton.small button {
+  font-size: 15px;
+  min-width: max-content;
+  width: 100%;
+  padding: 5px;
+  text-transform: capitalize;
+  letter-spacing: normal;
+}
+
+.productCardGrid .productWinningStatus,
+.productCardList .productWinningStatus {
+  padding: 10px 30px;
+  color: #fff;
+  height: 30px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: max-content;
+  line-height: 1;
+}
+
+.productCardGrid .productWinningStatus.winning,
+.productCardList .productWinningStatus.winning {
+  background: #06a2b4;
+}
+
+.productCardGrid .productWinningStatus.won,
+.productCardList .productWinningStatus.won {
+  background: #06b473;
+}
+
+.productCardGrid .productWinningStatus.outbid,
+.productCardList .productWinningStatus.outbid {
+  background: #ff9472;
+}
+
+.productCardGrid .productWinningStatus.lost,
+.productCardList .productWinningStatus.lost {
+  background: #ff7272;
+}
+
+.productCardGrid .reserveNotMet,
+.productCardList .reserveNotMet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(114, 142, 255, 90%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.productCardGrid .productWinningStatus:nth-child(1) {
+  top: 20px;
+}
+
+.productCardGrid .pcgImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.productCardGrid .gridProdTitle {
+  font-size: 16px;
+  color: #231f20;
+  font-family: var(--FuturaStdMedium);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  /* height: 4.5ex; */
+}
+
+.productCardGrid .lot-id {
+  font-size: 15px;
+  display: flex;
+  margin-top: 5px;
+  color: gray;
+}
+
+.productCardGrid .lot-id .lot-no {
+  margin: 0;
+  text-align: right;
+}
+
+.productCardGrid .lot-id span:first-child {
+  padding-right: 8px;
+}
+
+.productCardGrid .locationInfo {
+  font-size: 15px;
+  display: flex;
+  margin-top: 5px;
+  color: #484848;
+}
+
+.productCardGrid .locationInfo span:first-child {
+  padding-right: 8px;
+}
+
+.theme-dark .productCardGrid .gridProdTitle {
+  color: var(--textColor);
+}
+
+.productCardGrid .gridLotInfo .gridDivider {
+  padding: 0 10px;
+}
+
+.productCardGrid .gridLotDetails p {
+  font-size: 13px;
+  color: #646464;
+  font-weight: 600;
+  margin-bottom: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 6ex;
+}
+
+.productCardGrid .gridTimer h6 {
+  margin: 0;
+  font-size: 15px;
+  padding-inline-end: 5px;
+  color: #656565;
+}
+
+.productCardGrid .gridTimer p {
+  margin: 0;
+  font-size: 14px;
+  font-family: var(--FuturaStdMedium);
+}
+
+.productCardGrid .gridBidInfo {
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: var(--FuturaStdMedium);
+  color: var(--primColor);
+}
+
+.productCardGrid .gridBidInfo > span {
+  font-family: var(--FuturaStdBook);
+  padding-left: 5px;
+  color: #a2a2a2;
+}
+
+.productCardGrid .gridBidInfo h6 {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #373737;
+}
+
+.productCardGrid .gridBidInfo p {
+  margin-bottom: 0;
+  color: var(--primColor);
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+}
+
+.productCardGrid .gridBidInfo p span.gridDivider {
+  padding: 0 15px;
+}
+
+.productCardGrid .gridTimer p span {
+  padding-inline-end: 5px;
+}
+
+.productCardGrid .gridBidBox {
+  margin-top: 15px;
+  /* height: 7ex; */
+}
+
+.productCardGrid .gridBidBox .MuiFormHelperText-root.Mui-error {
+  width: 100%;
+  margin-inline-start: 0;
+}
+
+.productCardGrid .gridBidBox .biddingCnt > div {
+  margin: 0;
+  /* width: 49%; */
+}
+
+.productCardGrid .gridBidBox .biddingCnt .customInput {
+  margin-bottom: 5px;
+}
+
+.productCardGrid .gridBidBox .customInput input::placeholder {
+  font-size: 12px;
+}
+
+.productCardGrid .gridBidBox .biddingCnt .primButton,
+.productCardGrid .gridBidBox .biddingCnt .secButton {
+  /* width: 49%; */
+}
+
+/* .productCardGrid .gridBidBox .biddingCnt.beforeLogin .primButton {
+    width: 100%;
+} */
+
+/* GRID END */
+
+/* AUCTION CARD */
+
+.auctionCard {
+  text-align: left;
+  /* border: 1px solid #efefef; */
+  /* max-width: 400px; */
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  background: var(--backgroundColor);
+  transition: 250ms all ease-in-out;
+}
+
+.auctionCardBox {
+  width: 100%;
+  height: 378px;
+}
+
+.auctionCard:hover {
+  text-decoration: none;
+}
+
+.auctionCard .acImgCnt {
+  height: 220px;
+  display: flex;
+}
+
+.auctionCard .acImgCnt .acImgLt {
+  height: 100%;
+  width: 100%;
+  width: -webkit-fill-available;
+  object-fit: cover;
+  /* border: 1px solid #eeeeee; */
+}
+
+.auctionCard .acImgCnt .acImgRt {
+  width: 110px;
+}
+
+.auctionCard .acImgCnt .acImgRt img {
+  height: 50%;
+  width: inherit;
+  object-fit: cover;
+  border: 1px solid #eeeeee;
+}
+
+.auctionCard h3 {
+  font-size: 18px;
+  color: var(--textColor);
+  font-family: var(--FuturaStdMedium);
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.auctionCard h4 {
+  font-size: 15px;
+  color: var(--textColor);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.auctionCard .auctionInfo {
+  transition: 250ms all ease-in-out;
+  padding: 10px;
+  background: var(--backgroundColor);
+  position: relative;
+  overflow: hidden;
+}
+
+.auctionCard .auctionInfo .primButton {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.auctionCard:hover {
+  box-shadow: 0px 0px 80px #dadada;
+}
+
+.theme-dark .auctionCard:hover {
+  box-shadow: 0 4px 50px rgb(14 17 21 / 50%);
+}
+
+.auctionCardBox:hover .auctionInfo {
+  margin-top: -40px;
+  z-index: 10;
+}
+
+.auctionCardBox:hover .auctionInfo .primButton {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.auctionCard .auctionInfo h5 {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--textColor);
+}
+
+.auctionCard .auctionInfo .material-icons {
+  color: var(--primColor);
+  padding-right: 10px;
+}
+
+/* AUCTION CARD END */
+
+/* LIST */
+
+.productCardList {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 10%);
+  border-radius: 5px;
+}
+
+.theme-dark .productCardList {
+  background: #323a46;
+}
+
+.productCardList .primary-image img {
+  width: 250px;
+  height: 160px;
+}
+
+.productCardList .psListLt {
+  width: 76%;
+  border-right: 1px solid #e4e4e4;
+  padding-inline-end: 20px;
+}
+
+.theme-dark .productCardList .psListLt {
+  border-right: 1px solid #3e4652;
+}
+
+.productCardList .bid-btn-area {
+  width: 25%;
+  padding-inline-start: 20px;
+}
+
+.productCardList .listActBtn .listTimer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.productCardList .listLotDetails {
+  margin-bottom: 20px;
+}
+
+.productCardList .listLotDetails p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.productCardList .pclImg {
+  width: 200px;
+  position: relative;
+  margin-inline-end: 20px;
+}
+
+.productCardList .pclImg img {
+  width: inherit;
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.productCardList .pclImg .favoriteCheck {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.productCardList .listContent {
+  width: max-content;
+  text-align: start;
+  margin-inline-end: 20px;
+}
+
+.productCardList .listActBtn {
+  width: 26%;
+}
+
+.productCardList .listContent .listProdTitle {
+  font-size: 16px;
+  color: #231f20;
+  font-family: var(--FuturaStdMedium);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.theme-dark .productCardList .listContent .listProdTitle {
+  color: var(--textColor);
+}
+
+.productCardList .listActBox {
+  width: 30%;
+}
+
+.productCardList > p {
+  font-size: 14px;
+  color: #646464;
+  font-weight: 600;
+  margin-bottom: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.productCardList .listBidInfo h6 {
+  margin: 0;
+  font-size: 15px;
+  color: #373737;
+  padding-inline-end: 25px;
+  min-width: 120px;
+}
+
+.theme-dark .productCardList .listBidInfo h6 {
+  color: var(--textColor);
+}
+
+.productCardList .listTimer h6 {
+  width: 100%;
+  font-size: 14px;
+  color: #373737;
+  margin-bottom: 5px;
+}
+
+.productCardList .listTimer p {
+  margin: 0;
+  font-size: 15px;
+  margin-bottom: 22px;
+  color: var(--primColor);
+  font-family: var(--FuturaStdMedium);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productCardList .listBidInfo p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--primColor);
+  font-family: var(--FuturaStdBold);
+  /* margin-left: -118px; */
+}
+
+.productCardList .listBidInfo p span.listDivider {
+  padding: 0 15px;
+}
+
+.productCardList .listBidInfo {
+  margin-top: 5px;
+}
+
+.productCardList .listTimer p span {
+  padding-inline-end: 5px;
+}
+
+.productCardList .listBidBox {
+  margin: 15px 0;
+}
+
+.productCardList .listBidBox .biddingCnt {
+  flex-wrap: wrap;
+}
+
+.productCardList .listBidBox .biddingCnt > div {
+  width: 100%;
+}
+
+.productCardList .listBidBox .customInput {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.productCardList .listBidBox .primButton,
+.productCardList .listBidBox .secButton {
+  width: 100%;
+}
+
+.productCardList button.bidDetails {
+  text-transform: initial;
+  color: var(--primColor);
+  margin-top: 5px;
+  width: 100%;
+}
+
+/* LIST END */
+
+/* CART ITEM */
+
+.cartItem {
+  background: var(--backgroundColor);
+  padding: 10px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #d7dadc;
+}
+
+.cartItem .itemInfo {
+  width: 75%;
+}
+
+.cartItem .pclImg {
+  width: 100%;
+  max-width: 150px;
+  position: relative;
+  margin-inline-end: 20px;
+}
+
+.cartItem .pclImg img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cartItem .listContent {
+  width: max-content;
+  text-align: start;
+  margin-inline-end: 20px;
+}
+
+.auctionListContent {
+  padding-left: 10px;
+}
+
+.auctionListContent .alcDesc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.auctionListContent .location {
+  font-family: var(--FuturaStdMedium);
+}
+
+.productCardList .alcStartTime {
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productCardList .alcStartTime span {
+  display: block;
+  padding-bottom: 5px;
+  color: #656565;
+}
+
+.theme-dark .productCardList .alcStartTime span {
+  color: var(--textColor);
+}
+
+.auctionListContent .location span {
+  padding-right: 10px;
+  color: #777;
+}
+
+.theme-dark .auctionListContent .location span {
+  color: var(--textColor);
+}
+
+.cartItem .listActBtn {
+  width: 25%;
+  max-width: max-content;
+}
+
+.cartItem .listContent .listProdTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0e131f;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cartItem .listContent .listLotInfo {
+  margin: 5px 0;
+}
+
+.cartItem .listContent .listLotInfo h5 {
+  color: var(--secColor);
+  font-size: 15px;
+  margin: 0;
+  line-height: 25px;
+  display: flex;
+}
+.two-buttons {
+  display: flex;
+  gap: 10px;
+}
+.two-buttons .small {
+  width: 100% !important;
+}
+.two-buttons .makeStyles-root-12 small secButton {
+  width: 17% !important;
+}
+.cartItem .listContent .listLotInfo h5:nth-child(2) {
+  padding-inline-start: 20px;
+  border-left: 1px solid #ccc;
+  margin-inline-start: 20px;
+}
+
+.cartItem .listContent .listLotInfo span:first-child {
+  width: 90px;
+  display: inline-block;
+}
+
+.cartItem .listContent .listLotInfo span:last-child {
+  color: var(--secColor);
+  font-size: 14px;
+  font-weight: 700;
+  padding-inline-start: 5px;
+  display: inline-block;
+}
+
+.cartItem .listContent .listLotInfo .gridDivider {
+  padding: 0 10px;
+}
+
+.cartItem .listActBox {
+  width: 30%;
+}
+
+.cartItem .listBidInfo p {
+  font-size: 16px;
+  color: var(--secColor);
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.cartItem .listBidInfo h6 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--secColor);
+  padding-inline-end: 10px;
+}
+
+.cartItem .listBidInfo p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.cartItem .listBidInfo p span:first-child {
+  color: var(--primColor);
+}
+
+.cartItem .listBidInfo p span.listDivider {
+  padding: 0 15px;
+}
+
+.cartItem .listBidInfo {
+  margin-top: 5px;
+}
+
+.cartItem .listTimer p span {
+  padding-inline-end: 5px;
+}
+
+.cartItem .listBidBox .customInput {
+  margin: 15px 0;
+}
+
+.cartItem button.removeCart {
+  text-transform: initial;
+  color: var(--primColor);
+  margin-top: 5px;
+  width: 100%;
+}
+
+.cartItem .updateCartQuantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.cartItem
+  .updateCartQuantity
+  .customInput
+  .MuiFormControl-root
+  .MuiOutlinedInput-root {
+  width: 120px;
+  padding: 5px 35px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  border-radius: 50px;
+  text-align: center;
+  height: 40px;
+}
+
+.cartItem .updateCartQuantity input:focus {
+  outline: 0;
+}
+
+.cartItem .updateCartQuantity input {
+  padding: 0;
+  text-align: center;
+}
+
+.cartItem .updateCartQuantity button {
+  min-width: max-content;
+  position: absolute;
+  top: 3px;
+  z-index: 10;
+  color: var(--primColor);
+}
+
+.cartItem .updateCartQuantity button:first-child {
+  left: 10px;
+  border-radius: 50px;
+}
+
+.cartItem .updateCartQuantity button.Mui-disabled {
+  color: #ccc;
+}
+
+.cartItem .updateCartQuantity button:last-child {
+  right: 10px;
+  border-radius: 50px;
+}
+
+/* CART ITEM END */
+
+/* SIMILAR ITEMS */
+.similarItem {
+  background: var(--backgroundColor);
+  padding: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.similarItem .pclImg {
+  width: 25%;
+  margin-inline-end: 30px;
+}
+
+.similarItem .pclImg img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.similarItem .listContent {
+  text-align: start;
+  width: 70%;
+}
+
+.similarItem .listContent .listProdTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primColor);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.similarItem .listContent .listLotInfo {
+  margin: 5px 0;
+}
+
+.similarItem .listContent .listLotInfo h5 {
+  color: var(--secColor);
+  font-size: 14px;
+  margin: 0;
+  line-height: 25px;
+}
+
+.similarItem .listContent .listLotInfo .gridDivider {
+  padding: 0 10px;
+}
+
+/* SIMILAR ITEMS END */
+
+.actionAfterWin {
+  margin: 45px 0 5px 0;
+}
+
+.actionAfterWin .primButton,
+.actionAfterWin .secButton {
+  width: 100% !important;
+}
+
+/* Skeletons */
+
+.gridViewSkeleton {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+}
+
+.listViewSkeleton {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1.5fr;
+  margin: 15px 0;
+  background: #f7f7f7;
+}
+
+/* .bidHistoryModal .custom-modal .modal-dialog.modal-lg {
+    max-width: 500px;
+} */
+
+/* .bidHistoryModal table thead tr th:first-child,
+.bidHistoryModal table tbody tr td:first-child {
+    width: 55%;
+} */
+
+.bidHistoryModal table thead th,
+.bidHistoryModal table tbody td {
+  text-align: start;
+  white-space: nowrap;
+}
+
+.customModal .bidHistoryModal .modal-dialog.modal-lg {
+  max-width: 550px;
+}
+
+.customModal .bidHistoryModal.donorHistoryModal .modal-dialog.modal-lg {
+  max-width: 900px;
+}
+
+.productCardGrid .moreInfo button,
+.productCardList .moreInfo button {
+  color: var(--secColor);
+  text-transform: initial;
+}
+
+.productCardGrid .moreInfo button .material-icons,
+.productCardList .moreInfo button .material-icons {
+  padding-inline-start: 5px;
+}
+
+.productCardGrid .featuredOn {
+  display: flex;
+  align-items: center;
+}
+
+.productCardGrid .featuredOn h6 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  padding-right: 10px;
+  color: #656565;
+}
+
+.productCardGrid .featuredOn img {
+  width: 55px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.productCardList .featuredOn {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.productCardList .featuredOn h6 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  padding-right: 10px;
+  color: #373737;
+}
+
+.productCardList .featuredOn img {
+  width: 55px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.product {
+  cursor: pointer;
+}
+
+.card-image-area {
+  display: grid;
+  /* grid-template-columns: 335px 1fr; */
+  grid-template-columns: 1fr;
+  position: relative;
+  gap: 8px;
+}
+
+.evntCard .card-image-area .primary-image::before {
+  position: absolute;
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(0 0 0 / 12%) 80%,
+    rgba(0, 0, 0, 1) 98%
+  );
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* .card-image-area .primary-image {
+  grid-column: 1;
+  grid-row: 1 / 5;
+} */
+.product-info {
+  text-align: left;
+}
+
+.product-info .product-title {
+  cursor: pointer;
+  font-family: var(--FuturaStdMedium);
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 5.9ex;
+  line-height: 20px;
+}
+
+.product-info .product-auction {
+  font-size: 15px;
+}
+
+.product-info .start-date {
+  font-size: 15px;
+  color: var(--slightDarkGrey);
+  min-height: 25px;
+}
+
+.product-loc-bid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-dtls {
+  padding: 0.5rem 0;
+}
+
+.product-loc-bid .location {
+  color: var(--slightDarkGrey);
+}
+
+.product-loc-bid .location > p {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.product-loc-bid .location > p .material-icons {
+  color: var(--primColor);
+  padding-right: 10px;
+}
+
+.bid-btn-area .MuiButton-root {
+  color: var(--green);
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.bid-btn-area .MuiButton-root:hover {
+  background-color: transparent;
+  color: var(--green);
+  box-shadow: none;
+}
+
+.lot-id .lot-no {
+  margin: 0 1rem;
+}
+
+.lot-id {
+  font-size: 15px;
+  color: #373737;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.theme-dark .lot-id {
+  color: var(--textColor);
+}
+
+.card-image-area .cardTags {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 10;
+  display: flex;
+}
+
+.card-image-area .cardTags.evtTg {
+  width: 100%;
+  left: 0px;
+  top: 10px;
+  padding: 0 10px;
+}
+
+.card-image-area .live {
+  background-color: #6c438e;
+  padding: 0 0.5rem;
+  color: white;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.card-image-area .live span {
+  font-size: 22px;
+  margin: 0 5px;
+}
+
+.card-image-area .time {
+  background-color: #fbc121;
+  padding: 0 0.5rem;
+  color: #222831;
+  border-radius: 3px;
+  width: max-content;
+}
+
+.searchResultsAuction.List .primary-image{
+  position: relative;
+}
+
+.searchResultsAuction.List .time,
+.searchResultsAuction.List .live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.searchResultsAuction.List .time {
+  width: max-content;
+}
+.searchResultsAuction.List .card-image-area .live span {
+  font-size: 16px;
+}
+
+.card-image-area .event {
+  background-color: #2dd39d;
+  padding: 0 0.5rem;
+  color: #222831;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+.primary-image img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.theme-dark .imgNotFound {
+  filter: sepia(0.3) hue-rotate(185deg) brightness(0.5);
+}
+
+.image-one,
+.image-two,
+.image-three {
+  /* max-width: 94px; */
+  width: 110px;
+  height: 110px;
+}
+
+.image-preview {
+  display: grid;
+  grid-template-rows: 3fr;
+  gap: 5px;
+}
+
+.image-one img,
+.image-two img,
+.image-three img {
+  width: 100%;
+  height: 100%;
+}
+
+.bid-offer {
+  margin-top: 0.5rem;
+}
+
+.primButton button:disabled {
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.sponsoredTag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  font-family: var(--FuturaStdBold);
+  background: #fffff56e;
+  padding: 0px 5px;
+  color: var(--secBlue);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sponsoredTag .material-icons-outlined {
+  font-size: 15px;
+  padding-left: 3px;
+}
+
+.productCardList span.lvAtnStrd {
+  color: red;
+  justify-content: center;
+  width: 100%;
+}
+
+.productCardList .noTimerWrpr {
+  height: 23px;
+}
+
+.productCardList .noBdngWrpr {
+  height: 124px;
+  width: 100%;
+}
+
+.productCardGrid .biddingCnt .btnWrprGrd,
+.productCardList .biddingCnt .btnWrprGrd {
+  display: flex;
+  align-items: center;
+}
+
+.productCardGrid .biddingCnt .btnWrprGrd .primButton,
+.productCardList .biddingCnt .btnWrprGrd .primButton {
+  width: 100%;
+}
+
+.productCardGrid .biddingCnt .btnWrprGrd .secButton,
+.productCardList .biddingCnt .btnWrprGrd .secButton {
+  width: 100%;
+  max-width: 40px;
+  margin-left: 5px;
+}
+
+.productCardGrid .biddingCnt .btnWrprGrd .secButton button,
+.productCardList .biddingCnt .btnWrprGrd .secButton button {
+  background: #e4edda;
+  border: none;
+}
+
+.productCardGrid .biddingCnt .btnWrprGrd .secButton button:hover,
+.productCardList .biddingCnt .btnWrprGrd .secButton button:hover {
+  background: var(--primColor);
+  border: none;
+}
+
+.productCardList .biddingCnt .btnWrprGrd .secButton {
+  max-width: 50px;
+}
+
+.productCardList .biddingCnt .btnWrprGrd .secButton button {
+  width: 50px;
+  min-width: unset;
+}
+
+.productCardGrid .gridTimer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.productCardGrid .gridTimerBlock span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.productCardGrid .gridTimer p {
+  backdrop-filter: blur(16px) brightness(1.5);
+  padding: 9px 25px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.productCardGrid .prcCntnr label {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.productCardGrid .gridTimer p.noTimerWrpr {
+  display: none;
+}
+
+.eventProgress {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+.eventProgress .epLabel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.eventProgress .epLabel p {
+  margin: 0;
+  color: #fff;
+}
+
+.eventProgress .epLabel p span {
+  font-family: var(--FuturaStdMedium);
+}
+
+.eventProgress .MuiLinearProgress-colorPrimary {
+  background-color: #fff;
+}
+
+.eventProgress .MuiLinearProgress-barColorPrimary {
+  background-color: var(--primColor);
+}
+
+.eventProgress .MuiLinearProgress-root {
+  height: 8px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1366px) {
+  .productCardGrid .gridTimer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .productCardList {
+    flex-wrap: wrap;
+  }
+
+  .productCardList .psListLt {
+    width: 65%;
+  }
+
+  .product-loc-bid .location > p {
+    flex-wrap: wrap;
+  }
+
+  .product-loc-bid .location > p span {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar,
+  .searchfilter-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartItem {
+    flex-wrap: wrap;
+    width: 48%;
+  }
+
+  .cartItem .itemInfo {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .cartItem .pclImg {
+    max-width: none;
+    margin-inline-end: 0;
+  }
+
+  .cartItem .pclImg img {
+    height: 200px;
+  }
+
+  .cartItem .listContent {
+    width: 100%;
+    margin-inline-end: 0;
+  }
+
+  .cartItem .listActBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .productCardList .listTimer p {
+    padding-right: 25px;
+  }
+
+  .productCardList .psListLt {
+    width: 100%;
+    margin-inline-end: 0;
+    border-right: 1px solid #fff;
+  }
+
+  .productCardList .listActBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 645px) {
+  .productCardGrid .gridBidBox,
+  .productCardGrid .gridBidInfo,
+  .productCardGrid .gridLotDetails p {
+    height: auto;
+  }
+
+  .gridViewSkeleton {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .homeTitle h2 span {
+    font-size: 28px;
+  }
+
+  .home .homeTitle h2 {
+    font-size: 22px;
+  }
+
+  .auctionCard h3,
+  .product-info .product-title,
+  .product-info .start-date {
+    font-size: 14px;
+  }
+
+  .auctionCard h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .auctionCard .auctionInfo h5,
+  .product-loc-bid .location > p,
+  .bid-btn-area .MuiButton-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cartItem .pclImg img {
+    height: 150px;
+  }
+
+  .cartItem .itemInfo {
+    width: 100%;
+  }
+
+  .productCardGrid .gridProdTitle {
+    font-size: 16px;
+  }
+
+  .productCardGrid .gridTimer h6,
+  .productCardGrid .gridBidInfo h6 {
+    font-size: 13px;
+  }
+
+  .search .searchResults .productCardGrid,
+  .dashboard .productCardGrid {
+    width: 100%;
+  }
+
+  .productCardGrid .gridBidBox .customInput,
+  .productCardGrid
+    .gridBidBox
+    .customInput
+    .MuiFormControl-root.MuiTextField-root {
+    height: 45px;
+  }
+
+  .productCardGrid .gridBidBox .customInput input {
+    height: 100%;
+  }
+
+  .productCardGrid .gridBidBox .primButton,
+  .productCardGrid .gridBidBox .secButton {
+    width: 49%;
+  }
+
+  .similarItem .listContent .listProdTitle {
+    font-size: 15px;
+  }
+
+  .similarItem .pclImg {
+    width: 30%;
+    margin-inline-end: 10px;
+  }
+
+  .cartItem {
+    width: 100%;
+  }
+
+  .cartItem .listActBtn {
+    display: flex;
+    max-width: none;
+    justify-content: space-between !important;
+  }
+
+  .cartItem .listActBtn {
+    display: flex;
+    max-width: none;
+    justify-content: space-between !important;
+  }
+
+  .cartItem button.removeCart {
+    width: max-content;
+  }
+
+  .cartItem .listContent .listLotInfo h5 {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

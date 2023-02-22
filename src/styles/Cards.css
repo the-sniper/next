@@ -1,0 +1,100 @@
+.savedCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.credCard {
+  font-family: "Space Mono", monospace;
+  max-width: 315px;
+  width: 100%;
+  height: 180px;
+  background-image: url("../assets/svg/cardBg.svg");
+  padding: 20px 15px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 7px 7px rgb(0, 0, 0, 30%);
+  border-radius: 5px;
+  position: relative;
+  transition: 300ms all ease-in-out;
+}
+
+.cardActions {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/*.credCard:hover {
+    background: #000;
+}*/
+
+.credCard:hover > div:not(:last-child) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.credCard .cardActions button.edit {
+  color: #fff;
+  background: #7da1e9;
+  margin: 0 5px;
+}
+
+.credCard .cardActions button.delete {
+  color: #fff;
+  background: #ff84ae;
+  margin: 0 5px;
+}
+
+.credCard .cardActions button.default {
+  color: #fff;
+  background: #6f9971;
+  margin: 0 5px;
+}
+
+.credCard:hover .cardActions {
+  visibility: visible;
+  opacity: 1;
+}
+
+.credCard .credCardNum h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.credCard .credCardName span {
+  font-size: 11px;
+}
+
+.credCard .credCardName p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.emptyCard {
+  max-width: 315px;
+  width: 100%;
+  height: 180px;
+  border-radius: 5px;
+  border: 2px dashed #d8d8d8;
+  background: #fcfcfc;
+  padding: 25px 45px 15px 45px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emptyCard h2 {
+  font-size: 13px;
+  color: #4d4d4d;
+  font-weight: 600;
+}
+
+.emptyCard > div {
+  margin: auto 0;
+}

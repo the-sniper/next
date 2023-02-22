@@ -1,0 +1,11 @@
+.fullScreenPopup .MuiAppBar-colorPrimary {
+    background-color: #313131 !important;
+}
+
+.modalChildren {
+    padding: 20px;
+}
+
+.fullScreenPopup header .MuiToolbar-root {
+    flex-direction: row-reverse;
+}

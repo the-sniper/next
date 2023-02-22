@@ -1,0 +1,347 @@
+.marketingPlugin {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: calc(100vh - 100px);
+}
+
+.marketingMap {
+  display: grid;
+  grid-template-columns: auto 500px;
+  gap: 30px;
+}
+
+.marketingTemplate .cke_contents {
+  min-height: 600px;
+}
+
+.marketingPlugin .mpTitle {
+  font-size: 24px;
+  font-family: var(--FuturaStdHeavy);
+  color: #000;
+  margin: 0 0 15px 0;
+}
+
+.marketingPlugin .mpInfo {
+  font-size: 16px;
+  font-family: var(--FuturaStdBook);
+  color: #707070;
+  margin: 0;
+  line-height: 24px;
+}
+
+.marketingPlugin .MuiStepper-root {
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 25px 0;
+  margin: 35px 0;
+}
+
+.marketingPlugin .MuiStepLabel-label {
+  font-family: var(--FuturaStdMedium);
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.marketingPlugin .MuiStepLabel-active {
+  color: var(--primColor);
+}
+
+.marketingPlugin .MuiStepIcon-root.MuiStepIcon-root {
+  color: #f3efef;
+  width: 32px;
+  height: 32px;
+}
+
+.marketingPlugin .MuiSvgIcon-root .MuiStepIcon-text {
+  fill: #000;
+}
+
+.marketingPlugin .MuiStepIcon-root.MuiStepIcon-active circle {
+  color: #fff;
+}
+
+.marketingPlugin .MuiStepIcon-root.MuiStepIcon-active text {
+  fill: var(--primColor);
+}
+
+.marketingPlugin .MuiStepIcon-root.MuiStepIcon-active {
+  border: 1px solid var(--primColor);
+  border-radius: 50%;
+}
+
+.marketingPlugin .MuiStepConnector-lineHorizontal,
+.marketingPlugin .MuiStepConnector-root {
+  display: none;
+}
+
+.marketingPlugin .MuiStep-root:not(:last-child) {
+  margin-right: 75px;
+}
+
+.marketingPlugin .amtToBePaid {
+  margin-bottom: 30px;
+  background: #edffdc;
+  padding: 15px;
+  color: var(--primColor);
+  font-family: var(--FuturaStdHeavy);
+  text-align: center;
+}
+
+.marketingLocation {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 30px;
+}
+
+.marketingLocation.actvUseIno{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.marketingLocation .activeInfo {
+  display: flex;
+  /* align-items: center; */
+  margin: 0;
+}
+
+.marketingLocation .activeInfo:first-child {
+  margin-right: 45px;
+}
+
+.marketingLocation .activeInfo h5 {
+  color: #555555;
+  font-size: 15px;
+  font-family: var(--FuturaStdBook);
+}
+
+.marketingLocation .activeInfo > span {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.marketingLocation .activeInfo h5 > span {
+  color: #555555;
+}
+
+.marketingLocation .activeInfo h5 > span {
+  color: #2e2d2d;
+  display: block;
+  font-size: 16px;
+  font-family: var(--FuturaStdMedium);
+  margin-top: 5px;
+}
+
+.marketingLocation .activeInfo .MuiButtonBase-root {
+  padding: 0;
+  display: block;
+}
+
+.marketingLocation .activeInfo .MuiButton-label {
+  color: #2e2d2d;
+  font-size: 16px;
+  font-family: var(--FuturaStdMedium);
+  text-transform: initial;
+}
+
+.marketingAct {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 10px;
+  z-index: 10;
+}
+
+.marketingAct .primButton button {
+  height: 50px;
+  border-radius: 25px;
+  min-width: 150px;
+}
+
+.marketingPlugin .MuiStepIcon-root.MuiStepIcon-completed {
+  color: var(--primColor);
+}
+
+.marketingPayment {
+  max-width: 800px;
+  width: 100%;
+}
+
+.chart {
+  height: 500px;
+  width: 500px;
+}
+
+.chartTooltip {
+  background: #fff;
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+}
+
+.chartTooltip p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.chartTooltip p span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.noChartData {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f3;
+}
+
+.noChartData h5 {
+  margin: 0;
+  font-size: 16px;
+  color: #727272;
+}
+
+/* .locationPopup .MuiPaper-root {
+  max-height: 500px;
+  height: 100%;
+} */
+
+.locationPopup .locationCheck {
+  max-height: 400px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.locationPopup .locationCheck::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.locationPopup .locationCheck::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.locationPopup .locationCheck:hover::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+}
+
+.locationPopup .locationPopupInner {
+  padding: 30px;
+  min-width: 450px;
+  width: 100%;
+}
+
+.locationPopup .locationPopupInner h3 {
+  font-size: 18px;
+  font-family: "Futura Std Heavy";
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0;
+  margin-top: -20px;
+  color: #383838;
+}
+
+.locationPopup
+  .locationPopupInner
+  .customCheckbox
+  .MuiFormGroup-root
+  .MuiFormControlLabel-root {
+  width: 100%;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.locationPopup
+  .locationPopupInner
+  .customCheckbox
+  .MuiFormGroup-root
+  .MuiFormControlLabel-root
+  .MuiTypography-root {
+  width: 100%;
+}
+
+.locationPopupInner {
+  position: relative;
+}
+
+.locationPopup .closePopup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  min-width: initial;
+}
+
+.locationPopup .checkAll {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.locationPopup .checkAll .MuiButton-label {
+  font-size: 15px;
+  text-transform: initial;
+}
+
+.locationPopup .checkAll .MuiButton-label .material-icons {
+  margin-right: 25px;
+  color: var(--primColor);
+}
+
+.allBiddersToggle .MuiFormControlLabel-root {
+  margin: 0 0 15px 0;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.templateViewBtn {
+  border: 1px dashed #ccc;
+  border-radius: 25px;
+}
+
+.templateViewBtn .MuiButton-label {
+  text-transform: initial;
+}
+
+.chooseTemp {
+  margin-bottom: 30px;
+}
+
+.chooseTemp h6 {
+  font-family: "Futura Std Heavy";
+  margin-bottom: 15px;
+  color: #494949;
+}
+
+.chooseTemp .MuiButtonBase-root:not(:last-child) {
+  margin-right: 15px;
+}
+
+.chooseTemp .MuiButtonBase-root.active {
+  background: var(--primColor);
+  border-color: var(--primColor);
+  color: #fff;
+}
+
+.marketingLoaderCnt .loadingCnt {
+  display: block;
+}
+
+.marketingLoaderCnt {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}

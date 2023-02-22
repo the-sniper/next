@@ -1,0 +1,193 @@
+.search {
+  background: var(--backgroundColor);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.search .searchHead {
+  margin-bottom: 30px;
+}
+
+.search .searchHead h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.search .searchHead h4 span {
+  font-style: italic;
+}
+
+.search .searchHead button .material-icons {
+  padding-inline-end: 5px;
+}
+
+.search .searchHead button .MuiButton-label {
+  color: var(--secColor);
+  text-transform: initial;
+  font-weight: 700;
+}
+
+.search .searchResults .productCardGrid {
+  /* margin-inline-end: 5px; */
+}
+
+.search .searchLt .customSelect {
+  background: var(--backgroundColor);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.search .searchLt .gridListToggle button {
+  color: var(--secColor);
+  width: 50%;
+}
+
+.search .searchLt .gridListToggle button.active {
+  color: var(--primColor);
+  background: var(--backgroundColor);
+}
+
+.search .searchLt .gridListToggle i {
+  padding-inline-end: 10px;
+}
+
+.search .filterCheck .customCheckbox {
+  width: 100%;
+}
+
+.search .gridListToggle {
+  width: max-content;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.search .gridListToggle button.active {
+  color: var(--primColor);
+}
+
+.search .gridListToggle button .MuiButton-label {
+  font-family: var(--FuturaStdMedium);
+}
+
+@media (max-width: 1024px) {
+  .home .hmSearch .searchInput,
+  .search .searchInput {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .searchLt {
+    display: none;
+  }
+
+  .sbTitle {
+    font-size: 14px;
+    color: var(--secColor);
+    font-weight: 700;
+    text-align: start;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .fpTitle {
+    font-size: 14px;
+    color: var(--secColor);
+    font-weight: 700;
+    text-align: start;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+
+  .searchAuctions {
+    margin-bottom: 20px;
+  }
+
+  .searchMiscFilters .customSelect {
+    display: none;
+  }
+
+  .searchAuctions {
+    margin-bottom: 20px;
+  }
+
+  .searchAuctions label,
+  .searchAuctions button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000de;
+    height: 50px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    border: 1px solid #d8d8d8;
+    border-radius: 25px;
+    margin-inline-end: 10px;
+    text-decoration: none;
+    transition: 200ms all ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: initial;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+
+  .searchAuctions button.active {
+    color: var(--primColor);
+    background: rgb(25 157 229 / 11%);
+    border: 1px solid rgb(25 157 229 / 20%) !important;
+  }
+
+  .searchAuctions button .MuiButton-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchAuctions label {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .search .searchCnt {
+    margin-top: 0;
+  }
+
+  .productView .pvBidBox .customInput,
+  .productView .pvBidBox .customInput .MuiFormControl-root.MuiTextField-root {
+    height: 45px;
+  }
+  .productView .pvBidBox .customInput input {
+    height: 100%;
+  }
+  .productView .pvActBtn {
+    flex-wrap: wrap;
+  }
+  .productView .pvActBtn .pabChild:first-child {
+    width: 100%;
+  }
+  .search .searchHead {
+    margin-bottom: 5px;
+  }
+}
+.search .custom-modal .modal-dialog.modal-lg {
+  width: 40%;
+}
+.search .custom-modal .modal-header {
+  border-bottom: none;
+  background-color: transparent;
+  height: 50px;
+}
+.add-credit-card .primButton {
+  width: 150px;
+  margin: 0 auto;
+}

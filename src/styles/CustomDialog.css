@@ -1,0 +1,16 @@
+.customDialog h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.customDialog .MuiDialogContent-root {
+  padding-bottom: 20px;
+}
+
+.customDialog .MuiPaper-root.MuiDialog-paper {
+  min-width: 300px;
+}
+
+.customDialog .MuiDialogTitle-root {
+  padding-bottom: 10px;
+}

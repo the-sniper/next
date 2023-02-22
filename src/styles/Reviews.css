@@ -1,0 +1,1189 @@
+.Dalshireinter .sellerCard {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  /* max-width: 1200px; */
+  width: calc(100% - 0px);
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .sellerTitle
+  #toprated
+  img {
+  width: auto;
+  height: 20px;
+  max-width: fit-content;
+  margin-right: 5px;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .sellerTitle
+  #toprated
+  img {
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .sellerTitle
+  #toprated:hover,
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .sellerTitle
+  #toprated:focus {
+  box-shadow: unset;
+  background: transparent;
+}
+#toprated {
+  display: flex;
+  align-items: center;
+  color: #f08d27;
+  font-weight: 500;
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .sellerTitle
+  h4 {
+  font-size: 32px;
+  line-height: 40px;
+  padding-right: 10px;
+  margin: 0;
+  margin-bottom: 0px;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .sellerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Dalshireinter .sellerCard .sellerInfowrap .userBox .sellerTopTextInfo {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  padding: 0 15px;
+  height: inherit;
+  justify-content: flex-start;
+  position: relative;
+}
+.Dalshireinter {
+  /* max-width: 1200px; */
+  margin: 50px auto;
+}
+.Dalshireinter .sellerCard .sellerInfowrap .userBox figure {
+  border: 1px solid #e3e3e3;
+  width: 140px;
+}
+.Dalshireinter .sellerCard .sellerInfowrap .userBox img {
+  align-items: center;
+  border: 1px solid var(--grey400);
+  display: flex;
+  width: 140px;
+  flex: 0 0 140px;
+  height: 140px;
+  justify-content: center;
+  margin-right: 25px;
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+}
+.Dalshireinter .sellerCard .sellerInfowrap .userBox {
+  display: flex;
+}
+.Dalshireinter .sellerCard .sellerInfowrap {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  width: calc(100% - 55%);
+}
+
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .rating
+  ul
+  li
+  span {
+  color: #70a340;
+}
+.Dalshireinter .sellerCard .sellerInfowrap .userBox .sellerTopTextInfo .rating {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .rating
+  a {
+  display: inline-flex;
+  align-items: center;
+  color: #b1b1b1;
+  margin-left: 5px;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .followers
+  h4 {
+  margin-left: 15px;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .followers
+  button {
+  padding: 6px 15px;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  background: #70a340;
+  align-items: center;
+  color: #fff;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .followers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Dalshireinter
+  .sellerCard
+  .sellerInfowrap
+  .userBox
+  .sellerTopTextInfo
+  .rating
+  ul {
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.Dalshireinter .sellerCard .mapblock {
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  padding: 13px 14px 14px;
+  width: auto;
+}
+.Dalshireinter .sellerCard .mapblock .mapbeside {
+  padding: 0 15px;
+}
+.Dalshireinter .sellerCard .mapblock .map {
+}
+.Dalshireinter .sellerCard .mapblock address {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.Dalshireinter .sellerCard .mapblock .phone {
+  padding-bottom: 15px;
+  display: block;
+}
+.Dalshireinter .sellerCard .mapblock .follwuppop a {
+  padding: 6px 10px;
+  background: #70a340;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 5px;
+}
+.Dalshireinter .sellerCard .mapblock .follwuppop {
+}
+.Dalshireinter .Dalshireinter-tablinks .nav-pills li a:focus,
+.Dalshireinter .Dalshireinter-tablinks .nav-pills li a:hover {
+  background: transparent;
+}
+.Dalshireinter .Dalshireinter-tablinks .nav-pills li a.active {
+  border-bottom: 4px solid #70a340;
+  width: -webkit-fill-available;
+  background: transparent;
+}
+.Dalshireinter .Dalshireinter-tablinks .nav-pills {
+  border-bottom: 1px solid #ccc;
+}
+.Dalshireinter .Dalshireinter-tablinks .tabpillssection {
+  padding: 25px 0;
+}
+.Dalshireinter .Dalshireinter-tablinks .nav-pills li a {
+  cursor: pointer;
+  max-height: 52px;
+  padding: 15px;
+  border-radius: 0;
+  color: #9d9d9d;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  display: inline-block;
+}
+/* upcoming auction section */
+.Dalshireinter .tabpillssection .catalog-grid .horizontal-catalog-card {
+  border-bottom: 1px solid #e9e9e9;
+  max-height: 260px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0;
+  text-align: left;
+}
+.Dalshireinter .tabpillssection .largetext {
+  margin: 20px 0 33px;
+  text-align: left;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .leftblock {
+  flex: 0 0 25%;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper,
+.Dalshireinter .horizontal-catalog-card .one-and-two-wrapper {
+  border: 1px solid #e3e3e3;
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Dalshireinter .auctioncard .horizontal-catalog-card .one-and-two-wrapper {
+  width: 405px;
+}
+.Dalshireinter
+  .auctioncard
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  .secondary-img-container
+  a {
+  height: 145px;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  a.first-img-container,
+.Dalshireinter .one-and-two-wrapper a.first-img-container {
+  width: 70%;
+  height: 100%;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  .secondary-img-container,
+.horizontal-catalog-card .one-and-two-wrapper .secondary-img-container {
+  width: 30%;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  .secondary-img-container
+  img,
+.one-and-two-wrapper .secondary-img-container img {
+  padding: 2px 8px;
+  border: 1px solid #e7e7e7;
+  border-right: 0;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  a,
+.horizontal-catalog-card .one-and-two-wrapper a {
+  display: block;
+  /* border: 1px solid #e7e7e7; */
+  height: 112px;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  a
+  img,
+.horizontal-catalog-card .one-and-two-wrapper a img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box {
+  flex: 1 1 75%;
+  max-width: 75%;
+  padding-left: 20px;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .middle-box {
+  float: left;
+  max-height: 197px;
+  overflow-y: hidden;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 62%;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .right-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  width: 33%;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .middle-box
+  .tit {
+  font-size: 18px;
+  display: block;
+  cursor: pointer;
+  color: #000;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .middle-box
+  a:hover {
+  color: rgb(81, 214, 255);
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .middle-box
+  .des {
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: #7e7e7e;
+  margin-bottom: 5px;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .right-box
+  button {
+  padding: 8px 15px;
+  background: #70a340;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #70a340;
+  max-width: fit-content;
+}
+.Dalshireinter .Dalshireinter-tablinks .tabpillssection .tabz {
+  margin-bottom: 50px;
+}
+.loadbtndiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto;
+}
+.load-btn.outbtn {
+  color: #70a340;
+  border: 1px solid #70a340;
+  background: var(--backgroundColor);
+}
+.seeall {
+  font-size: 12px;
+  color: #868686;
+  display: inline-flex;
+  align-items: center;
+}
+.form-inlineform input {
+  border-radius: 0;
+  height: 34px;
+}
+.form-inlineform h5 {
+  font-size: 13px;
+  padding-right: 15px;
+  white-space: nowrap;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.form-inlineform .btn-default span {
+  font-size: 20px;
+  color: #fff;
+}
+.form-inlineform .input-group .btn-default {
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  background: #70a340;
+  border-radius: 0;
+  border: 1px solid #70a340;
+}
+.form-inlineform .selectbox::before {
+  position: absolute;
+  content: '';
+  right: 23px;
+  top: 10px;
+  background: #e1e1e1;
+  width: 1px;
+  height: 15px;
+  z-index: 99;
+}
+.form-inlineform .selectbox::after {
+  position: absolute;
+  font-family: 'Material Icons';
+  content: '\e5c5';
+  right: 0px;
+  color: #868686;
+  top: 0px;
+  font-size: 24px;
+}
+.form-inlineform .selectbox {
+  position: relative;
+}
+.form-inlineform select {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  appearance: none;
+  padding-right: 30px;
+}
+.form-inlineform {
+  display: inline-flex;
+  align-items: center;
+}
+.load-btn {
+  padding: 8px 15px;
+  background: #70a340;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #70a340;
+  max-width: fit-content;
+  text-align: center;
+  margin: auto 5px;
+  display: block;
+  border-radius: 0;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .right-box
+  a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  padding: 12px 0;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .info-box
+  .right-box
+  strong {
+  color: #ff1e1e;
+  font-size: 16px;
+  text-align: left;
+  padding: 12px 0;
+}
+.Dalshireinter
+  .tabpillssection
+  .catalog-grid
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  .first-img-container,
+.Dalshireinter
+  .horizontal-catalog-card
+  .one-and-two-wrapper
+  .first-img-container {
+  border: 0;
+}
+.Dalshireinter .tabpillssection .catalog-grid .horizontal-catalog-card {
+}
+.Dalshireinter .cardflex {
+  flex: 1 0 auto;
+  margin: 25px 0;
+  max-width: 100%;
+  width: 100%;
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 0;
+}
+.Dalshireinter .auctioncard a:nth-child(2) {
+  font-size: 14px;
+  display: block;
+}
+.Dalshireinter .auctioncard a:hover {
+  color: #70a340;
+}
+.Dalshireinter .auctioncard {
+  max-width: 405px;
+  width: 405px;
+  margin-bottom: 25px;
+}
+.Dalshireinter .auctioncard .auctionbody .auctioncardfoot span img {
+  width: 20px;
+  margin-right: 15px;
+}
+.Dalshireinter .auctioncard .auctionbody .auctioncardfoot span {
+  display: flex;
+  align-items: center;
+}
+.Dalshireinter .auctioncard .auctionbody .auctioncardfoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.Dalshireinter .auctioncard .auctionbody {
+  padding: 10px;
+}
+.Dalshireinter .auctioncard h6 {
+  color: #939393;
+  margin: 15px auto;
+}
+.Dalshireinter .auctioncard a {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.Dalshireinter .carosalcard {
+}
+.Dalshireinter .carosalcard a span {
+}
+.Dalshireinter .carosalcard p {
+  color: #848484;
+  font-size: 16px;
+}
+.Dalshireinter .carosalcard h6 span {
+  margin-right: 5px;
+}
+.Dalshireinter .carosalcard h6 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #70a340;
+}
+.Dalshireinter .carosalcard a {
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.Dalshireinter .carosalcard img {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 170px;
+  object-fit: scale-down;
+}
+.Dalshireinter .carosalcard .carodalimg span {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.Dalshireinter .carosalcard {
+  position: relative;
+}
+.Dalshireinter .pfmAuct {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.Dalshireinter .salesbox {
+  width: 15%;
+}
+.Dalshireinter .salesbox.lastprogres {
+  width: 30%;
+}
+.Dalshireinter .charts,
+.Dalshireinter .charts .overallExperience {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.Dalshireinter .charts .overallExperience {
+  width: 100%;
+  max-width: 100%;
+}
+.Dalshireinter .charts .overallExperience .OverallExperienceProgress {
+  width: 90%;
+}
+.Dalshireinter
+  .charts
+  .overallExperience
+  .OverallExperienceProgress
+  .ratingdiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  margin-bottom: 18px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+.Dalshireinter
+  .charts
+  .overallExperience
+  .OverallExperienceProgress
+  .ratingdiv
+  span {
+  width: 100px;
+  max-width: 100px;
+  min-width: 100px;
+}
+.Dalshireinter .charts .overallExperience .OverallExperienceProgress .progress {
+  height: 15px;
+  margin-bottom: 0;
+  margin: 0 10px;
+  border-radius: 0px;
+  background-color: #e9e9e9;
+  box-shadow: unset;
+  width: 100%;
+  min-width: 65%;
+  max-width: 65%;
+}
+.Dalshireinter
+  .charts
+  .overallExperience
+  .OverallExperienceProgress
+  .progress
+  .progress-bar {
+  background-color: #70a340;
+}
+.Dalshireinter
+  .charts
+  .overallExperience
+  .OverallExperienceProgress
+  .ratingdiv
+  span {
+  width: auto;
+  max-width: 55px;
+  min-width: 55px;
+  white-space: pre;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.Dalshireinter
+  .charts
+  .overallExperience
+  .OverallExperienceProgress
+  .ratingdiv
+  span
+  b {
+  color: #70a340;
+}
+.Dalshireinter .charts .OverallExperienceStar ul li span {
+  font-size: 30px;
+  color: #70a340;
+}
+.Dalshireinter .charts .OverallExperienceStar ul li {
+  float: left;
+}
+.Dalshireinter .charts .OverallExperienceStar ul {
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+.Dalshireinter .charts .OverallExperienceStar legend {
+  clear: both;
+  font-size: 16px;
+  border: 0;
+  color: #a7a7a7;
+}
+.Dalshireinter .performancerating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Dalshireinter .performancerating .tropy {
+  width: 110px;
+  text-align: center;
+}
+.Dalshireinter .performancerating .tropy figure {
+  border-radius: 100px;
+  border: 1px solid #dfdfdf;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.Dalshireinter .performancerating .tropy img {
+}
+.Dalshireinter .performancerating .tropy p {
+}
+.Dalshireinter .reviewtable ul li span {
+  font-size: 18px;
+  color: #70a340;
+}
+.Dalshireinter .reviewtable ul li {
+  float: left;
+}
+.Dalshireinter .reviewtable ul {
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+}
+.Dalshireinter .reviewtable .queryies span:nth-child(1):after {
+  content: '';
+  position: absolute;
+  right: 6px;
+  width: 1px;
+  height: 15px;
+  background: #ccc;
+  top: 0px;
+}
+.Dalshireinter .reviewtable {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 30px;
+}
+.Dalshireinter .reviewtable .queryies span i {
+  color: #70a340;
+  padding-left: 5px;
+}
+.Dalshireinter .reviewtable .queryies span {
+  font-size: 15px;
+  position: relative;
+  color: #70a340;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.Dalshireinter .reviewtable h4 {
+  font-size: 18px;
+  color: #000;
+}
+.Dalshireinter .reviewtable b {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+}
+.Dalshireinter .reviewtable p {
+  font-size: 14px;
+  color: #000;
+}
+.Dalshireinter .newscard {
+  width: 285px;
+}
+.Dalshireinter .newscard figure {
+  width: 100%;
+  height: 195px;
+}
+.Dalshireinter .newscard figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Dalshireinter .Dalshireinter-tablinks .nav-pills {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--backgroundColor);
+}
+.Dalshireinter .newflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.Dalshireinter .newscard a {
+  font-size: 16px;
+  color: #030303;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 15px;
+}
+.Dalshireinter .newscard p {
+  font-size: 13px;
+  color: #7e7e7e;
+  cursor: pointer;
+}
+.Dalshireinter .MuiPagination-root ul {
+  justify-content: flex-end;
+}
+.Dalshireinter ul.pagination li span {
+  font-size: 17px;
+}
+.Dalshireinter ul.pagination li.first a,
+.Dalshireinter ul.pagination li.last a {
+  border: 0;
+}
+.MuiDialogContent-root img {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+.MuiDialogContent-root button {
+  padding: 10px 15px;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  background: #70a340;
+  align-items: center;
+  color: #fff;
+  width: 300px;
+  display: block;
+}
+.MuiDialogContent-root form {
+  display: block;
+  width: 300px;
+  margin: auto;
+}
+.MuiDialogContent-root h3 {
+  text-align: center;
+}
+.MuiDialogContent-root p.foot {
+  margin-top: 35px;
+}
+.MuiDialogContent-root p {
+  text-align: center;
+}
+.MuiDialogContent-root img {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+.MuiDialogContent-root button {
+  padding: 10px 15px;
+  border-radius: 0;
+  border: 1px solid #efefef;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  background: #70a340;
+  align-items: center;
+  color: #fff;
+  width: 300px;
+  display: block;
+}
+.MuiDialogContent-root form {
+  display: block;
+  width: 300px;
+  margin: auto;
+}
+.MuiDialogContent-root h3 {
+  text-align: center;
+}
+.MuiDialogContent-root p.foot {
+  margin-top: 35px;
+}
+.MuiDialogContent-root p {
+  text-align: center;
+}
+.popovercls {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .Dalshireinter
+    .sellerCard
+    .sellerInfowrap
+    .userBox
+    .sellerTopTextInfo
+    .sellerTitle
+    h4 {
+    font-size: 24px;
+    line-height: 25px;
+  }
+  .Dalshireinter
+    .sellerCard
+    .sellerInfowrap
+    .userBox
+    .sellerTopTextInfo
+    .rating {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  .Dalshireinter .sellerCard .mapblock .follwuppop {
+    flex-wrap: wrap;
+    word-break: break-word;
+    white-space: pre;
+  }
+}
+@media (max-width: 935px) {
+  .Dalshireinter .sellerCard {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .Dalshireinter .sellerCard .sellerInfowrap {
+    width: calc(100% - 0%);
+  }
+  .Dalshireinter
+    .sellerCard
+    .sellerInfowrap
+    .userBox
+    .sellerTopTextInfo
+    .rating {
+    flex-direction: row;
+  }
+  .Dalshireinter .tabpillssection .largetext {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .Dalshireinter .Dalshireinter-tablinks .nav-pills li a {
+    font-size: 16px;
+  }
+  .Dalshireinter
+    .tabpillssection
+    .catalog-grid
+    .horizontal-catalog-card
+    .info-box
+    .right-box {
+    width: 100%;
+  }
+  .Dalshireinter .tabpillssection .catalog-grid .horizontal-catalog-card {
+    width: 100%;
+  }
+  .Dalshireinter .pfmAuct {
+    flex-direction: column;
+  }
+  .Dalshireinter .salesbox,
+  .Dalshireinter .salesbox.lastprogres {
+    width: 100%;
+  }
+}
+@media (max-width: 675px) {
+  .Dalshireinter .tabpillssection .catalog-grid .horizontal-catalog-card {
+    max-height: inherit;
+  }
+}
+@media (max-width: 600px) {
+  .Dalshireinter .tabpillssection .catalog-grid .horizontal-catalog-card {
+    flex-direction: column;
+  }
+  .Dalshireinter .sellerCard,
+  .Dalshireinter
+    .sellerCard
+    .sellerInfowrap
+    .userBox
+    .sellerTopTextInfo
+    .sellerTitle {
+    flex-direction: column;
+  }
+  .Dalshireinter
+    .tabpillssection
+    .catalog-grid
+    .horizontal-catalog-card
+    .one-and-two-wrapper,
+  .Dalshireinter .horizontal-catalog-card .one-and-two-wrapper,
+  .Dalshireinter .auctioncard .horizontal-catalog-card .one-and-two-wrapper,
+  .Dalshireinter
+    .tabpillssection
+    .catalog-grid
+    .horizontal-catalog-card
+    .info-box
+    .middle-box {
+    width: 100%;
+  }
+  .Dalshireinter .sellerCard .sellerInfowrap .userBox figure {
+    width: 300px;
+  }
+  .Dalshireinter
+    .tabpillssection
+    .catalog-grid
+    .horizontal-catalog-card
+    .info-box
+    .middle-box {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 15px;
+  }
+  .Dalshireinter
+    .sellerCard
+    .sellerInfowrap
+    .userBox
+    .sellerTopTextInfo
+    .sellerTitle
+    h4 {
+    font-size: 18px;
+  }
+  .Dalshireinter
+    .tabpillssection
+    .catalog-grid
+    .horizontal-catalog-card
+    .info-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .Dalshireinter .Dalshireinter-tablinks .nav-pills li a {
+    font-size: 13px;
+    max-height: fit-content;
+    padding: 4px 5px;
+  }
+  .Dalshireinter .Dalshireinter-tablinks .nav-pills {
+    top: 80px;
+  }
+}
+@media (max-width: 475px) {
+  .Dalshireinter .MuiPagination-root ul {
+    justify-content: center;
+  }
+  .Dalshireinter .Dalshireinter-tablinks .nav-pills {
+    top: 70px;
+  }
+  .Dalshireinter .sellerCard .sellerInfowrap .userBox img {
+    width: 100%;
+  }
+  .form-inlineform {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .form-inlineform select,
+  .form-inlineform .selectbox {
+    width: 100%;
+  }
+
+  .form-inlineform h5 {
+    padding-bottom: 5px;
+  }
+  .MuiDialogContent-root form,
+  .MuiDialogContent-root button {
+    max-width: 300px;
+    width: auto;
+    margin: auto;
+  }
+  .Dalshireinter .carosalcard a,
+  .Dalshireinter .carosalcard p,
+  .Dalshireinter .auctioncard h6,
+  .Dalshireinter .auctioncard a {
+    font-size: 14px;
+  }
+  .Dalshireinter .tabpillssection .largetext {
+    font-size: 16px;
+  }
+  .Dalshireinter
+    .charts
+    .overallExperience
+    .OverallExperienceProgress
+    .ratingdiv
+    span,
+  .Dalshireinter .carosalcard h6,
+  .Dalshireinter .auctioncard .auctionbody .auctioncardfoot span {
+    font-size: 13px;
+  }
+  .load-btn {
+    padding: 6px 8px;
+  }
+  .Dalshireinter .performancerating .tropy p,
+  .load-btn {
+    font-size: 13px;
+  }
+  .Dalshireinter
+    .charts
+    .overallExperience
+    .OverallExperienceProgress
+    .ratingdiv
+    span
+    b {
+    font-size: 12px;
+  }
+  .Dalshireinter .sellerCard .mapblock {
+    flex-direction: column;
+  }
+  .Dalshireinter .sellerCard .sellerInfowrap .userBox {
+    flex-direction: column;
+  }
+}

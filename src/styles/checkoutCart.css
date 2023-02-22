@@ -1,0 +1,242 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 25px 0 45px; */
+}
+
+.cart:not(:last-child) {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 75px;
+}
+
+.theme-dark .cart:not(:last-child) {
+  border-bottom: 1px solid #4c4c4c;
+}
+
+.cart .cartLt {
+  text-align: left;
+  width: 100%;
+}
+
+.cart .cartLt .cartTitle {
+  font-size: 20px;
+  font-family: var(--FuturaStdMedium);
+  color: #232323;
+  margin: 25px 0 30px;
+}
+
+.theme-dark .cart .cartLt .cartTitle {
+  color: #7b8390;
+}
+
+.cart .cartLt .cartItem thead tr th {
+  font-size: 15px;
+  color: #000;
+  font-family: var(--FuturaStdLight);
+  font-weight: unset;
+  border-top: none;
+  border-bottom: none;
+}
+
+.theme-dark .cart .cartLt .cartItem thead tr th {
+  color: var(--textColor);
+}
+
+.cart .cartLt .cartItem tbody tr td img {
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.cart .cartLt .cartItem tbody tr td {
+  vertical-align: middle;
+  font-weight: unset;
+  font-size: 15px;
+  color: #000;
+  font-family: var(--FuturaStdMedium);
+}
+
+.theme-dark .cart .cartLt .cartItem tbody tr td {
+  color: var(--textColor);
+}
+
+.cart .cartRt {
+  max-width: 420px;
+  width: 100%;
+  border: 1px dashed #a6adb4;
+  padding: 25px;
+  border-radius: 5px;
+  height: max-content;
+  margin-top: 45px;
+  margin-left: 75px;
+}
+
+.theme-dark .cart .cartRt {
+  border: 1px dashed #727b88;
+}
+
+.cart .cartRt .cartSummaryTitle {
+  font-size: 20px;
+  font-family: var(--FuturaStdMedium);
+  color: #232323;
+  text-align: left;
+  margin: 0px 0 20px;
+}
+
+.theme-dark .cart .cartRt .cartSummaryTitle {
+  color: #7b8390;
+}
+
+.cart .cartRt ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cart .cartRt ul li {
+  display: flex;
+  justify-content: space-between;
+  color: var(--textColor);
+  font-size: 16px;
+}
+
+.cart .cartRt ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.cart .cartRt ul li span:nth-child(1) {
+  font-family: var(--FuturaStdLight);
+}
+
+.cart .cartRt ul li span:nth-child(2) {
+  font-family: var(--FuturaStdMedium);
+}
+
+.cart .cartRt .primButton {
+  margin-top: 25px;
+}
+
+.emptyCart {
+  text-align: center;
+}
+
+.emptyCart > img {
+  width: 280px;
+  height: 280px;
+  margin: 30px auto;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.theme-dark .emptyCart > img {
+  opacity: 1;
+}
+
+.emptyCart .primButton {
+  max-width: max-content;
+  margin: 30px auto 0;
+}
+
+.emptyCart h5 {
+  font-family: var(--FuturaStdBold);
+}
+
+.emptyCart h6 {
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  .emptyCart > img {
+    width: 200px;
+    height: auto;
+  }
+  .emptyCart h5 {
+    font-size: 18px;
+  }
+  .emptyCart h6 {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+.cardSelect .cardmain .radio-item {
+  display: inline-block;
+  position: relative;
+}
+.cardSelect label.cardmain .vcRad {
+  position: relative;
+}
+.cardSelect label.cardmain .vcRad:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid var(--primColor);
+  background-color: transparent;
+}
+
+.cardSelect .cardmain input[type="radio"] {
+  opacity: 0;
+}
+
+.cardSelect
+  label.cardmain
+  .radio-item
+  input[type="radio"]:checked
+  + .vcRad:after {
+  border-radius: 11px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  content: " ";
+  display: block;
+  background: var(--primColor);
+}
+/* radiobox ened */
+
+.cardSelect .cardmain {
+  background: #fffaee;
+  border: 1px solid var(--primColor);
+  border-radius: 10px;
+  padding: 12px 20px;
+  line-height: 25px;
+  margin: 15px auto;
+  width: 100%;
+}
+.cardSelect .flx p {
+  margin: auto 0;
+}
+.cardSelect .flx:nth-child(1) p {
+  font-weight: 600;
+  font-size: 18px;
+}
+.cardSelect .flx:nth-child(2) p {
+  font-weight: 400;
+  color: #333;
+  font-size: 16px;
+}
+.cardSelect .flx {
+  display: flex;
+  justify-content: space-between;
+}
+
+.orPlcdSs img {
+  width: 60px;
+}
+
+.pymtSlect .customSelect {
+  margin-bottom: 10px;
+}
+
+.os-text.pdtNmLst {
+  list-style: decimal;
+  text-align: left;
+  width: max-content;
+}

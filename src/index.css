@@ -1,0 +1,1349 @@
+@font-face {
+  font-family: "Futura W01 Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura W01 Book"),
+    url("./Utils/fonts/futura-pt-w01-book.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Ultralight";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Ultralight"),
+    url("./Utils/fonts/sf-ui-display-ultralight.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Thin"),
+    url("./Utils/fonts/sf-ui-display-thin.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Light"),
+    url("./Utils/fonts/sf-ui-display-light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Regular"),
+    url("./Utils/fonts/sf-ui-display-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Medium"),
+    url("./Utils/fonts/sf-ui-display-medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Semibold"),
+    url("./Utils/fonts/sf-ui-display-semibold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Bold"),
+    url("./Utils/fonts/sf-ui-display-bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Heavy";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Heavy"),
+    url("./Utils/fonts/sf-ui-display-heavy.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF UI Display Black"),
+    url("./Utils/fonts/sf-ui-display-black.woff") format("woff");
+  font-display: swap;
+}
+
+/* FUTURA */
+
+@font-face {
+  font-family: "Futura Std Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Book"),
+    url("./Utils/fonts/futura/FuturaStdBook.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Book Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Book Oblique"),
+    url("./Utils/fonts/futura/FuturaStdBookOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Light Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Light Condensed"),
+    url("./Utils/fonts/futura/FuturaStdCondensedLight.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Light"),
+    url("./Utils/fonts/futura/FuturaStdLight.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Light Condensed Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Light Condensed Oblique"),
+    url("./Utils/fonts/futura/FuturaStdCondensedLightObl.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Light Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Light Oblique"),
+    url("./Utils/fonts/futura/FuturaStdLightOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Medium Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Medium Condensed"),
+    url("./Utils/fonts/futura/FuturaStdCondensed.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Medium"),
+    url("./Utils/fonts/futura/FuturaStdMedium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Medium Condensed Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Medium Condensed Oblique"),
+    url("./Utils/fonts/futura/FuturaStdCondensedOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Medium Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Medium Oblique"),
+    url("./Utils/fonts/futura/FuturaStdMediumOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Heavy";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Heavy"),
+    url("./Utils/fonts/futura/FuturaStdHeavy.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Heavy Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Heavy Oblique"),
+    url("./Utils/fonts/futura/FuturaStdHeavyOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Bold"),
+    url("./Utils/fonts/futura/FuturaStdBold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Bold Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Bold Condensed"),
+    url("./Utils/fonts/futura/FuturaStdCondensedBold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Bold Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Bold Oblique"),
+    url("./Utils/fonts/futura/FuturaStdBoldOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Bold Condensed Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Bold Condensed Oblique"),
+    url("./Utils/fonts/futura/FuturaStdCondensedBoldObl.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Extra Bold Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Extra Bold Condensed"),
+    url("./Utils/fonts/futura/FuturaStdCondensedExtraBd.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Extra Bold"),
+    url("./Utils/fonts/futura/FuturaStdExtraBold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Extra Bold Condensed Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Extra Bold Condensed Oblique"),
+    url("./Utils/fonts/futura/FuturaStdCondExtraBoldObl.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Std Extra Bold Oblique";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Std Extra Bold Oblique"),
+    url("./Utils/fonts/futura/FuturaStdExtraBoldOblique.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DDINCondensedBold";
+  src: url("./Utils/fonts/din/DDINCondensedBold.eot");
+  src: url("./Utils/fonts/din/DDINCondensedBold.eot")
+      format("embedded-opentype"),
+    url("./Utils/fonts/din/DDINCondensedBold.woff2") format("woff2"),
+    url("./Utils/fonts/din/DDINCondensedBold.woff") format("woff"),
+    url("./Utils/fonts/din/DDINCondensedBold.ttf") format("truetype"),
+    url("./Utils/fonts/din/DDINCondensedBold.svg#DDINCondensedBold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DDINCondensed";
+  src: url("./Utils/fonts/din/DDINCondensed.eot");
+  src: url("./Utils/fonts/din/DDINCondensed.eot") format("embedded-opentype"),
+    url("./Utils/fonts/din/DDINCondensed.woff2") format("woff2"),
+    url("./Utils/fonts/din/DDINCondensed.woff") format("woff"),
+    url("./Utils/fonts/din/DDINCondensed.ttf") format("truetype"),
+    url("./Utils/fonts/din/DDINCondensed.svg#DDINCondensed") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Book";
+  src: url("./Utils/fonts/avenir/AvenirLTStd-Book.eot");
+  src: url("./Utils/fonts/avenir/AvenirLTStd-Book.eot")
+      format("embedded-opentype"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Book.woff2") format("woff2"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Book.woff") format("woff"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Book.ttf") format("truetype"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Book.svg#AvenirLTStd-Book")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Roman";
+  src: url("./Utils/fonts/avenir/AvenirLTStd-Roman.eot");
+  src: url("./Utils/fonts/avenir/AvenirLTStd-Roman.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Roman.woff2") format("woff2"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Roman.woff") format("woff"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Roman.ttf") format("truetype"),
+    url("./Utils/fonts/avenir/AvenirLTStd-Roman.svg#AvenirLTStd-Roman")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("./Utils/fonts/georgia/Georgia.eot");
+  src: url("./Utils/fonts/georgia/Georgia.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Utils/fonts/georgia/Georgia.woff2") format("woff2"),
+    url("./Utils/fonts/georgia/Georgia.woff") format("woff"),
+    url("./Utils/fonts/georgia/Georgia.ttf") format("truetype"),
+    url("./Utils/fonts/georgia/Georgia.svg#Georgia") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura Medium";
+  src: url("./Utils/fonts/futura/FuturaBT-Medium.eot");
+  src: url("./Utils/fonts/futura/FuturaBT-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Utils/fonts/futura/FuturaBT-Medium.woff2") format("woff2"),
+    url("./Utils/fonts/futura/FuturaBT-Medium.woff") format("woff"),
+    url("./Utils/fonts/futura/FuturaBT-Medium.ttf") format("truetype"),
+    url("./Utils/fonts/futura/FuturaBT-Medium.svg#FuturaBT-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SignPainter";
+  src: url("./Utils/fonts/painter/SignPainter-HouseScript.eot");
+  src: url("./Utils/fonts/painter/SignPainter-HouseScript.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Utils/fonts/painter/SignPainter-HouseScript.woff2") format("woff2"),
+    url("./Utils/fonts/painter/SignPainter-HouseScript.woff") format("woff"),
+    url("./Utils/fonts/painter/SignPainter-HouseScript.ttf") format("truetype"),
+    url("./Utils/fonts/painter/SignPainter-HouseScript.svg#SignPainter-HouseScript")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.loaderCnt {
+  background: #fff;
+}
+
+/* .initialLoaderCnt {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #903368;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initialLoader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.initialLoader div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+} */
+
+.loadingCnt {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.marker-position {
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  background-color: #ffffff8c;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--FuturaStdBook), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.theme-dark {
+  background: #151a21;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+a {
+  color: var(--primColor);
+  font-weight: 500;
+}
+
+.customContainer {
+  padding-inline-start: 60px !important;
+  padding-inline-end: 60px !important;
+  width: 100% !important;
+}
+
+div:focus,
+button:focus {
+  outline: 0;
+}
+
+.MuiFormLabel-root,
+.MuiButton-label {
+  font-family: var(--FuturaStdBook), "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: inherit;
+}
+
+.MuiBadge-badge {
+  background-color: var(--primColor) !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked {
+  color: var(--primColor) !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: var(--primColor) !important;
+}
+
+/* .MuiTooltip-popper .MuiTooltip-tooltip {
+  font-size: 12px;
+  background: #2b2b2be0;
+} */
+
+.customInput,
+.customSelect,
+.MuiFormControl-root.customDatepicker,
+.customTextArea {
+  margin-bottom: 30px;
+  /* width: 100%; */
+}
+
+.customTextArea .MuiFormControl-root {
+  width: 100%;
+}
+
+.MuiFormControl-root.customDatepicker {
+  width: 100%;
+}
+
+.customSelect .MuiFormControl-root {
+  width: 100%;
+}
+
+.customInput .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutlin,
+.customSelect .MuiSelect-root.MuiSelect-select.Mui-focused {
+  border-color: var(--secColor);
+}
+
+.customInput .MuiFormLabel-root.Mui-focused,
+.customSelect .MuiFormLabel-root.Mui-focused {
+  color: var(--secColor);
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--secColor) !important;
+  border-width: 1px !important;
+}
+
+.theme-dark
+  .customInput
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline,
+.theme-dark
+  .customInput
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline,
+.theme-dark .customSelect .MuiSelect-root.MuiSelect-select.Mui-focused {
+  border-color: var(--inputBorderColor);
+}
+
+.theme-dark
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--inputBorderColor) !important;
+}
+
+.customInput .MuiFormControl-root.MuiTextField-root,
+.customSelect .MuiFormControl-root.MuiTextField-root {
+  width: 100%;
+  margin: 0;
+  text-align: start;
+}
+
+.theme-dark .MuiSelect-select:not([multiple]) option,
+.MuiSelect-select:not([multiple]) optgroup {
+  background: var(--backgroundColor);
+}
+
+.MuiInputBase-root,
+.MuiTypography-body1 {
+  font-family: var(--fontFamily) !important;
+}
+
+.theme-dark .gridListToggle button {
+  color: var(--textColor);
+}
+
+.theme-dark .MuiPagination-ul li button {
+  color: var(--textColor);
+}
+
+.theme-dark .MuiPaginationItem-page.Mui-selected {
+  background-color: rgb(61 67 76);
+}
+
+.cursorDecoy {
+  cursor: pointer;
+}
+
+.customModal {
+  z-index: 1500 !important;
+}
+
+.search .searchLt,
+.dashboard .dashboardLt {
+  max-width: 280px;
+  width: 100%;
+  margin-inline-end: 25px;
+}
+
+.search .searchLt {
+  position: sticky;
+  top: 10px;
+}
+
+.dashboard .dashboardLt .sideNav {
+  position: sticky;
+  top: 10px;
+}
+
+.search .searchRt,
+.dashboard .dashboardRt {
+  width: 100%;
+  width: -webkit-fill-available;
+  max-width: calc(100% - 280px);
+}
+
+.search .searchRt.evntRt {
+  max-width: 100%;
+}
+
+.search .searchResults.Grid,
+.dashboard .searchResults.Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 15px;
+}
+
+.search .searchResultsAuction.Grid,
+.dashboard .searchResultsAuction.Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 15px;
+}
+
+.toggleRespDrawer.MuiButton-root {
+  display: none;
+}
+
+.search .searchMiscFilters .MuiButtonBase-root.MuiButton-root,
+.dashboard .searchMiscFilters .MuiButtonBase-root.MuiButton-root {
+  min-width: max-content;
+  color: #8e8e8e;
+}
+
+.search .searchMiscFilters .MuiButtonBase-root.MuiButton-root.active,
+.dashboard .searchMiscFilters .MuiButtonBase-root.MuiButton-root.active {
+  color: var(--primColor);
+}
+
+.search .searchMiscFilters .customSelect,
+.dashboard .searchMiscFilters .customSelect {
+  margin-bottom: 0;
+  min-width: 150px;
+  margin-inline-start: 25px;
+}
+
+.customBreadcrumbs ol {
+  width: max-content;
+}
+
+.customBreadcrumbs a {
+  color: #797979;
+  text-transform: capitalize;
+}
+
+.customBreadcrumbs p {
+  text-transform: capitalize;
+}
+
+.theme-dark .MuiBreadcrumbs-ol li {
+  color: var(--textColor);
+}
+
+.aiTable table {
+  color: #212529;
+}
+
+.theme-dark .aiTable table {
+  color: var(--textColor);
+}
+
+.aiTable table thead th {
+  background: #343a40;
+  color: #fff;
+}
+
+.aiTable table .MuiFormControlLabel-root {
+  margin: 0;
+}
+
+.aiTable table td.credit {
+  color: #4caf50;
+  font-weight: 500;
+  display: flex;
+}
+
+.aiTable table td.debit {
+  color: #f44336;
+  font-weight: 500;
+  display: flex;
+}
+
+.aiTable table td > .material-icons {
+  padding-inline-end: 5px;
+}
+
+.aiTable .table th {
+  border: none;
+}
+
+.aiTable .table td,
+.aiTable .table th {
+  vertical-align: middle;
+}
+
+.searchSkeletonBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.searchSkeletonBody > div {
+  box-shadow: 0 3px 20px rgb(0 0 0 / 10%);
+}
+
+.searchSkeletonBody .skeletonWrapper {
+  background: var(--backgroundColor);
+}
+
+.material-icons.rtl,
+.rtlImage {
+  transform: rotateY(180deg);
+}
+
+.loadingCnt {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.userInitials.small {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  background: #e1f4ff;
+  border-radius: 50%;
+  color: #1d4963;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userInitials.large {
+  width: 90px;
+  height: 90px;
+  font-size: 28px;
+  font-weight: 700;
+  background: #f1f3f6;
+  border-radius: 50%;
+  color: #9ca8b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.rightDrawer .MuiPaper-root.MuiDrawer-paper {
+  width: 50vmax;
+  max-width: 800px;
+  padding: 20px;
+  background: var(--backgroundColor);
+}
+
+.productViewDrawer.rightDrawer .customContainer {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.productViewDrawer.rightDrawer .pvLt,
+.productViewDrawer.rightDrawer .pvRt {
+  width: 100%;
+}
+
+.productViewDrawer.rightDrawer .pvRt .featuredOn {
+  margin-top: 30px;
+}
+
+.MuiFormHelperText-root.Mui-error {
+  color: #f44336 !important;
+}
+
+/* .productView .pvRt h1 {
+  margin-top: 20px !important;
+} */
+
+.biddingCnt {
+  display: flex !important;
+  /* grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));*/
+  gap: 10px;
+}
+.biddingCnt .MuiFormControl-root {
+  width: 100%;
+  flex-direction: inherit;
+  height: 50px;
+}
+.biddingCnt .makeStyles-root-12 {
+  width: 60%;
+}
+.biddingCnt .customInput {
+  margin-bottom: 0;
+}
+
+.pvActDivider {
+  font-size: 14px;
+  font-family: var(--FuturaStdBold);
+  color: #7f7f7f;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.footerFixer {
+  min-height: calc(100vh - 381px);
+  height: 100%;
+}
+
+.fallbackLoader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-dark .fallbackLoader {
+  background: #222831;
+}
+
+.fallbackLoader img {
+  border-radius: 50%;
+}
+
+.bidsSection {
+  height: 100%;
+  max-height: 640px;
+  overflow: auto;
+  padding-left: 15px;
+}
+
+.bidsSection .bidComment {
+  min-height: 35px;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #eeeeee;
+  color: #484848;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+  text-align: left;
+  word-break: break-word;
+}
+
+.bidsSection .bidComment.green {
+  background-color: #70a340;
+  color: #fff;
+}
+
+.bidsSection .bidComment.yellow {
+  background-color: #ffca3c;
+  color: #333333;
+}
+
+.bidsSection::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.bidsSection::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.bidsSection:hover::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+}
+
+.theme-dark .bidsSection:hover::-webkit-scrollbar-thumb {
+  background-color: #606c7d;
+}
+
+.moveBack {
+  color: var(--textColor) !important;
+}
+
+.moveBack .material-icons {
+  color: #979797;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #dfdfdf;
+  margin-inline-end: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.theme-dark .moveBack .material-icons {
+  color: #727882;
+  background: #323a46;
+}
+
+.MuiBreadcrumbs-root .MuiButton-label {
+  text-transform: initial;
+}
+
+.MuiBreadcrumbs-root li p {
+  font-size: 14px;
+}
+
+.responsiveFilterDrawer .filterTitleCnt {
+  display: flex !important;
+}
+
+.responsiveFilterDrawer .MuiPaper-root.MuiDrawer-paper {
+  padding: 25px 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 90vh;
+  background: var(--backgroundColor);
+}
+
+.filterAction .filterTrigger {
+  display: none;
+  background: #ececec;
+  height: 100%;
+}
+
+.theme-dark .filterAction .filterTrigger {
+  background: #353a42;
+  color: #ddd;
+}
+
+.filterAction .filterTrigger .material-icons {
+  padding-right: 8px;
+}
+
+.filterAction .filterTrigger .MuiButton-label {
+  font-family: var(--FuturaStdMedium);
+  text-transform: initial;
+}
+
+.lvAtnStrd {
+  color: #d20000;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.lvAtnStrd img {
+  width: 20px;
+  height: 22px;
+  padding-bottom: 2px;
+  margin-right: 7px;
+}
+
+.theme-dark .lvAtnStrd {
+  color: #ff8282;
+}
+
+@media (max-width: 1024px) {
+  .footerFixer {
+    min-height: calc(100vh - 264px);
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterAction {
+    display: flex;
+    justify-content: space-between;
+  }
+  .filterAction .filterTrigger {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footerCnt {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerFixer {
+    min-height: calc(100vh - 228px);
+    height: 100%;
+  }
+}
+
+@media (max-width: 1145px) {
+  .search .searchLt,
+  .dashboard .dashboardLt {
+    max-width: 250px;
+  }
+  .search .searchMiscFilters .customSelect,
+  .dashboard .searchMiscFilters .customSelect {
+    margin-inline-start: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .toggleRespDrawer.MuiButton-root {
+    display: inline-flex;
+  }
+  .search .searchLt,
+  .dashboard .dashboardLt {
+    display: none;
+  }
+
+  .search .searchRt,
+  .dashboard .dashboardRt {
+    width: 100%;
+    max-width: none;
+  }
+
+  .responsiveFilterDrawer .MuiPaper-root.MuiDrawer-paper {
+    padding: 25px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    min-height: 300px;
+    max-height: 90vh;
+  }
+  .responsiveFilterDrawer .filterPanel .fpTitle {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .responsiveFilterDrawer .filterPanel .MuiAccordionDetails-root {
+    width: 100%;
+    padding: 10px 0;
+    max-height: 45vh;
+    overflow-y: auto;
+    padding-top: 20px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .MuiAccordionDetails-root small {
+    padding: 10px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .filterCheck,
+  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox {
+    width: 100%;
+  }
+
+  .responsiveFilterDrawer .filterPanel .filterCheck form {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .filterCheck .customCheckbox {
+    width: 100%;
+  }
+
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
+    width: 25%;
+    z-index: 100;
+  }
+
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterAcc
+    .MuiAccordionSummary-root.Mui-expanded {
+    background: rgb(25 157 229 / 11%);
+    border-color: rgb(25 157 229 / 20%) !important;
+  }
+  .customBreadcrumbs ol {
+    width: 100%;
+  }
+}
+
+input[value=""]::-webkit-datetime-edit {
+  color: transparent;
+}
+input:focus::-webkit-datetime-edit {
+  color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 991px) {
+  .customContainer {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+
+.aiTable table {
+  color: #212529;
+}
+
+.aiTable table thead th {
+  background: #343a40;
+  color: #fff;
+  font-weight: inherit;
+}
+
+.aiTable table .MuiFormControlLabel-root {
+  margin: 0;
+}
+
+.aiTable table td.credit {
+  color: #4caf50;
+  font-family: var(--FuturaStdMedium);
+  display: flex;
+}
+
+.aiTable table td.debit {
+  color: #f44336;
+  font-family: var(--FuturaStdMedium);
+  display: flex;
+}
+
+.aiTable table td > .material-icons {
+  padding-inline-end: 5px;
+}
+
+.aiTable .table th {
+  border: none;
+}
+
+.aiTable .table td,
+.aiTable .table th {
+  vertical-align: middle;
+}
+
+.aiTable table .ssActBtn button:first-child {
+  color: var(--primColor);
+}
+
+.aiTable table .ssActBtn button:last-child {
+  color: #ff6c6c;
+}
+
+.faCard .lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  object-fit: cover;
+}
+
+.eventContainer {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 800px) {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
+    width: 32%;
+  }
+}
+
+@media (max-width: 600px) {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
+    width: 50%;
+  }
+
+  .rightDrawer .MuiPaper-root.MuiDrawer-paper {
+    width: 90%;
+  }
+
+  .toggleRespDrawer.MuiButtonBase-root {
+    width: max-content;
+    flex-wrap: nowrap;
+  }
+
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
+    width: 100%;
+  }
+
+  .customContainer {
+    padding-inline-start: 15px !important;
+    padding-inline-end: 15px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 445px) {
+  .customContainer {
+    padding-inline-start: 15px !important;
+    padding-inline-end: 15px !important;
+  }
+  .pagination-wrapper h6 {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  .noPrint {
+    display: none !important;
+  }
+}
+
+.productStatus {
+  padding: 20px 0;
+  height: 30px;
+  border-radius: 30px;
+  margin: 0;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  width: max-content;
+  min-width: 118px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productStatus h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: initial;
+  margin: 0;
+  width: 100%;
+  padding: 0 12px;
+  border-radius: 4px;
+  transform: translateX(3px);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.productStatus h4.winning {
+  background: #0cba28;
+  color: #fff;
+}
+
+.productStatus h4.won {
+  background: #018554;
+  color: #a4e5cd;
+}
+
+.productStatus h4.outbid,
+.productStatus h4.losing {
+  background: #f1501f;
+  color: #fff4f1;
+}
+
+.productStatus h4.lost {
+  background: #d62f2f;
+  color: #ffccbd;
+}
+
+.productStatus h4.reserve,
+.productStatus h4.proxy {
+  background: #875486;
+  color: #ffffff;
+}
+
+.productView .productStatus {
+  width: 100%;
+  padding-left: 0;
+  margin: -20px 0 25px;
+  height: auto;
+}
+
+.productView .productStatus h4 {
+  padding: 25px 12px;
+  font-size: 18px;
+  transform: none;
+}
+
+.flscrnDscrptnPopup{
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .productView .productStatus {
+    margin: -40px 0 5px;
+  }
+  .productView .productStatus h4 {
+    font-size: 15px;
+  }
+}

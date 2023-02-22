@@ -1,0 +1,16 @@
+.RadioBox {
+    text-align: start;
+}
+
+.RadioBox .MuiFormControl-root {
+    text-align: start;
+}
+
+.RadioBox .MuiFormGroup-root {
+    flex-direction: row;
+}
+
+.RadioBox legend.MuiFormLabel-root {
+    font-size: 1.6em;
+    color: var(--secColor);
+}

@@ -1,0 +1,250 @@
+.search {
+  background: var(--backgroundColor);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.search .searchHead {
+  margin-bottom: 30px;
+}
+
+.search .searchHead h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.search .searchHead h4 span {
+  font-style: italic;
+}
+
+.search .searchHead button .material-icons {
+  padding-inline-end: 5px;
+}
+
+.search .searchHead button .MuiButton-label {
+  color: var(--secColor);
+  text-transform: initial;
+  font-weight: 700;
+}
+
+.search .searchResults .productCardGrid {
+  /* margin-inline-end: 5px; */
+}
+
+.search .searchLt .customSelect {
+  background: var(--backgroundColor);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.search .searchLt .gridListToggle button {
+  color: var(--secColor);
+  width: 50%;
+}
+
+.search .searchLt .gridListToggle button.active {
+  color: var(--primColor);
+  background: var(--backgroundColor);
+}
+
+.search .searchLt .gridListToggle i {
+  padding-inline-end: 10px;
+}
+
+.search .filterCheck .customCheckbox {
+  width: 100%;
+}
+
+.search .gridListToggle {
+  width: max-content;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.search .gridListToggle button.active {
+  color: var(--primColor);
+}
+
+.search .gridListToggle button .MuiButton-label {
+  font-family: var(--FuturaStdMedium);
+}
+
+.search .loadingCnt {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.search .gridViewSkeleton {
+  max-width: initial;
+}
+
+.searchRt.evntRt .product.evntCard {
+  border: 1px solid #e9e9e9;
+}
+
+.searchRt.evntRt .product.evntCard .product-dtls {
+  padding: 10px;
+}
+
+.searchRt.evntRt .product.evntCard .product-info .product-title {
+  line-height: 25px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px !important;
+  -webkit-line-clamp: 1;
+  height: unset;
+}
+
+.searchRt.evntRt .product.evntCard .product-info .start-date,
+.searchRt.evntRt .product.evntCard .product-loc-bid .location p {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.product-info .start-date .iconsWrp,
+.product-loc-bid .iconsWrp {
+  display: none;
+}
+
+.searchRt.evntRt .product.evntCard .product-info .start-date .iconsWrp,
+.searchRt.evntRt .product.evntCard .product-loc-bid .iconsWrp {
+  display: block;
+  color: gray;
+  margin-right: 10px;
+  padding-right: 0;
+}
+
+.searchRt.evntRt .product.evntCard .product-loc-bid {
+  flex-direction: column;
+}
+
+.searchRt.evntRt .product.evntCard .product-loc-bid div {
+  width: 100%;
+}
+
+.searchRt.evntRt .product.evntCard .product-loc-bid .bid-btn-area {
+  text-align: right;
+  margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  .home .hmSearch .searchInput,
+  .search .searchInput {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .searchLt {
+    display: none;
+  }
+
+  .sbTitle {
+    font-size: 14px;
+    color: var(--secColor);
+    font-weight: 700;
+    text-align: start;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .fpTitle {
+    font-size: 14px;
+    color: var(--secColor);
+    font-weight: 700;
+    text-align: start;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+
+  .theme-dark .responsiveFilterDrawer .filterPanel .fpTitle {
+    color: #fff;
+  }
+
+  .searchAuctions {
+    margin-bottom: 20px;
+  }
+
+  .searchMiscFilters .customSelect {
+    display: none;
+  }
+
+  .searchAuctions {
+    margin-bottom: 20px;
+  }
+
+  .searchAuctions label,
+  .searchAuctions button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000de;
+    height: 50px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    border: 1px solid #d8d8d8;
+    border-radius: 25px;
+    margin-inline-end: 10px;
+    text-decoration: none;
+    transition: 200ms all ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: initial;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+
+  .searchAuctions button.active {
+    color: var(--primColor);
+    background: rgb(25 157 229 / 11%);
+    border: 1px solid rgb(25 157 229 / 20%) !important;
+  }
+
+  .searchAuctions button .MuiButton-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchAuctions label {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .search .searchCnt {
+    margin-top: 0;
+  }
+
+  .productView .pvBidBox .customInput,
+  .productView .pvBidBox .customInput .MuiFormControl-root.MuiTextField-root {
+    height: 45px;
+  }
+  .productView .pvBidBox .customInput input {
+    height: 100%;
+  }
+  .productView .pvActBtn {
+    flex-wrap: wrap;
+  }
+  .productView .pvActBtn .pabChild:first-child {
+    width: 100%;
+  }
+  .search .searchHead {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 475px) {
+  .search .gridListToggle {
+    display: none;
+  }
+}

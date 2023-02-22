@@ -1,0 +1,33 @@
+.marketingSkeleton .msCnt {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.marketingSkeleton .skeleton.title {
+  margin-bottom: 20px;
+}
+
+.marketingSkeleton .skeletonWrapper {
+  box-shadow: none;
+}
+
+.marketingSkeleton .msRt .skeleton.gridImage {
+  margin-top: 30px;
+}
+
+.marketingSkeleton .msLt .skeleton.gridImage {
+  height: 500px;
+}
+
+.marketingSkeleton .msRt .skeleton.gridImage {
+  height: 340px;
+}
+
+.marketingSkeleton .msRt .skeleton.text {
+  width: 50%;
+}
+
+.marketingSkeleton .msRt .skeleton.actionButton {
+  width: 70%;
+}

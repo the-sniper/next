@@ -1,0 +1,55 @@
+.favoriteCheck {
+  min-width: 45px;
+  height: 45px;
+  background-color: rgba(255, 70, 70, 10%);
+  border-top-left-radius: 3px;
+  position: relative;
+  border-radius: 25px;
+}
+
+.favoriteCheck input {
+  display: none;
+}
+
+.favoriteCheck label {
+  color: #ff4646;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  margin: 0;
+  margin-top: 5px;
+  user-select: none;
+}
+
+.theme-dark .favoriteCheck label {
+  color: #ea6d6d;
+}
+
+.favoriteCheck.withLabel label {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.favoriteCheck.withLabel label .material-icons {
+  padding-left: 10px;
+}
+
+.favoriteCheck label:hover {
+  color: #ff4646;
+}
+
+.favoriteCheck label::selection {
+  color: none;
+  background: transparent;
+}
+
+.favoriteCheck label::moz-selection {
+  color: none;
+  background: transparent;
+}
+
+/* .favoriteCheck input:checked + label {
+  color: var(--primColor);
+} */

@@ -1,0 +1,18 @@
+.addToCalendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.addToCalendar button {
+    justify-content: flex-start;
+}
+
+.addToCalendar button img {
+    margin-right: 10px;
+}
+
+.addToCalendar button:not(:first-child) {
+    margin-top: 15px;
+}

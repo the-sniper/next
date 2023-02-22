@@ -1,0 +1,216 @@
+.dashboard {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.dashboard .dashboardLt {
+  max-width: 280px;
+  width: 100%;
+  margin-inline-end: 25px;
+}
+
+.dashboard .dashboardLt .sideNav {
+  position: sticky;
+  top: 10px;
+  margin-top: 60px;
+}
+
+.dashboard .dashboardRt {
+  width: 100%;
+  width: -webkit-fill-available;
+  max-width: calc(100% - 280px);
+}
+
+.sideNav ul {
+  background: #f1f1f1;
+  padding: 10px 0px;
+}
+
+.theme-dark .sideNav ul {
+  background: #323a46;
+}
+
+.sideNav .userAvatarProfile h4 {
+  font-size: 18px;
+  color: #373737;
+  margin: 15px auto;
+  word-break: break-all;
+  padding: 0 10px;
+}
+
+.sideNav hr {
+  margin-bottom: 25px;
+  background-color: #f1f3f6;
+}
+
+.sideNav h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primColor);
+  text-align: start;
+  padding-top: 15px;
+}
+
+.sideNav ul {
+  /* padding-inline-start: 0; */
+  margin: 0;
+}
+
+.sideNav ul a,
+.sideNav ul .MuiListItem-button {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #979797 !important;
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+  display: flex;
+  align-items: center;
+}
+
+.sideNav ul .MuiListItem-button {
+  height: 60px;
+  padding: 0;
+  border-radius: 0px;
+}
+
+.sideNav ul a,
+.sideNav ul .test {
+  padding: 8px 16px;
+  border-radius: 0px;
+  height: 100%;
+}
+
+.sideNav ul a span,
+.sideNav ul .MuiListItem-button span {
+  padding-inline-end: 10px;
+}
+
+.sideNav ul .MuiCollapse-wrapperInner {
+  padding-inline-start: 35px;
+}
+
+.sideNav ul a:hover {
+  text-decoration: none;
+}
+
+.sideNav ul > .MuiListItem-button a.active,
+.sideNav ul .activeDropdown {
+  color: var(--primColor) !important;
+  background: var(--backgroundColor);
+  border-left: 2px solid var(--primColor);
+}
+
+.sideNav ul .MuiListItem-button a.active {
+  color: var(--primColor) !important;
+}
+
+.dashboard .dashboardRt .maTitle {
+  background: var(--backgroundColor);
+  margin-bottom: 15px;
+}
+
+.dashboard .gridListToggle {
+  width: max-content;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.dashboard .gridListToggle button.active {
+  color: var(--primColor);
+}
+
+.dashboard .gridListToggle button .MuiButton-label {
+  font-family: var(--FuturaStdMedium);
+}
+
+.dashTitle {
+  font-size: 20px;
+  font-family: var(--FuturaStdBold);
+  letter-spacing: 1px;
+  color: #0e131f;
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.theme-dark .dashTitle {
+  color: var(--textColor);
+}
+
+.dashTitle span {
+  font-size: 16px;
+  font-family: var(---FuturaStdMedium);
+  color: #9f9f9f;
+  padding-left: 12px;
+  text-transform: initial;
+}
+.MuiButton-root.filterBtn {
+  display: none;
+}
+@media (max-width: 1145px) {
+  .dashboard .dashboardLt {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard .dashboardLt {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard .dashboardLt {
+    display: none;
+  }
+  .dashboard .dashboardRt {
+    width: 100%;
+    max-width: 100%;
+  }
+  .MuiButton-root.filterBtn {
+    position: fixed;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    padding: 6px 12px;
+    background: var(--backgroundColor);
+    border: 1px solid #d6d6d6;
+    border-radius: 40px;
+    color: var(--textColor);
+    z-index: 999;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 175px;
+  }
+
+  .MuiButton-root.filterBtn .MuiButton-label {
+    font-family: var(--FuturaStdExtraBold);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard .gridListToggle {
+    display: none;
+  }
+  .dasbord.respNav .MuiListItem-root {
+    padding: 5px 0px;
+  }
+  .dasbord .sideNav ul > .MuiListItem-button a.active,
+  .dasbord .sideNav ul .activeDropdown {
+    border-left: 4px solid var(--primColor);
+  }
+  .dasbord .sideNav ul .MuiListItem-button {
+    height: 45px;
+  }
+}
+@media (max-width: 545px) {
+  .dashTitle {
+    font-size: 18px;
+  }
+  .dashTitle {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,28 @@
+.errorPages {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #fff;
+  padding: 45px;
+}
+
+.errorPages .error404 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0px auto;
+}
+
+.errorPages p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.errorPages .primButton {
+  width: 200px;
+  margin: 20px auto 0;
+}
+
+@media (max-width: 767px) {
+  .errorPages h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,31 @@
+.tool-bar {
+  display: block;
+  width: 64px;
+  top: 402.059px;
+  left: 1057.5px;
+}
+
+.a-inline-block {
+  display: inline-block;
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
+}
+#emailTemplateBlockToolbar {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 30px;
+  background-color: white;
+  z-index: 10;
+  display: none;
+}
+
+.customTemplateViewContainer .bldrUqTable:hover #emailTemplateBlockToolbar {
+  display: block !important;
+}
+
+#emailTemplateBlockToolbar .MuiButton-label .material-icons {
+  font-size: 20px;
+}

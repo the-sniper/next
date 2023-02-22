@@ -1,0 +1,37 @@
+.invcPage {
+  padding: 60px;
+  font-size: 15px;
+}
+
+.invcPage .invoiceWrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.invcPage .byrAcInfo label {
+  min-width: 130px;
+}
+
+.invcPage .ttlDuTxt {
+  font-size: 17px;
+}
+
+.invcPage hr {
+  border-top: 1px solid #d0d0d0;
+}
+
+.invcPage .brdrBtn {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.invcPage .ftrCntnt {
+  color: rgb(168, 168, 168);
+  margin-top: 45px;
+  padding-top: 15px;
+  border-top: 1px solid rgb(233, 233, 233);
+}
+
+.theme-dark .tableWrapper th,
+.theme-dark .tableWrapper td {
+  color: var(--textColor);
+}

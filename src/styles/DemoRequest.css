@@ -1,0 +1,138 @@
+.dmoWrpr .dmoTopWrpr {
+  background: url("../assets/images/adbanner.png");
+  background-size: cover;
+  height: 614px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.dmoContainer {
+  max-width: 1384px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.dmoWrpr .dmoTopWrpr h4 {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  font-family: "Playfair Display", serif;
+  position: relative;
+  width: max-content;
+  margin-bottom: 90px;
+  line-height: 70px;
+}
+
+.dmoWrpr .dmoTopWrpr h4::after {
+  content: "";
+  height: 5px;
+  width: 45%;
+  background: #0c4a60;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+.dmoWrpr .brwsrCntnr {
+  width: 745px;
+  height: 1010px;
+  background: white;
+  border-radius: 10px;
+  margin-top: -450px;
+  box-shadow: 0 3px 6px #0000001a;
+  position: relative;
+  top: 20px;
+}
+
+.dmoWrpr .brwsrCntnr .brTop {
+  width: 100%;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer {
+  padding: 25px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer .stLogo {
+  width: 150px;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer .stLogo {
+  width: 150px;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer label {
+  font-size: 14px;
+  text-align: left;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer .customInput,
+.dmoWrpr .brwsrCntnr .frmContainer .customSelect,
+.dmoWrpr .brwsrCntnr .frmContainer .MuiFormControl-root.customDatepicker,
+.dmoWrpr .brwsrCntnr .frmContainer .customTextArea {
+  margin-bottom: 15px;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer .gtStrBtn {
+  background: #0c4a60;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+.dmoWrpr .brwsrCntnr .frmContainer .gtStrBtn .MuiButton-label {
+  text-transform: none;
+}
+
+.dmoWrpr .dmoBtmWrpr {
+  background: url("../assets/images/contentback.png");
+  background-size: cover;
+  width: 100%;
+}
+
+.dmoWrpr .dmoBtmWrpr .dmoContainer .textContainer {
+  max-width: 400px;
+  padding: 60px 0;
+  line-height: 38px;
+  color: #484848;
+}
+
+.submitted-message.hs-main-font-element {
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .dmoBtmWrpr .dmoContainer {
+    flex-wrap: wrap-reverse;
+  }
+
+  .dmoWrpr .brwsrCntnr {
+    margin-top: -36px;
+    position: relative;
+    height: unset;
+  }
+}
+
+@media (max-width: 900px) {
+  .dmoWrpr .dmoTopWrpr h4 {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .dmoWrpr .dmoTopWrpr {
+    height: 364px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dmoWrpr .brwsrCntnr .frmContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

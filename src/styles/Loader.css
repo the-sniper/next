@@ -1,0 +1,229 @@
+.loader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  background: #2196f31f;
+  transition: 200ms all ease-in-out;
+  user-select: none;
+}
+
+.listViewSkeleton.dark {
+  background: #272727;
+}
+
+/* CHECKOUT */
+
+.checkout .loadingCnt {
+  grid-template-columns: 1fr;
+}
+.checkoutSkeletonBody .checkoutSkeletonCnt {
+  display: grid;
+  grid-template-columns: 3.8fr 1.8fr;
+  gap: 15px;
+}
+
+.checkoutSkeletonBody .checkoutSkeletonCnt > .cscLt .cscItem {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+}
+
+.checkoutSkeletonBody
+  .checkoutSkeletonCnt
+  > .cscLt
+  .cscItem
+  > .skeletonWrapper:first-child {
+  height: 200px;
+  width: 70%;
+}
+
+.checkoutSkeletonBody
+  .checkoutSkeletonCnt
+  > .cscLt
+  .cscItem
+  .cscInfo
+  > .skeletonWrapper {
+  width: 200px;
+  box-shadow: none;
+}
+
+.checkoutSkeletonBody
+  .checkoutSkeletonCnt
+  > .cscLt
+  .cscItem
+  .cscInfo
+  > .skeletonWrapper:first-child {
+  margin-bottom: 20px;
+}
+
+.checkoutSkeletonBody .checkoutSkeletonCnt > .cscLt > .skeletonWrapper {
+  margin: 20px 0;
+}
+
+.checkoutSkeletonBody .checkoutSkeletonCnt > .cscLt .apptInfo {
+  max-width: 500px;
+  width: 100%;
+  margin: 40px 0 20px 0;
+}
+
+.checkoutSkeletonBody
+  .checkoutSkeletonCnt
+  > .cscLt
+  .apptInfo
+  .skeletonWrapper:first-child {
+  width: 200px;
+}
+
+.checkoutSkeletonBody
+  .checkoutSkeletonCnt
+  > .cscLt
+  .apptInfo
+  .skeletonWrapper:nth-child(2) {
+  width: 300px;
+}
+
+.checkoutSkeletonBody .checkoutSkeletonCnt > .cscLt .apptDate {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* PRODUCT VIEW */
+
+.productView .loadingCnt {
+  grid-template-columns: 1fr;
+}
+
+.productViewSkeleton .pvsImage {
+  margin-bottom: 30px;
+}
+
+.productViewSkeleton .pvsImage > .skeletonWrapper {
+  margin-bottom: 15px;
+}
+
+.productViewSkeleton .pvsImage .skeleton.gridImage {
+  height: 500px;
+}
+
+.productViewSkeleton .pvsAct {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 15px;
+  width: 60%;
+  margin: 30px auto;
+}
+
+.productViewSkeleton .pvsInfo {
+  margin: 20px 0;
+}
+
+.productViewSkeleton .pvsInfo .skeletonWrapper {
+  width: 80%;
+  margin: 10px 0;
+}
+
+.productViewSkeleton .pvsInfo .skeletonWrapper:nth-child(1) {
+  width: 20%;
+}
+
+.productViewSkeleton .pvsInfo .skeletonWrapper:nth-child(2) {
+  width: 40%;
+}
+
+.productViewSkeleton .pvsInfo .skeletonWrapper:nth-child(3) {
+  width: 30%;
+}
+
+.productViewSkeleton .pvsInfo .skeletonWrapper:nth-child(5) {
+  width: 45%;
+}
+
+.cart .loadingCnt {
+  grid-template-columns: 1fr;
+}
+
+/* AUCTION VIEW */
+
+.auctionViewSkeleton {
+  margin-top: 60px;
+}
+
+.auctionViewSkeleton .avsInfo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 50%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.auctionViewSkeleton .listViewSkeleton {
+  background: #fff;
+}
+
+.theme-dark .auctionViewSkeleton .listViewSkeleton {
+  background: transparent;
+}
+
+/* LIVE AUCTION */
+
+.liveAuctionSkeleton {
+  margin: 30px 0;
+}
+
+.liveAuctionSkeleton .laTopContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.liveAuctionSkeleton .skeletonWrapper {
+  box-shadow: none;
+}
+
+.liveAuctionSkeleton .laInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.liveAuctionSkeleton .lasSubTitle {
+  width: 25%;
+  margin: 30px 0 10px;
+}
+
+@media (max-width: 600px) {
+  .listViewSkeleton .skeleton.gridImage {
+    height: 100px;
+  }
+
+  .skeleton.actionButton {
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .listViewSkeleton .skeletonWrapper {
+    padding: 10px 5px;
+  }
+  .productViewSkeleton .pvsImage .skeleton.gridImage {
+    height: 300px;
+  }
+  .skeleton.thumbnail {
+    width: 70px;
+    height: 70px;
+  }
+
+  .productViewSkeleton .skeletonWrapper {
+    padding: 5px;
+  }
+}

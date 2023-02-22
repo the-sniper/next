@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="728" height="485" viewBox="0 0 728 485">
+  <defs>
+    <filter id="background" x="0" y="0" width="728" height="485" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_13350" data-name="Group 13350" transform="translate(1828.168 -1324.577)">
+    <g transform="matrix(1, 0, 0, 1, -1828.17, 1324.58)" filter="url(#background)">
+      <path id="background-2" data-name="background" d="M4,0H634a4,4,0,0,1,4,4V395a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(45 45)" fill="#fff"/>
+    </g>
+    <g id="browser" transform="translate(-1783.355 1370.053)">
+      <path id="bar" d="M4,0H634a4,4,0,0,1,4,4V19a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(0.187 -0.476)" fill="#f6f6f6"/>
+      <g id="button" transform="translate(6.581 6.581)">
+        <g id="circle" transform="translate(-0.394 -0.057)" fill="#f3605c" stroke="#d64542" stroke-width="0.5">
+          <circle cx="3" cy="3" r="3" stroke="none"/>
+          <circle cx="3" cy="3" r="2.75" fill="none"/>
+        </g>
+        <g id="circle-2" data-name="circle" transform="translate(10.606 -0.057)" fill="#f8be39" stroke="#d89f2c" stroke-width="0.5">
+          <ellipse cx="2.5" cy="3" rx="2.5" ry="3" stroke="none"/>
+          <ellipse cx="2.5" cy="3" rx="2.25" ry="2.75" fill="none"/>
+        </g>
+        <g id="circle-3" data-name="circle" transform="translate(20.606 -0.057)" fill="#50c845" stroke="#40ab2f" stroke-width="0.5">
+          <ellipse cx="3.5" cy="3" rx="3.5" ry="3" stroke="none"/>
+          <ellipse cx="3.5" cy="3" rx="3.25" ry="2.75" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

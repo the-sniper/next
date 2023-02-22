@@ -1,0 +1,87 @@
+.login {
+  max-width: 500px;
+  margin: 60px auto;
+  background: var(--backgroundColor);
+  border: 1px solid var(--borderColor);
+  border-top: 5px solid var(--tertColor);
+  border-radius: 5px;
+  padding: 45px;
+  text-align: center;
+}
+
+.theme-dark .login {
+  border-color: #4c4c4c;
+}
+
+.login .brandLogo {
+  margin-bottom: 35px;
+  width: 200px;
+}
+
+.theme-dark .login .brandLogo {
+  filter: brightness(30);
+}
+
+.login h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.login h4 {
+  margin-bottom: 35px;
+}
+
+.login .loginActBox .MuiButtonBase-root.MuiListItem-root {
+  padding-inline-start: 0;
+}
+
+.login .loginActBox .primButton {
+  width: 100%;
+}
+
+.login .MuiDivider-root {
+  margin: 25px 0;
+}
+
+/* .login.resetPassword h2{
+  margin-bottom: 35px;
+} */
+
+@media (max-width: 500px) {
+  .login {
+    border: none;
+    margin: 30px auto;
+    padding: 30px;
+  }
+  .login h2 {
+    font-size: 24px;
+  }
+  .login h4 {
+    font-size: 16px;
+  }
+  .login .brandLogo {
+    width: 150px;
+  }
+  .login .loginActBox {
+    flex-wrap: wrap;
+  }
+  .login .loginActBox .primButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 445px) {
+  .login {
+    padding: 15px;
+  }
+  .login .loginMiscAction a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .login h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+}

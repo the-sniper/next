@@ -1,0 +1,542 @@
+.cars-wrapper {
+  font-family: "DDINCondensed";
+}
+.cars-wrapper .container {
+  max-width: 1240px;
+}
+.cars-top-wrapper {
+  background: #090907;
+  width: 100%;
+  text-align: center;
+  padding: 50px 15px;
+}
+
+.ca-head {
+  font-weight: bold;
+  font-size: 80px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 50px 0;
+  z-index: 110;
+  position: relative;
+}
+
+.ca-sub-head {
+  font-weight: bold;
+  font-size: 80px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.26;
+  text-transform: uppercase;
+}
+
+.car-img {
+  margin: -100px auto;
+}
+
+.cl-text {
+  font-weight: bold;
+  font-size: 31px;
+  color: #fff;
+  opacity: 0.94;
+  text-transform: uppercase;
+}
+
+.comp-logos-wrap {
+  padding: 150px 0;
+  text-align: center;
+}
+
+.by-slider-wrap {
+  padding: 100px 25px;
+}
+
+.back-layer {
+  width: 100%;
+  background: linear-gradient(#090907 0%, #222b33 100%);
+  padding: 100px 15px;
+}
+
+.auction-benficial {
+  font-weight: bold;
+  font-size: 54px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.auction-benficial:after,
+.fac-head:after {
+  width: 284px;
+  height: 4px;
+  background: #3f87cc;
+  margin: 10px auto;
+}
+
+.aben-head {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: left;
+  color: #fff;
+}
+
+.back-layer .media {
+  padding: 45px 0;
+  justify-content: space-between;
+}
+
+.ab-list {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 34px;
+  text-align: left;
+  color: #fff;
+  list-style: none;
+  padding-left: 0;
+}
+
+.ab-list li {
+  padding-left: 25px;
+  position: relative;
+}
+
+.ab-list li .plus-icon {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.back-layer .media-body {
+  max-width: 540px;
+}
+
+.btn-blue {
+  width: 207px;
+  height: 48px;
+  border-radius: 4px;
+  background: #3f87cc;
+  border: 1px solid #3f87cc;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  background: #fff;
+  color: #3f87cc;
+}
+
+.cars-footer {
+  background: #080808;
+  padding: 50px 0 20px;
+}
+
+.cpy-rtext {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 35px;
+  text-align: center;
+  color: #afafaf;
+  padding: 60px 0 0;
+}
+
+.wrapping-up {
+  padding: 75px 15px;
+}
+
+.wrapping-up .media {
+  justify-content: space-between;
+}
+
+.wrapping-up .media-body {
+  width: 40%;
+  max-width: 540px;
+}
+
+.wrapping-up .media-right {
+  width: 60%;
+  margin: 0 0 -30%;
+}
+
+.wrapping-up-head {
+  font-weight: bold;
+  font-size: 54px;
+  text-align: left;
+  color: #0a1219;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.wrapping-up-head:after,
+.wrapping-up-head span:after {
+  width: 150px;
+  height: 4px;
+  background: #3f87cc;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+}
+
+.wrapping-up-head span:after {
+  bottom: 8px;
+}
+
+.wu-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+  text-align: left;
+  color: #797979;
+}
+
+.cars-middle-wrapper {
+  padding: 155px 0 30px;
+  background: #090907;
+  text-align: center;
+  margin-top: -6%;
+}
+
+.cv-note-head {
+  font-weight: bold;
+  font-size: 54px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.cn-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.stable-software {
+  font-size: 42px;
+  text-align: left;
+  color: #0a1219;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.stable-software span {
+  position: relative;
+  font-size: 54px;
+  display: inline-block;
+}
+
+.wrapping-up.ss-main-wrap .media-right,
+.wrapping-up.ss-main-wrap .media-body {
+  width: 48%;
+  max-width: 640px;
+}
+
+.btn-blue.by-demo-btn {
+  margin: 0 0 50px;
+}
+
+.start-tips {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 54px;
+  text-align: center;
+  color: #fff;
+  padding: 90px 15px;
+  background: #0a1219;
+  line-height: 1;
+}
+
+.fast-access {
+  padding: 75px 15px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.fac-head {
+  font-weight: bold;
+  font-size: 54px;
+  color: #0a1219;
+  position: relative;
+  line-height: 1;
+}
+
+.ols-note {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+  color: #797979;
+  margin: 30px auto;
+}
+
+.cc-dhead {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+}
+
+.pink-text {
+  color: #c3005e;
+}
+
+.drk-blue-text {
+  color: #055e98;
+}
+
+.grn-text {
+  color: #0da386;
+}
+
+.chart-con {
+  font-weight: bold;
+  font-size: 65px;
+  color: #0a1219;
+  margin: 10px auto 50px;
+}
+
+.chrome-car-wrap {
+  display: flex;
+}
+
+.chrome-car-wrap > div {
+  width: 50%;
+}
+
+.cc-right {
+  padding: 45px;
+  background: #0a1219;
+}
+
+.cc-right ul {
+  list-style: none;
+  font-family: "DIN Condensed";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: left;
+  color: #fff;
+  padding: 0;
+}
+
+.cc-right ul li {
+  margin-bottom: 40px;
+}
+
+.cc-right ul li > img {
+  margin-bottom: 25px;
+}
+
+.cars-wrapper .btn {
+  position: relative;
+  margin: 0;
+  z-index: 110;
+}
+
+.cars-wrapper .btn-sticky {
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.theme-dark .wu-text,
+.theme-dark .wrapping-up-head,
+.theme-dark .ols-note,
+.theme-dark .fac-head ,
+.theme-dark .chart-con{
+  color:#fff
+}
+.theme-dark .fast-access img {
+    filter: brightness(0.95) contrast(0.95);
+    background: #fff;
+    padding: 10px; 
+}
+
+.pdnBtm150{
+  padding-bottom: 150px;
+}
+@media (max-width: 767px) {
+  .cars-top-wrapper,
+  .fast-access {
+    padding: 25px 15px;
+  }
+  .cars-wrapper .media,
+  .chrome-car-wrap {
+    flex-wrap: wrap;
+  }
+  .chrome-car-wrap > div,
+  .wrapping-up.ss-main-wrap .media-right,
+  .wrapping-up.ss-main-wrap .media-body,
+  .wrapping-up .media-right,
+  .wrapping-up .media-body {
+    width: 100%;
+  }
+
+  .cars-wrapper img {
+    max-width: 100%;
+  }
+
+  .ca-head,
+  .ca-sub-head {
+    font-size: 32px;
+    padding: 20px 0;
+  }
+  .car-img {
+    margin: -50px auto;
+  }
+
+  .comp-logos-wrap {
+    padding: 30px 0;
+  }
+
+  .cl-text,
+  .aben-head {
+    font-size: 18px;
+  }
+  .cn-text {
+    font-size: 12px;
+    line-height: 1.67;
+  }
+
+  .auction-benficial,
+  .cv-note-head {
+    font-size: 24px;
+  }
+
+  .by-slider-wrap,
+  .start-tips,
+  .cc-right,
+  .wrapping-up,
+  .back-layer {
+    padding: 30px 15px;
+  }
+  .cc-right ul,
+  .wu-text {
+    line-height: 1.67;
+    font-size: 18px;
+  }
+  .auction-benficial:after,
+  .fac-head:after {
+    width: 150px;
+  }
+
+  .back-layer .media.col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .back-layer .media-body {
+    margin-top: 30px;
+  }
+
+  .cc-dhead,
+  .ols-note {
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  .chart-con {
+    margin: 10px auto;
+  }
+
+  .start-tips,
+  .fac-head,
+  .wrapping-up-head {
+    font-size: 32px;
+    line-height: 1.67;
+  }
+  .stable-software {
+    font-size: 16px;
+    line-height: 1.67;
+  }
+  .stable-software span {
+    font-size: 24px;
+  }
+  .wrapping-up-head span:after,
+  .wrapping-up-head:after,
+  .wrapping-up-head span:after {
+    bottom: 5px;
+    width: 100px;
+  }
+
+  .cc-right ul li > img {
+    height: 24px;
+    margin: 0 15px 0 0;
+  }
+
+  .cc-right ul li {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .wrapping-up .media-right {
+    height: 200px;
+    margin: 0 auto -145px;
+    max-width: 320px;
+  }
+
+  .wrapping-up .media-right img {
+    max-width: 320px;
+  }
+
+  .cars-middle-wrapper {
+    padding: 175px 0 30px;
+  }
+
+  .cars-footer {
+    background: #080808;
+    padding: 185px 0 0px;
+    text-align: center;
+  }
+
+  .cars-footer .btn {
+    margin: 15px auto 0;
+  }
+
+  .cars-top-wrapper .slick-list {
+    max-height: 115px;
+  }
+}
+
+
+
+@media (max-width: 479px) {
+  .ca-head,
+  .ca-sub-head {
+    padding: 10px 0;
+  }
+
+  .auction-benficial,
+  .cv-note-head,
+  .fac-head,
+  .ca-head,
+  .ca-sub-head,
+  .start-tips {
+    font-size: 22px;
+  }
+
+  .cars-wrapper img {
+    margin: 0 auto;
+  }
+
+  .back-layer .media {
+    padding: 45px 0 0;
+  }
+
+  .auction-benficial:after,
+  .fac-head:after {
+    width: 100px;
+  }
+
+  .btn-blue {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,176 @@
+:root {
+  --FuturaStdBook: "Futura Std Book";
+  --FuturaStdBookOblique: "Futura Std Book Oblique";
+  --FuturaStdLightCondensed: "Futura Std Light Condensed";
+  --FuturaStdLight: "Futura Std Light";
+  --FuturaStdLightCondensedOblique: "Futura Std Condensed Oblique";
+  --FuturaStdLightOblique: "Futura Std Light Oblique";
+  --FuturaStdMediumCondensed: "Futura Std Medium Condensed";
+  --FuturaStdMedium: "Futura Std Medium";
+  --FuturaStdMediumCondensedOblique: "Futura Std Medium Condensed Oblique";
+  --FuturaStdMediumOblique: "Futura Std Medium Oblique";
+  --FuturaStdHeavy: "Futura Std Heavy";
+  --FuturaStdBold: "Futura Std Bold";
+  --FuturaStdBoldCondensed: "Futura Std Bold Condensed";
+  --FuturaStdBoldOblique: "Futura Std Bold Oblique";
+  --FuturaStdBoldCondensedOblique: "Futura Std Bold Condensed Oblique";
+  --FuturaStdExtraBoldCondensed: "Futura Std Extra Bold Condensed";
+  --FuturaStdExtraBold: "Futura Std Extra Bold";
+  --FuturaStdExtraBoldCondensedOblique: "Futura Std Extra Bold Condensed Oblique";
+  --FuturaStdExtraBoldOblique: "Futura Std Extra Bold Oblique";
+
+  --diplayFont: "Playfair Display", serif;
+  --primColor: #70a340;
+  --secBlue: #090f4d;
+  --tertColor: #8b1558;
+  --accentColor: rgb(225, 244, 255);
+
+  /* Light theme */
+  --textColor: #373737;
+  --backgroundColor: #fff;
+  --borderColor: #ececec;
+}
+
+html.theme-dark {
+  /* Dark theme */
+  --textColor: #d8d8d8;
+  --backgroundColor: #222831;
+  --borderColor: #3b424c;
+  --primColor: #59862f;
+  --inputBorderColor: #696969;
+}
+
+body {
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+}
+
+.theme-dark img {
+  filter: brightness(0.95) contrast(0.95);
+}
+
+input:-webkit-autofill {
+  color: initial;
+  -webkit-text-fill-color: initial;
+  -webkit-background-clip: text;
+  box-shadow: 0 0 0 50px transparent inset;
+  caret-color: initial;
+}
+
+.theme-dark input:-webkit-autofill {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  -webkit-background-clip: text;
+  box-shadow: 0 0 0 50px transparent inset;
+  caret-color: #fff;
+}
+
+.theme-dark .customInput label,
+.theme-dark .MuiFormControl-root label {
+  color: var(--textColor);
+}
+
+.theme-dark .customInput input,
+.theme-dark .MuiFormControl-root input,
+.theme-dark .MuiFormControl-root .MuiSelect-root {
+  color: var(--textColor);
+}
+
+.theme-dark .customInput fieldset,
+.theme-dark .MuiFormControl-root fieldset {
+  border-color: var(--inputBorderColor);
+}
+
+.theme-dark .MuiInputBase-inputAdornedEnd ~ span,
+.theme-dark .MuiFormControl-root .MuiSvgIcon-root {
+  color: #696969;
+}
+
+.primButton button {
+  color: #fff;
+  border-radius: 3px;
+  background-color: var(--primColor);
+  border: 1px solid var(--primColor);
+  transition: 200ms all ease-in-out;
+  box-shadow: none;
+}
+
+.primButton button:hover {
+  background-color: var(--primColor);
+  border: 1px solid var(--primColor);
+  color: #fff;
+  opacity: "0.9";
+  box-shadow: none;
+}
+
+.secButton button {
+  color: var(--primColor);
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid var(--primColor);
+  transition: 200ms all ease-in-out;
+  box-shadow: none;
+}
+
+.secButton button:hover {
+  background-color: var(--primColor);
+  border: 1px solid var(--primColor);
+  color: #fff;
+  box-shadow: none;
+}
+
+.primButton button,
+.secButton button,
+.tertButton button {
+  height: 50px;
+}
+
+.primButton.small button,
+.secButton.small button,
+.tertButton.small button {
+  height: 40px;
+  min-width: max-content;
+}
+
+.primButton.large button,
+.secButton.large button,
+.tertButton.large button {
+  height: 60px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: rgb(25, 157, 229, 15);
+}
+
+::selection {
+  color: #fff;
+  background: rgb(25, 157, 229, 15);
+}
+
+@media (max-width: 500px) {
+  .primButton.small button,
+  .secButton.small button,
+  .tertButton.small button {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .primButton button,
+  .secButton button,
+  .tertButton button {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .primButton.large button,
+  .secButton.large button,
+  .tertButton.large button {
+    height: 50px;
+    font-size: 14px;
+  }
+  .home .homeBanner .hbLt .bannerSearch input {
+    height: 50px;
+  }
+}

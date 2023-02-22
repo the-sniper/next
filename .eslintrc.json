@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "jest": true,
+        "es6": true
+    },
+    "plugins": ["import"],
+    "extends": ["plugin:prettier/recommended", "plugin:react/recommended"],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "requireConfigFile": false,
+        "babelOptions": {
+            "presets": ["@babel/preset-react"]
+         }
+    },
+    "rules": {
+        "react/prop-types": "warn",
+        "react/jsx-key": "warn",
+        "no-eval": "warn",
+        "import/first": "warn",
+        "no-unused-vars": "warn",
+        "no-async-promise-executor": "warn",
+        "react/react-in-jsx-scope": "warn",
+        "react/no-unescaped-entities": "warn",
+        "react/no-unknown-property": "warn"
+    }
+}

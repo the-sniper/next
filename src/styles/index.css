@@ -1,0 +1,620 @@
+body {
+  margin: 0;
+  font-family: var(--fontFamily), 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.customContainer {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  width: 100% !important;
+  max-width: 1600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+div:focus,
+button:focus {
+  outline: 0;
+}
+
+header,
+footer {
+  background: #fff;
+}
+
+.customInput,
+.customSelect {
+  margin-bottom: 30px;
+}
+
+.customInput .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutlin,
+.customSelect .MuiSelect-root.MuiSelect-select.Mui-focused {
+  border-color: var(--secColor);
+}
+
+.customInput .MuiFormLabel-root.Mui-focused,
+.customSelect .MuiFormLabel-root.Mui-focused {
+  color: var(--secColor);
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--secColor) !important;
+  border-width: 1px !important;
+}
+.customInput .MuiFormControl-root.MuiTextField-root,
+.customSelect .MuiFormControl-root.MuiTextField-root {
+  width: 100%;
+  margin: 0;
+}
+
+.search .searchLt,
+.dashboard .dashboardLt {
+  width: 23%;
+  margin-right: 30px;
+  max-width: 350px;
+}
+
+.search .searchRt,
+.dashboard .dashboardRt {
+  width: 100%;
+  width: -webkit-fill-available;
+  max-width: 78%;
+}
+
+.home .homeLt .searchInput .input-group-text,
+.search .searchLt .searchInput .input-group-text,
+.dashboard .dashboardLt .searchInput .input-group-text {
+  background-color: #fff;
+  border-right: none;
+}
+
+.home .homeLt .searchInput input,
+.search .searchLt .searchInput input,
+.dashboard .dashboardLt .searchInput input {
+  border-left: none;
+}
+
+.home .homeLt .searchInput input:focus,
+.search .searchLt .searchInput input:focus,
+.dashboard .dashboardLt .searchInput input:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.home .sectionTitle > h2,
+.search .sectionTitle h2 {
+  font-size: 26px;
+  color: #353535;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.table {
+  background: #fff;
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #2b2b2b;
+  border-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.PaymentModal .modal-dialog.modal-lg {
+  max-width: 400px !important;
+}
+
+.PaymentModal .helpingText {
+  font-size: 18px;
+  padding: 20px 0;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.homeSkeletonBody,
+.searchSkeletonBody {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.homeSkeletonBody .hsbGrid,
+.searchSkeletonBody .ssbGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.searchSkeletonBody {
+  margin: 45px 0;
+}
+
+.loginSkeletonBody {
+  /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 0;
+}
+
+.loginSkeletonBody .lsbLeft {
+  margin-right: 15px;
+  max-width: 450px;
+  width: 100%;
+  align-self: stretch;
+  background: #f7f7f7;
+}
+
+.loginSkeletonBody .lsbRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 450px;
+  width: 100%;
+  align-self: stretch;
+  background: #f7f7f7;
+}
+
+.loginSkeletonBody .lsbLeft .skeleton.title,
+.loginSkeletonBody .lsbRight .skeleton.title,
+.loginSkeletonBody .lsbRight .skeleton.avatar {
+  margin: 0 auto;
+}
+
+.loginSkeletonBody .lsbLeft .lsbBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.regSkeletonBody {
+  width: 600px;
+  margin: 45px auto;
+}
+
+.regSkeletonBody .lsbBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.regSkeletonBody .skeleton.title {
+  margin: 0 auto;
+}
+
+.checkoutSkeletonBody {
+  margin: 45px 0;
+}
+
+.checkoutSkeletonBody .csbItem {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+input[value='']::-webkit-datetime-edit {
+  color: transparent;
+}
+input:focus::-webkit-datetime-edit {
+  color: #000;
+}
+
+button .MuiButton-label {
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.slick-slider {
+  cursor: grab;
+}
+
+.slick-slider:active {
+  cursor: grabbing;
+}
+
+.actionWrapper {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.actionWrapper > button:first-child {
+  margin-right: 30px;
+}
+
+.cursorDecoy {
+  cursor: pointer;
+}
+
+.verifyPhone .phVer {
+  display: block;
+  margin: 10px 0;
+}
+
+.verifyPhone .phVerInp {
+  margin-top: 25px;
+}
+
+.customModal {
+  z-index: 1500 !important;
+}
+
+.np-pro-box {
+  padding: 25px 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.np-pro-box img {
+  width: 180px;
+}
+
+.np-pro-box h5 {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.np-pro-box h6 {
+  line-height: 24px;
+  font-size: 15px;
+  color: #6d6d6d;
+}
+
+.filterClose {
+  float: right;
+  display: block;
+  z-index: 100;
+}
+
+@media (min-width: 1440px) {
+  .customContainer {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .search .searchLt,
+  .dashboard .dashboardLt {
+    width: 20%;
+  }
+  .home .homeRt {
+    max-width: 100%;
+  }
+
+  .search .searchRt,
+  .dashboard .dashboardRt {
+    max-width: 80%;
+  }
+
+  .home .homeLt,
+  .search .searchLt {
+    position: sticky;
+    top: 10px;
+  }
+  header .scrollTop {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .search .productCardGrid,
+  .dashboard .productCardGrid {
+    width: 280px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .search .productCardGrid,
+  .dashboard .productCardGrid {
+    width: 32%;
+    margin-right: 5px;
+  }
+  .home .homeLt,
+  .search .searchLt,
+  .dashboard .dashboardLt {
+    width: 32%;
+  }
+}
+
+@media (min-width: 1025px) {
+  header .scrollTop {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home .homeRt,
+  .search .searchRt,
+  .dashboard .dashboardRt {
+    max-width: none;
+  }
+  .customContainer {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    width: 100% !important;
+  }
+  .search .searchResults .productCardGrid,
+  .dashboard .productCardGrid {
+    margin-right: 10px;
+  }
+
+  .home .sectionTitle h2,
+  .search .sectionTitle h2,
+  .dashTitle {
+    font-size: 22px !important;
+  }
+
+  .home .homeLt,
+  .search .searchLt {
+    width: 100%;
+    max-width: none;
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .deskFilter {
+    display: none;
+  }
+
+  .home .hmSearch {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .home .hmSearch .searchInput {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .toggleRespDrawer.MuiButtonBase-root {
+    display: inline-flex !important;
+    border: none;
+    color: var(--primColor);
+  }
+
+  .toggleRespDrawer.MuiButtonBase-root .material-icons {
+    padding-right: 10px;
+  }
+
+  .filterAcc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .filterPanel .filterAcc .MuiPaper-root.MuiAccordion-root {
+    margin-right: 10px;
+    width: 100%;
+    position: static;
+    margin-top: 0;
+  }
+
+  .filterPanel .filterAcc .MuiCollapse-wrapper {
+    width: 100%;
+  }
+
+  .filterPanel .filterAcc .MuiAccordionSummary-root {
+    border: 1px solid #d8d8d8;
+    height: 40px;
+    min-height: initial;
+    border-radius: 50px;
+  }
+
+  .responsiveFilterDrawer .MuiPaper-root.MuiDrawer-paper {
+    padding: 25px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    min-height: 300px;
+    max-height: 90vh;
+    height: 100%;
+  }
+  .responsiveFilterDrawer .filterPanel .fpTitle {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .responsiveFilterDrawer .filterPanel .MuiAccordionDetails-root {
+    width: 100%;
+    padding: 10px 0;
+    max-height: 45vh;
+    overflow-y: auto;
+    padding-top: 20px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .MuiAccordionDetails-root small {
+    padding: 10px;
+  }
+
+  .responsiveFilterDrawer .filterPanel .filterCheck,
+  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox {
+    width: 100%;
+  }
+
+  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+    width: 25%;
+    z-index: 100;
+  }
+
+  .responsiveFilterDrawer .filterPanel .filterAcc .MuiAccordionSummary-root.Mui-expanded {
+    background: rgb(174 34 7 / 8%);
+    border-color: rgb(174 34 7 / 51%);
+  }
+
+  .dashboard .dashboardLt {
+    display: none;
+  }
+  .dashboard .dashboardRt {
+    width: 100%;
+  }
+  .filterPanel .priceSlider .MuiSlider-root {
+    width: 80%;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+    width: 32%;
+  }
+
+  .search .productCardGrid,
+  .dashboard .productCardGrid {
+    width: 49%;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeSpecialItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .homeSpecialItems .specialEvent {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .homeSpecialItems .specialEvent .specialEventLt {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .homeSpecialItems .specialEvent .seActBtn {
+    width: 100%;
+    max-width: none;
+  }
+  .homeSpecialItems .specialEvent .seImg,
+  .homeSpecialItems .specialEvent .seContent {
+    margin-right: 0;
+  }
+
+  .homeSpecialItems .specialEvent .seImg {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+    width: 50%;
+  }
+  .home .hmSearch .searchInput {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0px;
+  }
+  .toggleRespDrawer.MuiButtonBase-root {
+    width: max-content;
+    flex-wrap: nowrap;
+  }
+  .home .sectionTitle {
+    margin-bottom: 20px;
+  }
+  .filterPanel .filterAcc .MuiAccordionSummary-root {
+    min-height: 30px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+    width: 100%;
+  }
+  .responsiveFilterDrawer .MuiPaper-root.MuiDrawer-paper {
+    min-height: 65vh;
+  }
+  .productNav {
+    display: none;
+  }
+  .customContainer {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .sectionTitle h2,
+  .search .sectionTitle h2,
+  .dashTitle {
+    font-size: 20px !important;
+  }
+  .specialEvent .seImg {
+    max-width: none !important;
+  }
+  .specialEvent .seImg img {
+    height: 150px !important;
+  }
+  .pagination-wrapper {
+    margin: 20px;
+  }
+  .pagination-wrapper > div {
+    font-size: 12px;
+  }
+
+  .pagination-wrapper h6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .pagination-wrapper .MuiPagination-root {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterAcc {
+    justify-content: flex-start;
+  }
+
+  .filterPanel .filterAcc .MuiPaper-root.MuiAccordion-root {
+    margin: 0 10px 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .homeSpecialItems .specialEvent {
+    width: 100%;
+  }
+  .specialEvent .seImg {
+    max-width: none;
+  }
+  .home .sectionTitle h2,
+  .search .sectionTitle h2,
+  .dashTitle {
+    font-size: 18px !important;
+  }
+  .home .sectionTitle > object {
+    width: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .filterPanel .filterAcc .MuiPaper-root.MuiAccordion-root {
+    margin: 0 10px 10px 0;
+  }
+}

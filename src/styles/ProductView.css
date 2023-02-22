@@ -1,0 +1,611 @@
+.productView {
+  margin-top: 50px;
+}
+
+.productViewSlider .productView {
+  margin-top: 0;
+}
+
+.productView .pvLt {
+  width: 55%;
+  padding-right: 35px;
+}
+.productView .pvRt {
+  width: 40%;
+}
+
+.productView .image-gallery-thumbnails-container {
+  text-align: start;
+}
+
+.productView .image-gallery-icon {
+  filter: none;
+  background: #00000036;
+  padding: 10px;
+}
+
+.productView .image-gallery-icon:hover {
+  color: var(--primColor);
+}
+
+.productView .image-gallery-thumbnail {
+  border: 2px solid transparent;
+}
+
+.productView .image-gallery-thumbnail.active,
+.productView .image-gallery-thumbnail:hover,
+.productView .image-gallery-thumbnail:focus {
+  outline: none;
+  border: 2px solid var(--primColor);
+  border-radius: 5px;
+}
+
+.productView .image-gallery-thumbnail .image-gallery-thumbnail-image {
+  height: 54px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.productView .image-gallery-content .image-gallery-slide .image-gallery-image {
+  height: 100%;
+  max-height: 500px;
+  min-height: 300px;
+  cursor: initial;
+}
+
+.productView .image-gallery-content .image-gallery-slide > div {
+  background: #efefef;
+}
+
+.theme-dark .productView .image-gallery-content .image-gallery-slide > div {
+  background: #2c313a;
+}
+
+.productView
+  .image-gallery-content.fullscreen
+  .image-gallery-slide
+  .image-gallery-image {
+  max-height: 100vh;
+}
+
+.productView .pvRt h1 {
+  font-size: 26px;
+  line-height: 45px;
+  font-family: var(--FuturaStdMedium);
+  color: var(--textColor);
+  margin: 0 0 25px;
+  text-align: left;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.productView .pvRt .featuredOn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.productView .pvRt .featuredOn h6 {
+  color: #9f9f9f;
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+  margin: 0;
+  padding-right: 15px;
+}
+
+.productView .pvRt .featuredOn img {
+  width: 125px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.productView .pvMiscActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.productView .productDescription ul li {
+  display: block;
+  text-align: left;
+}
+.productView .productDescription p {
+  display: block;
+  text-align: left;
+}
+.productView .productDescription label {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: gray;
+  font-weight: 600;
+  display: block;
+  text-align: left;
+}
+.productView .pvMiscActions .favoriteCheck {
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+  width: max-content;
+  height: 35px;
+}
+
+.productView .pvMiscActions .favoriteCheck label {
+  margin-top: 0;
+}
+
+.productView .pvMiscActions .MuiButton-root {
+  background: #a79595;
+  border-radius: 25px;
+  height: 35px;
+  width: max-content;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.productView .pvMiscActions .MuiButton-root .MuiButton-label {
+  color: #fff;
+  font-size: 15px;
+  font-family: var(--FuturaStdMedium);
+  text-transform: initial;
+}
+
+.productView .pvPrimActions {
+  background: rgb(244, 251, 244);
+  border: 1px solid rgb(227, 227, 227);
+  padding: 30px;
+}
+
+.theme-dark .productView .pvPrimActions {
+  background: #383f4a;
+  border: 1px solid #222831;
+  color: var(--textColor);
+  position: relative;
+}
+
+.productView .pvPrimActions h2 {
+  font-family: var(--FuturaStdMedium);
+  margin: 0;
+  align-items: center;
+  display: flex;
+  font-size: 28px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.productView .pvPrimActions h2 span {
+  background-color: white;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 7px 18px;
+  margin-left: 15px;
+}
+
+.productView .pvPrimActions .biddingCnt {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  gap: 10px;
+}
+
+.productView .pvPrimActions .biddingCnt .customInput {
+  margin-bottom: 0;
+}
+
+.productView .pvPrimActions .pvActDivider {
+  font-size: 14px;
+  font-family: var(--FuturaStdBold);
+  color: #7f7f7f;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.productView .pvPrimActions .MuiInputBase-root {
+  height: 50px;
+  border-radius: 0;
+}
+
+.productView .productDetails .MuiPaper-root {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.productView .productDetails .MuiPaper-root .MuiButtonBase-root.MuiTab-root {
+  color: #4e4e4e;
+  font-size: 16px;
+  font-family: var(--FuturaStdMedium);
+  text-transform: initial;
+}
+
+.theme-dark
+  .productView
+  .productDetails
+  .MuiPaper-root
+  .MuiButtonBase-root.MuiTab-root,
+.theme-dark .productView .productDetails .tabBody {
+  color: var(--textColor);
+}
+
+.theme-dark .productView .productDetails .tabBody .content *,
+.theme-dark .productViewSlider .productDetails .content * {
+  color: var(--textColor) !important;
+  font-family: var(--FuturaStdBook);
+}
+
+.productView
+  .productDetails
+  .MuiPaper-root
+  .MuiButtonBase-root.MuiTab-root.Mui-selected {
+  color: var(--primColor);
+}
+
+.productView .productDetails .MuiPaper-root .MuiTabs-indicator {
+  background-color: var(--primColor);
+}
+
+.productView .productDetails {
+  background: #f4f4f4;
+  padding: 45px;
+  margin: 50px 0;
+}
+
+.theme-dark .productView .productDetails {
+  background: #323a46;
+}
+
+.productView .productDetails .tabBody {
+  padding: 20px;
+  background: var(--backgroundColor);
+  margin-top: 30px;
+  text-align: left;
+  font-size: 16px;
+  font-family: var(--FuturaStdLight);
+  color: #3e3e3e;
+}
+
+.productView .similarItems .slick-slide {
+  padding: 10px 0;
+}
+
+.productView .similarItems .slick-slide {
+  padding-right: 10px;
+}
+
+.productView .similarItems {
+  margin-bottom: 80px;
+}
+
+.productView .similarItems h3 {
+  font-size: 20px;
+  color: #232323;
+  font-family: var(--FuturaStdMedium);
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.productView .pvAccordian .MuiButtonBase-root {
+  background: #f4f4f4;
+}
+
+.theme-dark .productView .pvAccordian .MuiButtonBase-root {
+  background: #323a46;
+  color: var(--textColor);
+}
+
+.productView .pvAccordian .MuiCollapse-container {
+  text-align: start;
+}
+
+.theme-dark .productView .pvAccordian .MuiCollapse-container {
+  color: var(--textColor);
+}
+
+.productView .mobileView {
+  padding: 15px !important;
+  background: var(--backgroundColor);
+}
+
+.productView .mobileView .MuiAccordion-root {
+  margin-bottom: 5px;
+}
+
+.productView .mobileView .MuiAccordion-root:before {
+  display: none;
+}
+
+.productView .viewFull {
+  font-size: 16px;
+  font-family: var(--FuturaStdMedium);
+  background: var(--tertColor);
+  padding: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.productView .viewFull .material-icons {
+  padding-right: 10px;
+}
+
+/* image-thumnail css */
+.productView .pvLt .image-gallery-thumbnails-wrapper.left {
+  margin-right: 15px;
+}
+.productView .pvLt .image-gallery-thumbnails-wrapper.left,
+.image-gallery-thumbnails-wrapper.left
+  .image-gallery-thumbnails
+  .image-gallery-thumbnail {
+  width: 54px;
+  border-radius: 0;
+  border: none;
+}
+.productView .prTmrCntn .estmtChkd {
+  color: var(--textColor);
+  margin: 0;
+  font-size: 16px;
+}
+.mnBdCntnr .primButton .fs-16 {
+  font-size: 16px;
+}
+.productView .prTmrCntn .timerContent {
+  color: #70a340;
+  font-family: var(--FuturaStdMedium);
+  font-size: 16px;
+}
+.productView .bdFldLablel label.scrLbl {
+  display: flex;
+  align-items: center;
+}
+.productView .bdFldLablel label.scrLbl .material-icons {
+  font-size: 16px;
+}
+.productView .bdFldLablel label {
+  color: rgb(36, 36, 36);
+  font-weight: normal;
+  margin: 0;
+  font-size: 14px;
+}
+.theme-dark .productView .bdFldLablel label {
+  color: var(--textColor);
+}
+
+.productView .bdFldLablel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.productView .trndgWrpr {
+  color: gray;
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+}
+.productView .trndgWrpr .material-icons {
+  color: orangered;
+  font-size: 20px;
+}
+.productView .shpnTtle {
+  font-size: 16px;
+  font-weight: bold;
+}
+.productView .productDescription {
+  padding: 25px 0;
+}
+.productView .productTxtContainer .shpnTtle {
+  font-size: 16px;
+  font-weight: bold;
+}
+.productView .productTxtContainer .shpngPlcyDtl {
+  padding-left: 0;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.productView .productTxtContainer .shpngPlcyDtl li {
+  list-style: none;
+  padding-left: 0;
+  font-size: 15px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.productView .productTxtContainer .shpngPlcyDtl li span {
+  color: gray;
+  margin-right: 10px;
+  padding-left: 5px;
+}
+.productView .productTxtContainer .vwPlcLnk {
+  padding: 15px 0;
+}
+
+.theme-dark .productTxtContainer {
+  color: var(--textColor);
+}
+
+.auctionDetailsflexWrap .actnrDtl .inrWrpr {
+  display: flex;
+  align-items: flex-start;
+}
+.auctionDetailsflexWrap .actnrDtl .lgContainer {
+  width: 130px;
+  min-width: 130px;
+  height: 130px;
+  margin-right: 18px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(227, 227, 227);
+}
+.auctionDetailsflexWrap .actnrDtl .lgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.auctionDetailsflexWrap .actnrDtl h5 {
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  margin-right: 5px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.auctionDetailsflexWrap .actnrDtl .rtng {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  width: max-content;
+  margin: 0;
+}
+.productView .productTxtContainer .btnStck {
+  display: flex;
+  align-items: center;
+}
+.auctionDetailsflexWrap .actnrDtl .outlnBtn {
+  font-size: 12px;
+  height: 30px;
+  letter-spacing: 1px;
+  line-height: 12px;
+  background-image: none;
+  border-radius: 0px;
+  border: 1px solid #70a340;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  color: #70a340;
+}
+.auctionDetailsflexWrap .actnrDtl .primBtn {
+  font-size: 12px;
+  height: 30px;
+  letter-spacing: 1px;
+  line-height: 12px;
+  background-image: none;
+  border-radius: 0px;
+  border: 1px solid #70a340;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #70a340;
+  color: rgb(255, 255, 255);
+  width: 305px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  line-height: 14px;
+  margin-bottom: 10px;
+  height: 30px;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+.auctionDetailsflexWrap .actnrDtl .rtng .material-icons {
+  font-size: 20px;
+  color: #70a340;
+}
+.productView .pvPrimActions,
+.productView .pvLt .image-gallery {
+  position: sticky;
+  top: 5px;
+  z-index: 9;
+}
+
+.productViewSlider .productView .pvPrimActions,
+.productViewSlider .productView .pvLt .image-gallery {
+  position: relative;
+  z-index: 9;
+}
+
+.product-slider-close {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: var(--textColor);
+}
+
+.productView .skeletonWrapper {
+  box-shadow: none;
+}
+
+@media (max-width: 992px) {
+  .productView .pvLt {
+    width: 50%;
+    padding-right: 15px;
+  }
+  .productView .pvRt {
+    width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .productView .pvRt h1 {
+    font-size: 26px;
+  }
+  .productView .prTmrCntn .timerContent,
+  .productView .prTmrCntn .estmtChkd {
+    font-size: 14px;
+  }
+  .auctionDetailsflexWrap .actnrDtl .primBtn {
+    width: 200px;
+  }
+}
+@media (max-width: 700px) {
+  .productView .customContainer {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .productView .pvRt h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .productView .prTmrCntn .timerContent,
+  .productView .prTmrCntn .estmtChkd {
+    font-size: 15px;
+  }
+  .productView .pvLt,
+  .productView .pvRt {
+    width: 100%;
+  }
+  .productView .pvPrimActions {
+    position: sticky;
+    top: 85px;
+    z-index: 999;
+    padding: 15px;
+  }
+  .productView .bdFldLablel label {
+    font-size: 13px;
+  }
+  .productView .prTmrCntn .timerContent {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.productView .custom-modal .modal-dialog.modal-lg {
+  width: 40%;
+}
+.productView .custom-modal .modal-header {
+  border-bottom: none;
+  background-color: transparent;
+  height: 50px;
+}
+.add-credit-card .primButton {
+  width: 150px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .productViewDrawer.rightDrawer .customContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .productViewSkeleton .pvsAct {
+    width: 100%;
+  }
+}

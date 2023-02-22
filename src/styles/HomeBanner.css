@@ -1,0 +1,123 @@
+.homeBanner {
+  overflow: hidden;
+}
+
+.homeBanner .tagline {
+  /* background: #e5e5e5; */
+  background: #e5e5e50d;
+  padding: 12px;
+}
+
+.homeBanner .tagline h4 {
+  color: #b8c0f1;
+  font-size: 14px;
+  font-family: var(--FuturaStdExtraBold);
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  letter-spacing: 4.5px;
+}
+
+.homeBanner .hbCnt {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.homeBanner .hbCnt .hbLt {
+  width: 40%;
+  /* padding: 459px 90px 100px 60px; */
+  /* padding-top: 70px;
+  padding-bottom: 70px; */
+}
+
+.homeBanner .hbCnt .hbLt h1 {
+  font-size: 59px;
+  /* color: #2a3249; */
+  color: white;
+  margin-bottom: 25px;
+  font-family: var(--FuturaStdMedium);
+}
+
+.homeBanner .hbCnt .hbLt .primButton {
+  width: max-content;
+}
+
+.homeBanner .hbCnt .hbRt {
+  width: 60%;
+}
+
+.homeBanner .hbCnt .hbRt img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.homeBanner .bannerThumb {
+  background: #eae5df;
+  margin-top: -10px;
+}
+
+.homeBanner .hbCatTitle h6 {
+  color: #2a3249;
+  font-family: var(--FuturaStdMedium);
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.homeBanner .bannerThumb .slick-slide.slick-active.slick-current h6 {
+  color: var(--primColor);
+}
+
+/* .homeBanner .Typist {
+  display: inline-block;
+} */
+/* .homeBanner .hbRt {
+  display: none;
+} */
+@media (max-width: 991px) {
+  .homeBanner .hbCnt {
+    flex-wrap: wrap;
+  }
+  .homeBanner .hbCnt .hbLt,
+  .homeBanner .hbCnt .hbRt {
+    width: 100%;
+    padding: 45px 30px;
+  }
+  .homeBanner .hbCnt .hbLt {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 445px) {
+  .homeBanner .tagline h4 {
+    font-size: 10px;
+    text-align: center;
+  }
+  .homeBanner .hbCnt .hbLt,
+  .homeBanner .hbCnt .hbRt {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .homeBanner .hbCnt .hbRt img {
+    height: 180px;
+  }
+  .homeBanner .hbCnt .hbLt h1 {
+    font-size: 35px;
+  }
+  .homeBanner .tagline h4 {
+    letter-spacing: 3px;
+  }
+  .auctionCard .auctionInfo {
+    padding: 10px;
+    padding-bottom: 5px;
+  }
+  .homeBanner .hbCnt .hbLt,
+  .homeBanner .hbCnt .hbRt {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,35 @@
+.customDialog .MuiPaper-root.MuiDialog-paper {
+    min-width: 300px;
+}
+
+.customDialog .MuiPaper-root.MuiDialog-paper .customInput,
+.customDialog .MuiPaper-root.MuiDialog-paper .customSelect {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.customDialog .MuiDialogContent-root {
+    padding-bottom: 20px;
+}
+
+.customDialog .actionWrapper {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.customDialog .actionWrapper > button:first-child {
+    margin-inline-end: 30px;
+}
+
+.customDialog .MuiDialogTitle-root {
+    padding-bottom: 10px;
+}
+
+.customDialog .actionWrapper.secondaryActions {
+    justify-content: center;
+}
+
+.customDialog .MuiDialogContent-root h5 {
+    font-size: 18px;
+}

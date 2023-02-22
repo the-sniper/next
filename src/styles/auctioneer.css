@@ -1,0 +1,539 @@
+html,
+body {
+  max-width: 100vw;
+  /* overflow-x: hidden; */
+}
+
+.auction-main-container {
+  position: relative;
+  z-index: 110;
+}
+
+.as-black-logo {
+  position: absolute;
+  top: 86px;
+}
+
+.auction-main-container p {
+  font-family: 'Avenir Book';
+}
+
+.auctioneer-wrapper {
+  min-height: 950px;
+  width: 100%;
+  position: relative;
+}
+
+.auctioneer-wrapper img.la-img,
+.compatible-wrapper .compatible-img {
+  filter: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auctioneer-wrapper .container {
+  position: relative;
+  z-index: 110;
+  padding: 250px 0;
+}
+
+.anw-head {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 60px;
+  text-align: left;
+  color: #090907;
+  font-family: 'Georgia';
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.anw-head:after {
+  width: 60%;
+  height: 3px;
+  border-radius: 1.5px;
+  background: #720000;
+  opacity: 0.14;
+  position: absolute;
+  max-width: 200px;
+}
+
+.anw-content {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 39px;
+  text-align: left;
+  color: #090907;
+  max-width: 350px;
+}
+
+.brown-btn-wrapper {
+  width: 179px;
+  height: 50px;
+  border-radius: 6px;
+  background: #8d4405;
+  border: 1px solid #8d4405;
+  color: #fff;
+  font-family: 'Avenir Book';
+}
+
+.brown-btn-wrapper:hover,
+.brown-btn-wrapper:focus {
+  background: #8d4405;
+  color: #fff;
+  text-decoration: none;
+}
+
+.bm-like {
+  width: 90%;
+  max-width: 1186px;
+  height: 300px;
+  border-radius: 150px;
+  background: #fff;
+  box-shadow: 0px 0px 40px #f0dec8;
+  position: relative;
+  z-index: 110;
+  margin: -100px auto 100px;
+  text-align: center;
+  padding: 35px 0;
+}
+
+.why-us-wrapper {
+  background: linear-gradient(#fff 0%, #fff8f0 100%);
+}
+
+.wug-text {
+  font-weight: normal;
+  font-size: 20px;
+  color: #848484;
+  opacity: 0.94;
+  text-transform: capitalize;
+  font-family: 'Avenir Book';
+}
+
+.why-us-head {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 35px;
+  text-align: center;
+  color: #000;
+  opacity: 0.94;
+  font-family: 'Georgia';
+}
+
+.why-us-wrapper .media {
+  padding: 100px 0 50px;
+}
+
+.why-us-wrapper .media-body {
+  padding: 0 75px;
+  font-family: 'Avenir Book';
+}
+
+.mu-media-head {
+  font-weight: normal;
+  font-size: 30px;
+  color: #000;
+  opacity: 0.94;
+  margin: 25px 0;
+  font-family: 'Avenir Roman';
+}
+
+.wu-img-right {
+  padding-left: 100px;
+  margin-right: -112px;
+}
+
+.wu-img-left {
+  padding-right: 100px;
+  margin-left: -112px;
+}
+
+.mu-media-head1 {
+  font-weight: normal;
+  font-size: 26px;
+  color: #000;
+  opacity: 0.94;
+  margin: 25px 0;
+}
+
+.etu-content .col-sm-4 p,
+.etu-content .col-sm-4 h4 {
+  max-width: 240px;
+  margin: 25px auto 0;
+}
+
+.etu-content .col-sm-4 h4 {
+  font-family: 'Georgia';
+}
+
+.compatible-wrapper {
+  position: relative;
+  min-height: 560px;
+  margin: 100px 0 0;
+}
+
+.compatible-wrapper .container {
+  position: relative;
+  z-index: 110;
+  padding: 50px 0;
+}
+
+.compatible-wrapper .anw-head {
+  max-width: 275px;
+  font-size: 36px;
+  margin: -75px 0 35px;
+}
+
+.compatible-wrapper .anw-content {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.45;
+  text-align: left;
+  color: #090907;
+  max-width: 375px;
+  margin: 35px 0 0;
+}
+
+.ss-head {
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 47px;
+  text-align: left;
+  color: #0a1219;
+  font-family: 'Avenir Roman';
+}
+
+.ss-head span {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 37px;
+}
+
+.more-income-media {
+  margin-bottom: 150px;
+  align-items: inherit;
+  -ms-flex-align: inherit;
+}
+
+.more-income-media .media-body {
+  background: #fafafa;
+  padding: 75px;
+  text-align: center;
+  font-family: 'Avenir Book';
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+.more-income-media .media-body h4 {
+  font-family: 'Georgia';
+  font-weight: normal;
+  font-style: italic;
+  font-size: 35px;
+  color: #000;
+  opacity: 0.94;
+}
+
+.more-income-media .media-body > * {
+  max-width: 560px;
+  margin: 0 auto 30px;
+}
+
+.revenue-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+  font-family: 'DDINCondensed';
+}
+
+.pink-text {
+  color: #c3005e;
+}
+
+.grn-text {
+  color: #0da386;
+}
+
+.rv-percentage {
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 1.67;
+  color: #0a1219;
+  margin: 5px auto;
+  font-family: 'DDINCondensed';
+}
+
+.per-amt {
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  opacity: 0.94;
+  line-height: 1.67;
+  font-family: 'Avenir Book';
+}
+
+.black_btn {
+  width: 200px;
+  height: 55px;
+  border-radius: 6px;
+  background: #0a1219;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  margin-right: 45px;
+}
+
+.cp-link {
+  font-family: 'Avenir Book';
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 1.67;
+  color: #0a1219;
+}
+
+.demo-wrap {
+  margin-top: 30px;
+}
+
+.auction-main-container p.asft-copy-txt {
+  font-family: 'Avenir Book';
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 35px;
+  text-align: left;
+  color: #171717;
+  max-width: 245px;
+  margin: 100px 0 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .why-us-wrapper .media-body,
+  .wu-img-right,
+  .wu-img-left {
+    width: 50%;
+    padding: 0 15px;
+    margin: 0;
+  }
+
+  .more-income-media {
+    flex-wrap: wrap;
+  }
+
+  .more-income-media .media-left img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .more-income-media .media-body,
+  .more-income-media .media-left {
+    width: 100%;
+  }
+
+  .wu-img-right img,
+  .wu-img-left img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .compatible-wrapper {
+    min-height: 350px;
+  }
+
+  .compatible-wrapper .container {
+    max-width: 362px;
+    margin: 0;
+    padding: 25px 15px;
+  }
+
+  .more-income-media {
+    flex-wrap: wrap;
+  }
+
+  .why-us-wrapper .media {
+    padding: 30px 0;
+    align-items: center;
+    -ms-flex-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .auction-main-container p.asft-copy-txt {
+    margin-top: 0;
+  }
+
+  .auction-main-container img,
+  .more-income-media .media-body > * {
+    max-width: 100%;
+  }
+
+  .auctioneer-wrapper {
+    min-height: 350px;
+    width: 100%;
+    position: relative;
+  }
+
+  .auctioneer-wrapper img.la-img,
+  .compatible-wrapper .compatible-img {
+    height: 275px;
+  }
+
+  .auctioneer-wrapper .container {
+    padding: 55px 15px;
+  }
+
+  .anw-head,
+  .compatible-wrapper .anw-head {
+    font-size: 24px;
+    margin: 0 0 15px;
+  }
+
+  .anw-content {
+    max-width: 165px;
+    font-size: 14px;
+    line-height: 1.67;
+  }
+
+  .brown-btn-wrapper {
+    width: 140px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .anw-head:after {
+    width: 110px;
+  }
+
+  .bm-like {
+    width: 90%;
+    border-radius: 12px;
+    padding: 10px;
+    height: 195px;
+    margin: -118px auto 50px;
+  }
+
+  .bm-like p,
+  .auction-main-container p {
+    font-size: 13px;
+  }
+
+  .bm-like .list-inline li img {
+    max-width: 125px;
+  }
+  .why-us-wrapper .media {
+    padding: 35px 0 0;
+    flex-wrap: wrap;
+  }
+
+  .why-us-wrapper .media-body {
+    padding: 0 15px;
+  }
+
+  .mu-media-head {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+
+  .wu-img-right,
+  .wu-img-left {
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: center;
+  }
+
+  .wu-img-right img,
+  .wu-img-left img {
+    max-width: 90%;
+  }
+
+  .media-cr-xs {
+    flex-direction: column-reverse;
+  }
+
+  .etu-content .col-sm-4 {
+    margin-top: 25px;
+  }
+
+  .more-income-media,
+  .lauc-media {
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+
+  .more-income-media .media-body,
+  .lauc-media .media-body {
+    padding: 25px 15px;
+    width: 100%;
+  }
+
+  .rv-percentage {
+    font-size: 36px;
+  }
+
+  .ss-head {
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  .ss-head span {
+    font-size: 20px;
+  }
+
+  .compatible-wrapper {
+    margin: 0 auto;
+    min-height: auto;
+  }
+
+  .compatible-wrapper .compatible-img {
+    height: auto;
+    position: relative;
+    margin: 0 0 30px;
+    max-height: 200px;
+  }
+
+  .compatible-wrapper .container {
+    padding: 0 15px;
+    min-height: auto;
+  }
+
+  .compatible-wrapper .anw-content {
+    margin: 0 0 25px;
+    font-size: 14px;
+  }
+
+  .more-income-media .media-left {
+    width: 100%;
+  }
+
+  .more-income-media .media-left img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .as-black-logo {
+    top: 10px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 479px) {
+  .demo-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .demo-wrap .black_btn {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}

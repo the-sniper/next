@@ -1,0 +1,6 @@
+export const USER_LOADED = "USER_LOADED";
+export const LOGOUT = "LOGOUT";
+export const RESPONSE_STATUS = "RESPONSE_STATUS";
+export const CLEAR_RESPONSE = "CLEAR_RESPONSE";
+export const LOAD_ALL_LOGIN = "LOAD_ALL_LOGIN";
+export const LOAD_ALL_REGISTER = "LOAD_ALL_REGISTER";

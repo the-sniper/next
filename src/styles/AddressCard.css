@@ -1,0 +1,99 @@
+.addressCard {
+  padding: 25px !important;
+  position: relative;
+}
+
+.addressCard .MuiButton-label {
+  flex-wrap: wrap !important;
+  text-align: left;
+  text-transform: initial;
+  font-family: var(--FuturaStdMedium);
+}
+
+.addressCard {
+  border: 1px dashed #a6adb4 !important;
+}
+
+.theme-dark .addressCard {
+  border: 1px dashed #727b88 !important;
+}
+
+.addressCard.new h5 {
+  font-size: 16px;
+  color: #646464;
+  font-family: var(--FuturaStdMedium);
+  margin: 12px 0 0;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.theme-dark .addressCard.new h5{
+  color: var(--textColor);
+}
+
+.addressCard h3 {
+  font-size: 16px;
+  color: #444d63;
+  margin: 0 0 15px;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.theme-dark .addressCard h3 {
+  color: #b4bbcc;
+}
+
+.addressCard h4 {
+  font-size: 16px;
+  color: #788094;
+  margin: 0 0 5px;
+  width: 100%;
+}
+
+.addressCard h4:last-child {
+  margin-bottom: 0;
+}
+
+.addressCard .selectIcon {
+  color: #dbd9e2;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-dark .addressCard .selectIcon {
+  color: #4e5765;
+}
+
+.addressCard .selectIcon.checked {
+  color: #06b473;
+}
+
+.addressCard .addressActions {
+  display: inline-flex;
+}
+
+.addressCard .addressActions .MuiButton-root {
+  min-width: max-content;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #a5a5a5;
+}
+
+.addressCard .addressActions button:nth-child(1):hover {
+  color: #789be8;
+}
+
+.addressCard .addressActions button:nth-child(2):hover {
+  color: #e87878;
+}
+
+.addressCard .secButton button {
+  background: transparent;
+}
+
+.theme-dark .addressCard .secButton button:hover {
+  color: var(--primColor);
+}

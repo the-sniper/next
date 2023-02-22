@@ -1,0 +1,617 @@
+/* html,body {
+  max-width:100vw;
+  overflow-x: hidden;
+} */
+
+.liquidation-main-container {
+  position: relative;
+  z-index: 110;
+}
+
+.liquidation-main-container p {
+  font-family: 'Futura Medium';
+}
+
+.liquid-wrapper {
+  height: 884px;
+  width: 100%;
+  position: relative;
+}
+
+.liquid-wrapper img.la-img,
+.compatible-wrapper .compatible-img {
+  filter: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.liquid-wrapper .container {
+  position: relative;
+  z-index: 110;
+  padding: 65px 0;
+  text-align: center;
+}
+
+.lw-head {
+  font-weight: 500;
+  font-size: 60px;
+  color: #fff;
+  position: relative;
+  margin: 45px auto 15px;
+}
+
+.liquidation-main-container p.lw-content {
+  font-family: 'SignPainter';
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 39px;
+  text-align: center;
+  color: #fff;
+}
+
+.liq-blue-btn {
+  width: 179px;
+  height: 50px;
+  border-radius: 6px;
+  background: #2869a8;
+  border: 1px solid #2869a8;
+  color: #fff;
+}
+
+.brown-btn-wrapper:hover,
+.brown-btn-wrapper:focus {
+  background: #2869a8;
+  color: #fff;
+  text-decoration: none;
+}
+
+.liq-img-center {
+  margin: 50px auto;
+  box-shadow: 0px 50px 99px rgb(0 0 0 / 20%);
+  max-width: 1006px;
+}
+
+.lauc-bm-like {
+  width: calc(100% - 30px);
+  max-width: 981px;
+  height: 203px;
+  border-radius: 18px;
+  background: transparent;
+  border: 1px solid #c7c7c7;
+  margin: 250px auto 50px;
+  text-align: center;
+  position: relative;
+}
+
+.why-us-wrapper {
+  background: linear-gradient(#fff 0%, #fff8f0 100%);
+}
+
+.la-wug-text {
+  font-weight: normal;
+  font-size: 20px;
+  color: #848484;
+  text-transform: capitalize;
+  font-family: 'Avenir Book';
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 90%;
+  display: inline-block;
+  max-width: 588px;
+  background: #fff;
+  top: -15px;
+}
+
+.la-wug-text.la-last {
+  top: inherit;
+  bottom: -15px;
+}
+
+.why-us-head {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 35px;
+  text-align: center;
+  color: #000;
+  opacity: 0.94;
+  font-family: 'Futura Medium';
+}
+
+.why-us-wrapper .media {
+  padding: 100px 0 50px;
+}
+
+.why-us-wrapper .media-body {
+  padding: 0 75px;
+  font-family: 'Avenir Book';
+}
+
+.mu-media-head {
+  font-weight: normal;
+  font-size: 30px;
+  color: #000;
+  opacity: 0.94;
+  margin: 25px 0;
+  font-family: 'Avenir Roman';
+}
+
+.wu-img-right {
+  padding-left: 100px;
+  margin-right: -112px;
+}
+
+.wu-img-left {
+  padding-right: 100px;
+  margin-left: -112px;
+}
+
+.mu-media-head1 {
+  font-weight: normal;
+  font-size: 26px;
+  color: #000;
+  opacity: 0.94;
+  margin: 25px 0;
+}
+
+.la-etu-content .col-sm-4 p,
+.la-etu-content .col-sm-4 h4 {
+  max-width: 240px;
+  margin: 25px auto 0;
+  font-family: 'Futura Medium';
+}
+
+.compatible-wrapper {
+  position: relative;
+  min-height: 560px;
+  margin: 100px 0 0;
+}
+
+.compatible-wrapper .container {
+  position: relative;
+  z-index: 110;
+  padding: 50px 0;
+}
+
+.compatible-wrapper .lw-head {
+  max-width: 275px;
+  font-size: 36px;
+  margin: -75px 0 35px;
+  color: #000;
+  font-family: 'Futura Medium';
+}
+
+.liquidation-main-container .compatible-wrapper p.lw-content {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.45;
+  text-align: left;
+  color: #090907;
+  max-width: 375px;
+  margin: 35px 0 0;
+  font-family: 'Futura Medium';
+}
+
+.la-ss-head {
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 47px;
+  text-align: left;
+  color: #0a1219;
+  font-family: 'Futura Medium';
+}
+
+.la-ss-head span {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 37px;
+}
+
+.la-more-income-media {
+  margin-bottom: 150px;
+  align-items: inherit;
+  -ms-flex-align: inherit;
+}
+
+.la-more-income-media .media-body {
+  background: #fafafa;
+  padding: 75px;
+  text-align: center;
+  font-family: 'Avenir Book';
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+.la-more-income-media .media-body h4 {
+  font-family: 'Futura Medium';
+  font-weight: normal;
+  font-size: 35px;
+  color: #000;
+  opacity: 0.94;
+}
+
+.la-more-income-media .media-body > * {
+  max-width: 560px;
+  margin: 0 auto 30px;
+}
+
+.la-revenue-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+  font-family: 'DDINCondensed';
+}
+
+.pink-text {
+  color: #c3005e;
+}
+
+.grn-text {
+  color: #0da386;
+}
+
+.rv-percentage {
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 1.67;
+  color: #0a1219;
+  margin: 5px auto;
+  font-family: 'DDINCondensed';
+}
+
+.per-amt {
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  opacity: 0.94;
+  line-height: 1.67;
+  font-family: 'Avenir Book';
+}
+
+.black_btn {
+  width: 200px;
+  height: 55px;
+  border-radius: 6px;
+  background: #0a1219;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  margin-right: 45px;
+}
+
+.la-cp-link {
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 1.67;
+  color: #0a1219;
+  font-family: 'Futura Medium';
+}
+
+.demo-wrap {
+  margin-top: 30px;
+}
+
+.liquidation-main-container p.asft-copy-txt {
+  font-family: 'Avenir Book';
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 35px;
+  text-align: left;
+  color: #171717;
+  max-width: 245px;
+  margin: 100px 0 20px;
+}
+
+.lauc-live-auctioneer {
+  background: #003058;
+  margin: 150px auto 75px;
+  padding: 65px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.lau-hiw-head {
+  margin-bottom: 75px;
+  font-weight: 500;
+  font-size: 33px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Futura Medium';
+}
+
+.lhw-img-box {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lauc-live-auctioneer .la-etu-content .col-sm-4 h4 {
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  margin-top: 75px;
+  margin-bottom: 0px;
+}
+
+.la-hiw-num {
+  font-weight: 500;
+  font-size: 113px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.19;
+  position: absolute;
+  left: 0;
+  top: -55px;
+  font-family: 'Futura Medium';
+}
+
+.lhw-con-box,
+.lhw-con-box h4,
+.lhw-con-box p {
+  position: relative;
+  z-index: 110;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .why-us-wrapper .media-body,
+  .wu-img-right,
+  .wu-img-left {
+    width: 50%;
+    padding: 0 15px;
+    margin: 0;
+  }
+
+  .la-more-income-media {
+    flex-wrap: wrap;
+  }
+
+  .la-more-income-media .media-left img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .la-more-income-media .media-body,
+  .la-more-income-media .media-left {
+    width: 100%;
+  }
+
+  .wu-img-right img,
+  .wu-img-left img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .compatible-wrapper {
+    min-height: 350px;
+  }
+
+  .compatible-wrapper .container {
+    max-width: 362px;
+    margin: 0;
+    padding: 25px 15px;
+  }
+
+  .la-more-income-media {
+    flex-wrap: wrap;
+  }
+
+  .why-us-wrapper .media {
+    padding: 30px 0;
+    align-items: center;
+    -ms-flex-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .lauc-live-auctioneer {
+    margin: 50px auto 25px;
+    padding: 25px 0;
+  }
+  .lauc-bm-like {
+    padding: 40px 0;
+    margin: 25px auto;
+  }
+
+  .lau-hiw-head {
+    margin-bottom: 0;
+  }
+
+  .la-revenue-text {
+    font-size: 18px;
+  }
+
+  .liquidation-main-container p.asft-copy-txt {
+    margin-top: 0;
+  }
+
+  .liquidation-main-container img,
+  .la-more-income-media .media-body > * {
+    max-width: 100%;
+  }
+
+  .liquid-wrapper {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .liquid-wrapper img.la-img {
+    height: 65%;
+  }
+
+  .liquidation-main-container img.la-as-logo {
+    max-width: 175px;
+    margin: 0 0 20px;
+  }
+
+  .liq-img-center {
+    margin: 10px auto;
+  }
+
+  .compatible-wrapper .compatible-img {
+    height: 275px;
+  }
+
+  .liquid-wrapper .container {
+    padding: 55px 15px;
+  }
+
+  .lw-head,
+  .compatible-wrapper .lw-head {
+    font-size: 24px;
+    margin: 0 0 15px;
+  }
+
+  .liquidation-main-container p.lw-content.lw-content {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.67;
+  }
+
+  .brown-btn-wrapper {
+    width: 140px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .lw-head:after {
+    width: 110px;
+  }
+
+  .bm-like {
+    width: 90%;
+    border-radius: 12px;
+    padding: 10px;
+    height: 195px;
+    margin: -118px auto 50px;
+  }
+
+  .bm-like p,
+  .liquidation-main-container p {
+    font-size: 13px;
+  }
+
+  .bm-like .list-inline li img {
+    max-width: 125px;
+  }
+  .why-us-wrapper .media {
+    padding: 35px 0 0;
+    flex-wrap: wrap;
+  }
+
+  .why-us-wrapper .media-body {
+    padding: 0 15px;
+  }
+
+  .mu-media-head {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+
+  .wu-img-right,
+  .wu-img-left {
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: center;
+  }
+
+  .wu-img-right img,
+  .wu-img-left img {
+    max-width: 90%;
+  }
+
+  .media-cr-xs {
+    flex-direction: column-reverse;
+  }
+
+  .la-etu-content .col-sm-4 {
+    margin-top: 25px;
+  }
+
+  .la-more-income-media,
+  .lauc-media {
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+
+  .la-more-income-media .media-body,
+  .lauc-media .media-body {
+    padding: 25px 15px;
+    width: 100%;
+  }
+
+  .rv-percentage {
+    font-size: 36px;
+  }
+
+  .la-ss-head {
+    font-size: 18px;
+    line-height: 1.67;
+  }
+
+  .la-ss-head span {
+    font-size: 20px;
+  }
+
+  .compatible-wrapper {
+    margin: 0 auto;
+    min-height: auto;
+  }
+
+  .compatible-wrapper .compatible-img {
+    height: auto;
+    position: relative;
+    margin: 0 0 30px;
+    max-height: 200px;
+  }
+
+  .compatible-wrapper .container {
+    padding: 0 15px;
+    min-height: auto;
+  }
+
+  .compatible-wrapper .lw-content {
+    margin: 0 0 25px;
+    font-size: 14px;
+  }
+
+  .la-more-income-media .media-left {
+    width: 100%;
+  }
+
+  .la-more-income-media .media-left img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .as-black-logo {
+    top: 10px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 479px) {
+  .demo-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .demo-wrap .black_btn {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}

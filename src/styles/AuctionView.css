@@ -1,0 +1,791 @@
+.auctionView .MuiBreadcrumbs-root {
+  margin-top: 45px;
+}
+
+.auctionView .MuiBreadcrumbs-root a {
+  color: #333;
+}
+
+.auctionView .MuiBreadcrumbs-root p {
+  color: #969696;
+}
+
+.auctionView .auctionViewBanner {
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  gap: 0px;
+  margin-top: 20px;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.auctionView .auctionViewBanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auctionView .auctionViewBanner .actnMsgContainer {
+  position: absolute;
+  width: 250px;
+  bottom: 10px;
+  left: 10px;
+}
+
+.auctionView .auctionViewBanner .auctionMultipleBanner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  height: inherit;
+  overflow: hidden;
+}
+
+.auctionView .liveAuctionTag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #6c438e;
+  color: #fff;
+  height: 25px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: var(--FuturaStdMedium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+.auctionView .timeAuctionTag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f3bb23;
+  color: #222831;
+  height: 25px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: var(--FuturaStdMedium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+.auctionView .liveAuctionTag .material-icons,
+.auctionView .timeAuctionTag .material-icons {
+  padding: 0 5px;
+  font-size: 18px;
+}
+
+.auctionView .auctionDetails {
+  text-align: left;
+  margin: 30px 0;
+}
+
+.auctionView .auctionDetails .avMiscInfo {
+  font-size: 15px;
+  color: #656565;
+  margin: 0;
+}
+
+.theme-dark .auctionView .auctionDetails .avMiscInfo {
+  color: #89919c;
+}
+
+.auctionView .auctionDetails .avLt {
+  padding-right: 25px;
+  max-width: 70%;
+}
+
+.auctionView .auctionDetails .avLt h1 {
+  font-family: var(--FuturaStdMedium);
+  font-size: 26px;
+  color: #333;
+  margin: 25px 0 10px;
+}
+
+.theme-dark .auctionView .auctionDetails .avLt h1 {
+  color: #dedede;
+}
+
+.theme-light .auctionDetails .secButton button:hover {
+  color: var(--primColor);
+}
+
+.auctionView .auctionDetails .avLt h5 {
+  font-size: 16px;
+  color: var(--textColor);
+  margin: 0px 0 15px;
+}
+
+.auctionView .auctionDetails .avLt p {
+  font-size: 18px;
+  font-family: var(--FuturaStdLight);
+  color: #656565;
+  margin: 0px;
+  line-height: 26px;
+}
+
+.theme-dark .auctionView .auctionDetails .avLt p {
+  color: #abaeb3;
+}
+
+.auctionView .auctionDetails .avRt {
+  text-align: center;
+  background: #f8faf5;
+  padding: 30px;
+  max-width: 325px;
+  width: 100%;
+  height: 100%;
+}
+
+.auctionView .auctionDetails .avRt .secButton button {
+  background: transparent;
+}
+
+.theme-dark
+  .auctionView
+  .auctionDetails
+  .avRt
+  .secButton
+  .MuiButton-outlined.Mui-disabled {
+  border: 1px solid #7a818c;
+  color: #7a818c;
+}
+
+.theme-dark .auctionView .auctionDetails .avRt {
+  background: #323a46;
+}
+
+.auctionView .auctionDetails .primButton,
+.auctionView .auctionDetails .secButton {
+  margin-bottom: 20px;
+}
+
+.auctionView .auctionDetails small {
+  color: #656565;
+  line-height: 22px;
+}
+
+.theme-dark .auctionView .auctionDetails small {
+  color: var(--textColor);
+}
+
+.readMore {
+  padding: 0;
+  margin-top: 10px;
+}
+
+.readMore .MuiButton-label {
+  font-family: var(--sf-ui-semi-bold);
+  color: var(--textColor);
+}
+
+.auctionSearchForm {
+  background: var(--backgroundColor);
+  border-radius: 25px;
+  height: 45px;
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-dark .auctionSearchForm {
+  border: 1px solid #555f6d;
+}
+
+.auctionSearchForm input {
+  border: none;
+  margin-inline-end: 0;
+  height: 100%;
+  background: inherit;
+  border-radius: 25px;
+  /* border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; */
+  padding: 12px;
+  color: #848484;
+  width: -webkit-fill-available;
+}
+
+.auctionSearchForm button {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primColor);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  margin-inline-end: 0px;
+}
+
+.auctionSearchForm input:focus,
+.auctionSearchForm button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.auctionSearchForm input::placeholder {
+  color: #848484;
+}
+
+.auctionView .auctionMiscFilters .customSelect {
+  min-width: 150px;
+  margin: 0;
+}
+
+.auctionView .auctionSearchForm .form-control {
+  width: 100%;
+}
+
+.auctionLots .auctionMiscForm {
+  margin-bottom: 40px !important;
+}
+
+.auctionLots .lotAuctionlist {
+  margin-bottom: 30px !important;
+}
+
+.auctionView .alTitle {
+  font-size: 20px;
+  color: #232323;
+  font-family: var(--FuturaStdMedium);
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.theme-dark .auctionView .alTitle {
+  color: var(--textColor);
+}
+
+.auctionView .searchResults.Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 15px;
+}
+
+.auctionView .gridListToggle {
+  margin-right: 10px;
+}
+
+.auctionView .gridListToggle .MuiButtonBase-root.MuiButton-root {
+  min-width: max-content;
+  color: #8e8e8e;
+}
+
+.auctionView .gridListToggle .MuiButtonBase-root.MuiButton-root.active {
+  color: var(--primColor);
+}
+
+.auctionView .loadingCnt {
+  display: flex;
+  width: 100%;
+}
+
+.auctionView .loadingCnt > div {
+  width: 100%;
+}
+
+.auctionViewContainer .loadingCnt {
+  display: block;
+  width: 100%;
+}
+
+.auctionViewContainer .loadingCnt .skeletonWrapper {
+  box-shadow: none;
+}
+
+.auctionViewContainer .actnMs {
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  padding: 5px;
+  left: 0;
+}
+
+.auctionViewContainer .bidsSection {
+  height: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 0 !important;
+  width: 300px;
+}
+
+.auctionTypeTag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #d6aa36;
+  background: #f3bb231f;
+  padding: 15px 20px;
+  max-height: 50px;
+  height: 100%;
+  font-family: var(--FuturaStdMedium);
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  border: 1px dashed #ffdf88;
+  border-radius: 5px;
+}
+
+.theme-dark .auctionTypeTag {
+  color: #af8a29;
+  border: 1px dashed #a0853b;
+}
+
+.auctionTypeTag span {
+  padding-right: 10px;
+}
+
+.auctionViewContainer .lvAtnStrd {
+  height: 36px;
+}
+
+.donationThemeWrapper .prgrsContainer {
+  margin-bottom: 30px;
+}
+
+.donationThemeWrapper .prgrsContainer .stsCntnr {
+  margin-top: 8px;
+}
+
+.donationThemeWrapper .prgrsContainer h3 {
+  font-size: 30px;
+  font-family: var(--FuturaStdMedium);
+  margin-top: 0px;
+}
+
+.donationThemeWrapper .prgrsContainer p {
+  margin-bottom: 10px;
+}
+
+/* .donationThemeWrapper .prgrsContainer .prgrsBrCntnr {
+  width: 80%;
+} */
+
+.donationThemeWrapper .prgrsContainer .prgrsBrCntnr .progress {
+  height: 11px;
+  background: #c3c3c3;
+  border-radius: 100px;
+}
+
+.donationThemeWrapper .prgrsContainer .prgrsBrCntnr .progress .progress-bar {
+  border-radius: 100px;
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 175, 0, 1) 50%,
+    rgba(86, 255, 0, 1) 100%
+  );
+}
+
+.donationThemeWrapper .prgrsContainer .prgrsBrCntnr .progress .stsCntnr {
+  margin-top: 22px;
+}
+
+.donationThemeWrapper .prgrsContainer .prgrsBrCntnr .stsCntnr p {
+  color: #757575;
+  font-size: 16px;
+}
+
+.donationThemeWrapper .prgrsContainer .prgrsBrCntnr .stsCntnr p span {
+  font-size: 20px;
+}
+
+.donationThemeWrapper .dnrList {
+  max-width: 100%;
+  margin-left: auto;
+}
+
+.donationThemeWrapper .dnrList .hdrCntnr {
+  margin-bottom: 20px;
+}
+
+.donationThemeWrapper .dnrList .hdrCntnr h5 {
+  display: flex;
+  align-items: center;
+}
+
+.donationThemeWrapper .dnrList .hdrCntnr .shlAlBtn {
+  color: var(--primColor);
+}
+
+.donationThemeWrapper .dnrList .dnrCntnr .amtVl {
+  color: var(--primColor);
+}
+
+.donationThemeWrapper .dnrList .dnrCntnr {
+  padding: 12px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.donationThemeWrapper .dnrList .dnrCntnr h5 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.donationThemeWrapper .dnrList .dnrCntnr h5 span {
+  color: #b9b9b9;
+}
+
+.makDonBtn button {
+  background: #ff4f04;
+  border: none;
+}
+
+.eventTabs.MuiAppBar-root {
+  box-shadow: none;
+  margin: 20px auto 30px;
+  background-color: #fff;
+  /* width: max-content; */
+  position: sticky;
+  top: -1px;
+}
+
+.eventTabs.MuiAppBar-root .MuiTabs-root {
+  background-color: #f1f1f1;
+  border-radius: 15px;
+}
+
+.eventTabs .MuiTabs-root .MuiTabs-flexContainer button {
+  color: #333;
+  border-radius: 15px;
+}
+
+.eventTabs .MuiTabs-flexContainer {
+  justify-content: center;
+}
+
+.eventTabs .MuiTabs-root .MuiTabs-flexContainer button.Mui-selected {
+  background: var(--primColor);
+  color: #fff;
+}
+
+.eventTabs .MuiTabs-indicator {
+  background-color: var(--primColor);
+  display: none;
+}
+
+.charityCnt {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.charityCnt .charityLt{
+  position: sticky;
+  top: 60px;
+  height: max-content;
+}
+
+.charityCnt .eventDetails {
+  box-shadow: 0px 3px 30px #cccccc57;
+  padding: 15px 25px 25px;
+  border-radius: 5px;
+  border: 1px solid #f1f1f1;
+}
+
+.charityCnt .eventDetails .edTitle {
+  font-size: 15px;
+  font-family: var(--FuturaStdHeavy);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #3e3e3e;
+  margin-top: 10px;
+}
+
+.charityCnt .eventDetails .edInner {
+  /* display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px; */
+  margin-bottom: 25px;
+}
+
+.charityCnt .eventDetails .edInner:last-child {
+  margin-bottom: 0;
+}
+
+.charityCnt .eventDetails .edInner h4 {
+  font-size: 16px;
+  margin: 0;
+  color: #8d8d8d;
+  margin-bottom: 10px;
+}
+
+.charityCnt .eventDetails .edInner h5 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.charityRt .crTitle {
+  font-size: 24px;
+  font-family: var(--FuturaStdMedium);
+  margin-bottom: 20px;
+  color: var(--primColor);
+}
+
+.charityCnt .calBtn {
+  padding: 0;
+  margin-top: 5px;
+  color: var(--primColor);
+}
+
+.charityCnt .calBtn .MuiButton-label {
+  text-transform: initial;
+}
+
+@media (max-width: 991px) {
+  .auctionDetailsflexWrap {
+    flex-wrap: wrap;
+  }
+
+  .auctionView .auctionDetails .avLt {
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .auctionView .auctionDetails .auctionTypeTag {
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auctionView .MuiBreadcrumbs-root {
+    margin-top: 15px;
+  }
+
+  .auctionLots .auctionSearchForm {
+    width: 280px;
+    margin-bottom: 0 !important;
+  }
+
+  .auctionView .auctionViewBanner {
+    height: 100%;
+  }
+
+  .auctionView .auctionViewBanner img {
+    height: 200px;
+  }
+
+  .auctionViewContainer .actnMs {
+    left: initial;
+    right: 0;
+  }
+
+  .auctionViewContainer .bidsSection {
+    max-width: 250px;
+    max-height: 200px;
+    width: max-content;
+  }
+
+  .bidsSection .bidComment {
+    font-size: 12px;
+  }
+
+  .auctionLots .lotAuctionlist {
+    flex-wrap: wrap;
+  }
+
+  .auctionLots .auctionSearchForm {
+    width: 100%;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .auctionView .gridListToggle {
+    margin-right: 10px;
+    position: absolute;
+    top: -50px;
+    right: -18px;
+  }
+
+  .auctionLots .auctionMiscFilters {
+    position: relative;
+  }
+}
+
+@media (max-width: 700px) {
+  .auctionDetailsflexWrap {
+    flex-direction: column;
+  }
+
+  .auctionView .auctionDetails .avRt {
+    margin: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .auctionView .auctionMiscFilters .customSelect {
+    min-width: 140px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .auctionView .auctionDetails .avMiscInfo {
+    font-size: 14px;
+  }
+
+  .auctionView .auctionDetails .avLt h1 {
+    font-size: 16px;
+    margin: 15px 0 15px;
+  }
+
+  .auctionView .auctionDetails .avLt h5 {
+    font-size: 16px;
+    margin: 0px 0 10px;
+  }
+
+  .auctionView .auctionDetails .avLt p {
+    font-size: 13px;
+  }
+
+  .auctionView .auctionDetails .avLt {
+    padding-right: 0;
+  }
+
+  .auctionLots .lotAuctionlist {
+    flex-direction: column;
+  }
+
+  .auctionView .gridListToggle {
+    display: none;
+  }
+
+  .auctionLots .auctionMiscFilters {
+    position: relative;
+    justify-content: space-between !important;
+  }
+
+  .auctionLots .auctionSearchForm {
+    width: 100%;
+    margin-bottom: 25px !important;
+  }
+}
+
+.auctionView .custom-modal .modal-dialog.modal-lg {
+  width: 40%;
+}
+
+.auctionView .custom-modal .modal-header {
+  border-bottom: none;
+  background-color: transparent;
+  height: 50px;
+}
+
+.add-credit-card .primButton {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.donationPageWrapper {
+  background: url('../assets/images/donback.png');
+  padding: 42px;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.donationPageWrapper .donationFormWrapper {
+  max-width: 600px;
+}
+
+.donationPageWrapper .pyhdrTtle {
+  background: #b6cdda;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #3b505d;
+}
+
+.donAmountRadio .RadioBox {
+  margin-bottom: 40px;
+}
+
+.donAmountRadio .RadioBox .MuiFormGroup-root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.donAmountRadio .RadioBox .MuiFormGroup-root .MuiRadio-root {
+  display: none;
+}
+
+.donAmountRadio .RadioBox .MuiFormGroup-root .MuiFormControlLabel-root {
+  border: 1px solid var(--primColor);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  color: var(--primColor);
+  background-color: white;
+}
+
+.donAmountRadio .RadioBox .MuiFormGroup-root .MuiFormControlLabel-root.checked {
+  background: var(--primColor);
+  color: white;
+}
+
+.donationFormWrapper .fnlDntnInfo {
+  background: linear-gradient(
+    270deg,
+    rgba(230, 246, 255, 1) 0%,
+    rgb(172 209 229) 100%
+  );
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.donationFormWrapper .fnlDntnInfo .donAmountVle {
+  color: var(--primColor);
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.donationFormWrapper .fnlDntnInfo .ttlAmountWrpr label {
+  color: gray;
+  font-weight: 700;
+  margin: 0;
+  margin-right: 30px;
+}
+
+.donationFormWrapper .fnlDntnInfo .usrNameVale {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.donationFormWrapper .fnlDntnInfo .usrCntctInfo p {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.donationFormWrapper .fnlDntnInfo .usrCntctInfo p .material-icons {
+  color: gray;
+  font-size: 19px;
+  margin-right: 8px;
+}

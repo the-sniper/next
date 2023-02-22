@@ -1,0 +1,714 @@
+.ticHdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.ticHdr .ticPic .ticFig img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding-right: 15px;
+}
+
+.ticHdr .ticPic .ticFig {
+  width: 85px;
+  height: 70px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.ticHdr .ticPic .ticDets .ticTit small {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ticHdr .ticPic .ticDets .ticLoc {
+  display: block;
+  font-size: 14px;
+  color: var(--backgroundColor);
+  font-weight: 500;
+}
+
+.ticHdr .ticPic .ticDets .ticTim {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ticHdr .ticPic .ticDets .ticTit {
+  font-size: 18px;
+  font-weight: 500;
+  width: auto;
+  max-width: 500px;
+}
+
+.ticHdr .ticPic .ticDets {
+  color: var(--backgroundColor);
+}
+
+.ticHdr .ticPic {
+  flex: 0 0 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.ticHdrBg {
+  background-color: #434343;
+}
+
+.ticHdr .ticInfo {
+  flex: 0 0 30%;
+}
+
+.ticHdr .ticInfo .ticInfospan {
+  background: #85b657;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: var(--backgroundColor);
+}
+
+.ticHdr .ticInfo .ticInfospan small {
+  font-size: 100%;
+  color: var(--tertColor);
+  text-decoration: underline;
+}
+
+.ticBdy {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: calc(100vh - 92px);
+}
+
+.ticBdy .ticbench {
+  width: calc(100vw - 510px);
+  background: #f3f7f6;
+  /* height: calc(100vh - 180px); */
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.ticBdy .ticbench .stadiumWrapper form {
+  margin: auto;
+}
+
+.ticBdy .ticbench .stadiumWrapper .MuiFormControl-root {
+  width: 100%;
+}
+
+.ticBdy .ticbench .stadiumWrapper {
+  padding: 25px 35px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.ticBdy .ticFullInfo .hdrPadd {
+  padding: 20px;
+}
+
+.ticBdy .ticFullInfo {
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--backgroundColor);
+  height: 100%;
+  padding: 10px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ticBdy .ticFullInfo .ticselectcard .ticCnt {
+  width: auto;
+  min-width: 72%;
+}
+
+.ticBdy .ticFullInfo .ticselectcard .ticCnt .customSelect {
+  margin-bottom: 0;
+}
+
+.ticBdy .ticFullInfo .ticselectcard .ticftr .MuiButtonBase-root {
+  background: #70a340;
+  padding: 16px 15px;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.ticBdy .ticFullInfo .ticselectcard .ticftr {
+  width: auto;
+  min-width: 25%;
+  margin-left: 15px;
+}
+
+.ticBdy .ticFullInfo .ticselectcard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.filterTit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.ticBdy .ticFullInfo .ticRange .ticendrange,
+.ticBdy .ticFullInfo .ticRange .ticstartrange {
+  width: 90px;
+}
+
+.ticBdy .ticFullInfo .ticprogress {
+  width: calc(100% - 200px);
+  margin: auto;
+}
+
+.ticBdy .ticFullInfo .ticRange {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ticBdy .ticFullInfo .ticTabvarient .MuiAppBar-colorDefault {
+  box-shadow: unset;
+  background-color: var(--backgroundColor);
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+.ticBdy .ticFullInfo .ticTabvarient .MuiTabs-indicator {
+  background-color: #70a340;
+}
+
+.ticBdy .ticFullInfo .ticTabvarient .MuiTab-textColorPrimary.Mui-selected {
+  color: #70a340;
+}
+
+.ticBdy .ticFullInfo .ticTabvarient .MuiTab-root {
+  min-width: 50%;
+}
+
+.ticBdy .ticFullInfo .ticTabvarient .tabpanel {
+  min-height: 100vh;
+}
+
+.quickPicks .split-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tabPanelminH {
+  min-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.split-content__primary .quick-picks__branding-title {
+  color: #b3b3b3;
+  font-weight: 400;
+  margin-top: 4px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.split-content__secondary .price-with-fees {
+  font-size: 12px;
+  color: #b3b3b3;
+  line-height: 15px;
+  display: block;
+}
+
+.split-content__secondary .quick-picks__button {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: #70a340;
+  font-weight: 600;
+}
+
+.quickPicks .split-content .split-content__primary {
+  width: auto;
+  min-width: 50%;
+}
+
+.quickPicks .split-content .split-content__secondary {
+  width: auto;
+  min-width: 50%;
+  text-align: right;
+}
+
+.quickPicks .split-content .split-content__primary .quick-picks__item-desc {
+  margin-bottom: 0px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.quickPicks
+  .split-content
+  .split-content__primary
+  .quick-picks__item-desc:first-child,
+.split-content__secondary .quick-picks__button:first-child {
+  margin-bottom: 15px;
+}
+
+.quickPicks {
+  overflow: auto;
+}
+
+.stadiumWrapper .chairContainer {
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: auto;
+  background: #cecece;
+  transition: ease-in-out 0.2s;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.stadiumWrapper .chairGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  row-gap: 20px;
+  position: relative;
+}
+
+.stadiumWrapper .chairContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.stadiumWrapper .chairContainer .chkWrpr {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.stadiumWrapper .chairContainer:hover {
+  background: rgb(255, 199, 96);
+}
+
+.stadiumWrapper .chairContainer .chkWrpr {
+  display: none;
+}
+
+.stadiumWrapper .chairContainer.booked {
+  cursor: not-allowed;
+  color: #160000;
+}
+
+.tableWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tableWrapper .chair {
+  position: absolute;
+  top: 0px;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+  border-radius: 40px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.stadiumWrapper .chair .chairContainer {
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+}
+
+.stadiumWrapper .chairContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.stadiumWrapper .chairContainer .chkWrpr {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tableWrapper .chair.chair_4 {
+  top: 94px;
+  right: 20px;
+  left: unset;
+}
+
+.tableWrapper .chair.chair_3 {
+  top: 56px;
+  left: unset;
+  right: 1px;
+}
+
+.tableWrapper .chair.chair_5 {
+  top: unset;
+  bottom: 0;
+}
+
+.tableWrapper .chair.chair_6 {
+  top: 94px;
+  left: 20px;
+}
+
+.tableWrapper .chair.chair_7 {
+  top: 56px;
+  left: 1px;
+}
+
+.tableWrapper .chair.chair_8 {
+  top: 15px;
+  left: 16px;
+}
+
+.tableWrapper .chair.chair_2 {
+  top: 15px;
+  right: 16px;
+  left: unset;
+}
+
+.tableWrapper .tableShp {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #889f9d;
+  font-weight: 600;
+  color: white;
+}
+
+.stadiumWrapper .ticketTableGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-top: 35px;
+  position: relative;
+}
+
+.stadiumWrapper .generalRowWrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 14px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.stadiumWrapper .stageWrapper {
+  background: rgb(67, 67, 67);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+}
+
+.ticHdrBg .MuiDrawer-paperAnchorRight {
+  left: auto;
+  right: 34px;
+  position: static;
+}
+
+.diaglogTitle h2 {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.ticketStatussingle {
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: auto;
+  background: #cecece;
+  transition: ease-in-out 0.2s;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 10px 10px 0 0;
+}
+.ticketStatussingle input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.stsHdr {
+  padding: 15px 20px;
+  background: #47543b;
+  color: white;
+  border-radius: 4px;
+}
+
+.tcktStsGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tcktStsGrid .stWrp {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.tcktStsGrid .stWrp .seatDiv {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px 10px 0 0;
+  background: #cecece;
+}
+
+.tcktStsGrid .stWrp p {
+  font-size: 14px;
+}
+
+.tcktStsGrid .stWrp .seatDiv.sltdSeat {
+  background: orange;
+}
+
+.tcktStsGrid .stWrp .seatDiv.bkdSeat {
+  background: #ff9898;
+}
+
+.tckStatusWrpr {
+  bottom: 0px;
+  left: 10px;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 15px;
+  position: fixed;
+  left: 0;
+  max-width: calc(100vw - 510px);
+  background: #f3f7f7;
+  padding-bottom: 10px;
+}
+
+.tckStatusWrpr h4 {
+  font-size: 16px;
+  font-family: var(--FuturaStdMedium);
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.flrPrcInfo {
+  font-size: 14px;
+}
+
+.stadiumWrapper hr {
+  margin: 20px 0;
+}
+
+.TicketTooltip {
+  min-width: 170px;
+  padding: 10px;
+}
+
+.TicketTooltip .stIfoTxt label {
+  font-size: 10px;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.TicketTooltip .stIfoTxt p {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.TicketTooltip .stIfoTxt.priceCont p {
+  color: var(--primColor);
+}
+
+.ticketInfo {
+  box-shadow: 0 0 10px #00000026;
+  border: 1px solid #e5e5e5;
+  border-radius: 9px;
+  margin: 10px 7px;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.ticketInfo .seatsInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.ticketInfo .cancelBtn {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  padding: 0;
+  min-width: unset;
+}
+
+.ticketInfo .seatsInfo label {
+  font-size: 12px;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.ticketInfo .seatsInfo p {
+  margin: 0;
+}
+
+.ttlPriceCntnr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+.ttlPriceCntnr p,
+.ttlPriceCntnr h5 {
+  margin: 0;
+}
+
+.ttlPriceCntnr h5 {
+  color: var(--primColor);
+  font-family: var(--FuturaStdMedium);
+}
+
+.tcktNxtBtn {
+  padding: 0 15px;
+  margin-top: 35px;
+}
+
+.tcktNxtBtn .secButton,
+.tcktNxtBtn .primButton {
+  max-width: 200px;
+  width: 100%;
+}
+
+.ticFullInfo .fnlDntnInfo {
+  background: linear-gradient(
+    270deg,
+    rgb(236 240 232) 0%,
+    rgb(241 248 234) 100%
+  );
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.ticFullInfo .fnlDntnInfo .donAmountVle {
+  color: var(--primColor);
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ticFullInfo .fnlDntnInfo .ttlAmountWrpr label {
+  color: gray;
+  font-weight: 700;
+  margin: 0;
+  margin-right: 30px;
+}
+
+.ticFullInfo .fnlDntnInfo .usrNameVale {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.ticFullInfo .fnlDntnInfo .usrCntctInfo p {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.ticFullInfo .fnlDntnInfo .usrCntctInfo p .material-icons {
+  color: gray;
+  font-size: 19px;
+  margin-right: 8px;
+}
+
+.ticFullInfo .fnlDntnInfo .usrCntctInfo p .usrEmail {
+  max-width: 238px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* width */
+.ticBdy .ticbench::-webkit-scrollbar,
+.ticBdy .ticFullInfo::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.ticBdy .ticbench::-webkit-scrollbar-track,
+.ticBdy .ticFullInfo::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.ticBdy .ticbench::-webkit-scrollbar-thumb,
+.ticBdy .ticFullInfo::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+/* Handle on hover */
+.ticBdy .ticbench::-webkit-scrollbar-thumb:hover,
+.ticBdy .ticFullInfo::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.booked-details-seller {
+  margin-top: 15px;
+  margin-left: 150px;
+}

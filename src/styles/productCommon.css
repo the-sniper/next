@@ -1,0 +1,147 @@
+.thumbsContainer {
+    display: flex;
+    margin: 15px 0;
+}
+
+.thumbsContainer .thumb {
+    margin-inline-end: 15px;
+}
+
+.thumbsContainer .thumb img {
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid #e3e3e3;
+}
+
+.thumbsContainer .thumb .thumbCnt {
+    position: relative;
+}
+
+.thumbsContainer .thumb .thumbCnt {
+    position: relative;
+}
+
+.thumbsContainer .thumb .thumbCnt .fileActions {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 5px;
+    background: #5d5d5dc9;
+    width: 100%;
+    height: 100%;
+    transition: 200ms all ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbsContainer .thumb .thumbCnt:hover .fileActions {
+    visibility: visible;
+    opacity: 1;
+}
+
+.thumbsContainer .thumb .thumbCnt .cancelBtn {
+    margin-inline-end: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.thumbsContainer .thumb .thumbCnt .viewBtn {
+    cursor: pointer;
+    color: #fff;
+}
+
+/* 
+.thumbsContainer .thumb .thumbCnt .cancelBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #5d5d5d;
+    cursor: pointer;
+    transition: 200ms all ease-in-out;
+} */
+
+.thumbsContainer .thumb .thumbCnt .cancelBtn:hover {
+    color: #ffa87a;
+}
+
+.thumbsContainer .thumb .thumbCnt .viewBtn:hover {
+    color: #8dd7ff;
+}
+
+.notAvailable {
+    color: #b7b7b7 !important;
+}
+
+.thumbsContainer .thumb .thumbCnt .defaultThumb {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+}
+
+.thumbsContainer .thumb .thumbCnt .defaultThumb .material-icons {
+    font-size: 60px;
+    color: #ccc;
+}
+
+.dropzone {
+    border: 1px dashed #c9c5d7;
+    padding: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #737373;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.dropzone h4 {
+    width: 100%;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px;
+}
+
+.RadioBox .MuiFormControlLabel-root {
+    margin-bottom: 0;
+}
+
+.customCheckbox .MuiFormHelperText-root,
+.checkboxError .MuiFormHelperText-root,
+.validationError {
+    text-align: center;
+    color: #f44336;
+    font-size: 0.75rem;
+}
+
+.checkboxError {
+    width: 100%;
+}
+
+.checkboxError p {
+    text-align: start;
+}
+
+.checkboxHeading {
+    width: 100%;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 15px !important;
+}
+
+.password-strength-meter .password-strength-meter-progress {
+    width: 100%;
+}

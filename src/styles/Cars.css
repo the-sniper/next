@@ -1,0 +1,85 @@
+.carsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 15px;
+}
+.carsContainer .carsGrid {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 10%);
+  border-radius: 5px;
+}
+
+.theme-dark .carsContainer .carsGrid {
+  background: #323a46;
+}
+
+.carsContainer .carsGrid .pcgImg {
+  width: 100%;
+  height: 220px;
+  max-width: 500px;
+  position: relative;
+}
+
+.carsContainer .carsGrid .pcgImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.carsContainer .carsGrid .gridProdTitle {
+  font-size: 18px;
+  color: #231f20;
+  font-family: var(--FuturaStdMedium);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  /* height: 4.5ex; */
+}
+
+.theme-dark .carsContainer .carsGrid .gridProdTitle {
+  color: #dddddd;
+}
+
+.theme-dark .carsContainer .carsGrid .cgInfo h5 span {
+  color: #a6a6a6;
+}
+
+.carsContainer .carsGrid .cgInfo h5 {
+  font-size: 15px;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.carsContainer .carsGrid .cgInfo h5 span {
+  width: 70px;
+  display: inline-block;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.carsContainer .carsGrid .primButton {
+  height: 45px;
+  margin-top: 10px;
+}
+
+.carsContainer .carsGrid .primButton button {
+  height: 100%;
+}

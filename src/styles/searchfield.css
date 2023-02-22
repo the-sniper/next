@@ -1,0 +1,105 @@
+.search-field .MuiAppBar-colorPrimary {
+  background-color: transparent;
+  color: black;
+  box-shadow: none;
+}
+
+.search-field button .MuiButton-label {
+  text-transform: capitalize;
+  font-family: var(--FuturaStdMedium);
+}
+.search-field .MuiPaper-root .MuiToolbar-root {
+  justify-content: space-between;
+  padding: 0;
+}
+.search-field {
+  margin-bottom: 1rem;
+}
+.lot-prize p {
+  margin: 0 2rem;
+}
+.all-category .MuiButton-containedPrimary {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+.all-category .MuiButton-containedPrimary:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+.searchfilter-btn .MuiButton-containedPrimary,
+.searchfilter-btn .MuiButton-containedPrimary:hover {
+  background-color: var(--green);
+}
+.searchFieldLt,
+.searchFieldRt {
+  display: flex;
+  align-items: center;
+}
+
+.searchFieldRt {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.searchFieldRt .searchBar .MuiInputBase-root input:focus,
+.searchFieldRt .searchBar .MuiInputBase-root input {
+  width: 30ch;
+}
+.searchFieldRt .searchBar .MuiInputBase-root {
+  background-color: #e8f2ee;
+  height: 40px;
+}
+
+.theme-dark .searchFieldRt .searchBar .MuiInputBase-root {
+  background-color: #323a46;
+}
+
+.theme-dark .searchFieldRt .searchBar input,
+.theme-dark .searchFieldRt .searchBar input::placeholder{
+  color: var(--textColor);
+}
+
+.searchFieldRt .all-category .MuiInputBase-root {
+  background-color: transparent;
+}
+
+.searchFieldRt .allCategory {
+  margin: 0 20px;
+  margin-left: auto;
+}
+
+.searchFieldRt .allCategory .MuiFormControl-root {
+  min-width: 150px;
+}
+
+.searchFieldRt .allCategory .MuiInputBase-root::before {
+  display: none;
+}
+
+.searchFieldRt .allCategory .MuiSelect-select.MuiSelect-select {
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .searchFieldRt .searchBar .MuiInputBase-root input:focus,
+  .searchFieldRt .searchBar .MuiInputBase-root input {
+    width: 25ch;
+  }
+  .searchFieldLt button:nth-child(2) {
+    font-size: 10px;
+    margin-top: -13px;
+    text-align: left;
+    padding: 0;
+    margin-left: -16px;
+  }
+  .searchFieldLt {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .searchFieldLt button:nth-child(2),
+  .shopcatertxt {
+    display: none;
+  }
+}

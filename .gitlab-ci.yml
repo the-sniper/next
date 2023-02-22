@@ -1,0 +1,32 @@
+stages:
+    - next
+cache: &cache
+    paths:
+    - node_modules
+auctioniobuyer-next-front-build:   
+    image: node:14-alpine
+    stage: next
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "nextjs"'
+    when: manual
+    allow_failure: false
+    before_script:
+        - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+        - apk update && apk upgrade && apk add --no-cache bash git
+        - eval $(ssh-agent -s)
+        - pwd
+        - ls -la 
+        - echo $PATH
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+        - mkdir -p ~/.ssh
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    
+    script:
+        - hostname
+        - ls -la
+        - node -v
+        - npm install
+        - npm install env-cmd --save
+        - npx prettier --write .
+        - CI=false npm run build:staging
+        - scp -r .next/ dsadmin@67.78.54.203:/usr/share/nginx/html/AuctionIO/auctionio_next/auctioniobuyer/
