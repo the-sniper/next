@@ -105,18 +105,18 @@ class MyDocument extends Document {
             media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
             href="/192.png"
           />
-          <meta property="og:url" content="https://www.auction.io" />
-          <meta property="og:type" content="website" />
+          {/* <meta property="og:url" content="https://www.auction.io" />
+          <meta property="og:type" content="website" /> */}
           <title>Auction.io</title>
-          <meta property="og:title" content="Auction.io" />
+          {/* <meta property="og:title" content="Auction.io" />
           <meta
             property="og:description"
             content="Auction.io provides detailed view to verify the quality of the product before you submit a bid. Real Time Bids. Suggested Retail Pricing and Machine learning."
           />
           <meta property="og:image" content="/logoShort.png" />
-          <meta property="og:image:secure_url" content="/logoShort.png" />
-          <meta property="og:image:width" content="400" />
-          <meta property="og:image:height" content="300" />
+          <meta property="og:image:secure_url" content="/logoShort.png" /> */}
+          {/* <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="300" /> */}
         </Head>
         <body className="kaxsdc" data-event="load">
           <Main />

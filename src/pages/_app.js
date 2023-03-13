@@ -8,6 +8,7 @@ import { theme } from "../lib/material-ui/theme";
 import "allsettled-polyfill";
 import { StylesProvider } from "@material-ui/core";
 import { socket } from "@/common/socket";
+import { DefaultSeo } from "next-seo";
 
 import "../styles/app.css";
 import "../index.css";
@@ -131,46 +132,60 @@ function App(props) {
   }, [router?.pathname]);
 
   return (
-    <CacheProvider value={emotionCache}>
-      <CommonState>
-        <AuthState>
-          <UserState>
-            <ProductState>
-              <AuctionState>
-                <BuyerState>
-                  <StripeCardState>
-                    <AlertState>
-                      <SnackbarProvider
-                        maxSnack={3}
-                        ref={notistackRef}
-                        action={(key) => (
-                          <Button
-                            style={{ color: "#fff" }}
-                            onClick={onClickDismiss(key)}
-                          >
-                            <span className="material-icons">close</span>
-                          </Button>
-                        )}
-                      >
-                        <StylesProvider injectFirst>
-                          <div className="App">
-                            <Alerts />
-                            {/* <InitialLoad /> */}
-                            <CommonTemplate>
-                              <Component {...pageProps} />
-                            </CommonTemplate>
-                          </div>
-                        </StylesProvider>
-                      </SnackbarProvider>
-                    </AlertState>
-                  </StripeCardState>
-                </BuyerState>
-              </AuctionState>
-            </ProductState>
-          </UserState>
-        </AuthState>
-      </CommonState>
-    </CacheProvider>
+    <>
+      <DefaultSeo
+        title="Auction.io"
+        canonical="https://auction.io/"
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          description: "Description of open graph article",
+          url: "https://www.example.com/articles/article-title",
+          url: "https://www.auction.io/",
+          siteName: "Auction.io",
+        }}
+      />
+      <CacheProvider value={emotionCache}>
+        <CommonState>
+          <AuthState>
+            <UserState>
+              <ProductState>
+                <AuctionState>
+                  <BuyerState>
+                    <StripeCardState>
+                      <AlertState>
+                        <SnackbarProvider
+                          maxSnack={3}
+                          ref={notistackRef}
+                          action={(key) => (
+                            <Button
+                              style={{ color: "#fff" }}
+                              onClick={onClickDismiss(key)}
+                            >
+                              <span className="material-icons">close</span>
+                            </Button>
+                          )}
+                        >
+                          <StylesProvider injectFirst>
+                            <div className="App">
+                              <Alerts />
+                              {/* <InitialLoad /> */}
+                              <CommonTemplate>
+                                <Component {...pageProps} />
+                              </CommonTemplate>
+                            </div>
+                          </StylesProvider>
+                        </SnackbarProvider>
+                      </AlertState>
+                    </StripeCardState>
+                  </BuyerState>
+                </AuctionState>
+              </ProductState>
+            </UserState>
+          </AuthState>
+        </CommonState>
+      </CacheProvider>
+    </>
   );
 }
 

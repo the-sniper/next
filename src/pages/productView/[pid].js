@@ -46,6 +46,7 @@ import AddCreditCard from "../../components/organisms/AddCreditCard";
 import Link from "next/link";
 import BuyerContext from "@/context/buyer/buyerContext";
 import BidStatus from "@/components/molecules/Bidding/BidStatus";
+import { NextSeo } from "next-seo";
 
 export function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -462,7 +463,7 @@ function ProductView({
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>
           {userList?.lotDetails ? userList?.lotDetails?.title : "Product View"}{" "}
           | Auction.io
@@ -491,7 +492,65 @@ function ProductView({
             userList?.lotDetails.content_head1
           )}
         />
-      </Head>
+      </Head> */}
+
+      <NextSeo
+        title={userList?.lotDetails?.title}
+        description={removeHTMLTags(userList?.lotDetails?.description)?.trim()}
+        canonical={windowLocation?.href}
+        openGraph={{
+          url: windowLocation?.href,
+          title: userList?.lotDetails?.title,
+          description: removeHTMLTags(
+            userList?.lotDetails?.description
+          )?.trim(),
+          images: [
+            {
+              url: getImages_url_check(
+                userList?.images[0]?.file_name,
+                userList?.lotDetails.content_head1
+              ),
+              width: 400,
+              height: 300,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+            {
+              url: getImages_url_check(
+                userList?.images[0]?.file_name,
+                userList?.lotDetails.content_head1
+              ),
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg",
+            },
+            {
+              url: getImages_url_check(
+                userList?.images[0]?.file_name,
+                userList?.lotDetails.content_head1
+              ),
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Third",
+              type: "image/jpeg",
+            },
+            {
+              url: getImages_url_check(
+                userList?.images[0]?.file_name,
+                userList?.lotDetails.content_head1
+              ),
+            },
+            {
+              url: getImages_url_check(
+                userList?.images[0]?.file_name,
+                userList?.lotDetails.content_head1
+              ),
+            },
+          ],
+          siteName: "Auction.io",
+        }}
+      />
 
       <div className="productView">
         {isLoading ? (
