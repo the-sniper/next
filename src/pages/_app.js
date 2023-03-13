@@ -130,6 +130,7 @@ function App(props) {
       }
     }
   }, [router?.pathname]);
+  let windowLocation = typeof window != "undefined" ? window.location : null;
 
   return (
     <>
@@ -139,10 +140,36 @@ function App(props) {
         openGraph={{
           type: "website",
           locale: "en_US",
-          description: "Description of open graph article",
-          url: "https://www.example.com/articles/article-title",
+          description:
+            "Auction.io provides detailed view to verify the quality of the product before you submit a bid. Real Time Bids. Suggested Retail Pricing and Machine learning.",
           url: "https://www.auction.io/",
           siteName: "Auction.io",
+          images: [
+            {
+              url: `${windowLocation?.href}/logoShort.png`,
+              width: 400,
+              height: 300,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+            {
+              url: `${windowLocation?.href}/logoShort.png`,
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg",
+            },
+            {
+              url: `${windowLocation?.href}/logoShort.png`,
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Third",
+              type: "image/jpeg",
+            },
+            {
+              url: `${windowLocation?.href}/logoShort.png`,
+            },
+          ],
         }}
       />
       <CacheProvider value={emotionCache}>

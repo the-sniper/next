@@ -541,12 +541,6 @@ function ProductView({
                 userList?.lotDetails.content_head1
               ),
             },
-            {
-              url: getImages_url_check(
-                userList?.images[0]?.file_name,
-                userList?.lotDetails.content_head1
-              ),
-            },
           ],
           siteName: "Auction.io",
         }}
