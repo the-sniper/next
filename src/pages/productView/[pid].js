@@ -44,6 +44,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import AddCreditCard from "../../components/organisms/AddCreditCard";
 import Link from "next/link";
+import BuyerContext from "@/context/buyer/buyerContext";
+import BidStatus from "@/components/molecules/Bidding/BidStatus";
 
 export function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -88,13 +90,11 @@ function ProductView({
   handleClose,
   posts,
   userList,
-  contextData,
+  aucLotId,
 }) {
   const isMobile = useMediaQuery({
     query: "(max-width: 600px)",
   });
-
-  console.log(posts, "checkPostsClient");
 
   const location = useRouter();
 
@@ -110,20 +110,32 @@ function ProductView({
   const [isLoading, setIsLoading] = useState(true);
   const [reload, setReload] = useState(false);
   const [currentPrice, setCurrentPrice] = useState("");
-  // console.log(data, 'contextData')
+  const [buynowbtnDisable, setBuynowbtnDisable] = useState(false);
 
   // const [productDetails, setProductDetails] = useState([]);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  let auctionlotid = location?.query.auctionLotId;
-  let auctionId = location.query.auctionId;
+  let auctionlotid = aucLotId;
 
-  const { getIndividualProductLotDetails, lot_details } =
-    useContext(ProductContext);
+  const {
+    getAllSearchProducts,
+    search_allproducts,
+    individual_product_dtls,
+    getIndividualProductLotId,
+    getIndividualProductLotDetails,
+    lot_details,
+    addWatchlist,
+  } = useContext(ProductContext);
+  const {
+    getBuynowCheckout,
+    getStripeCard,
+    buynow_cart_items,
+    removeFromCart,
+  } = useContext(UserContext);
+  const { addToCartSingle } = useContext(BuyerContext);
 
-  const { addSavedSearch, getStripeCard } = useContext(UserContext);
   const {
     getAuctionDetails,
     auctiondetails,
@@ -169,6 +181,9 @@ function ProductView({
       setCurrentLotDetails(lotDetails);
     }
   }, [lotDetails]);
+
+  let auctionId = currentLotDetails?.lotDetails?.lotof || null;
+
   useEffect(() => {
     if (auctiondetails && Object.keys(auctiondetails).length !== 0) {
       setActionDtl(auctiondetails);
@@ -181,7 +196,7 @@ function ProductView({
 
   useEffect(() => {
     if (
-      location.pathname === "/auctionView" &&
+      location.pathname.includes("/auctionView") &&
       lotDetails &&
       Object.keys(lotDetails).length > 0
     ) {
@@ -355,6 +370,8 @@ function ProductView({
       is_auctionio: 1,
     };
     getIndividualProductLotDetails(productDtls);
+  };
+  useEffect(() => {
     getAuctionDetails({
       title: "",
       auctionId: auctionId,
@@ -363,10 +380,10 @@ function ProductView({
       perpage: "",
       is_auctionio: 1,
     });
-  };
+  }, [auctionId]);
 
   useEffect(() => {
-    if (location.pathname == "/productView") {
+    if (location.pathname.includes("/productView")) {
       prodAuctionDtls();
     }
     if (auctionId) {
@@ -383,7 +400,7 @@ function ProductView({
   useEffect(() => {
     if (allauctionlots && allauctionlots.length !== 0) {
       let auctionlotid =
-        location.pathname === "/auctionView" &&
+        location.pathname.includes("/auctionView") &&
         lotDetails &&
         lotDetails.lotDetails
           ? lotDetails.lotDetails.id
@@ -415,33 +432,36 @@ function ProductView({
 
   let windowLocation = typeof window != "undefined" ? window.location : null;
 
-  // useEffect(() => {
-  //     async function init() {
-  //         const carsData = await DirectAPICAll(
-  //             'post',
-  //             `https://forwardapidev.auctionsoftware.com/api/lotDetails`,
-  //             {
-  //                 is_auctionio: 1,
-  //                 lotId: 28708,
-  //             },
-  //         )
-  //         console.log(carsData, 'checkRes')
-  //     }
-  //     init()
-  // })
-
-  const productUrl = `productView/${
-    currentLotDetails?.lotDetails?.id + "?"
-  }auctionId=${location.query.auctionId}&auctionLotId=${
-    currentLotDetails?.lotDetails?.id
-  }`;
+  const handleBuyNowClick = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    let data = [];
+    data.push({
+      id: currentLotDetails.lotDetails.id,
+      user_id: user.id,
+      qty: currentLotDetails.lotDetails.qty,
+    });
+    setBuynowbtnDisable(true);
+    let cartid = buynow_cart_items.find(
+      (val) => val.project_id == currentLotDetails.lotDetails.id
+    );
+    const result = await (cartid
+      ? removeFromCart({ id: cartid?.project_id, user_id: user.id })
+      : addToCartSingle({ cart_data: data }));
+    if (result) {
+      setAlert(
+        cartid ? "Item Removed From Your Cart!" : "Item Added To your Cart!",
+        "success"
+      );
+      getBuynowCheckout({ user_id: user.id });
+    } else {
+      setAlert("An Error Occured", "error");
+    }
+    setBuynowbtnDisable(false);
+  };
 
   return (
     <>
-      {console.log(productUrl, "productUrl")}
-      {console.log(contextData, "contextData")}
-      {console.log(currentLotDetails, "currentLotDetails")}
-
       <Head>
         <title>
           {userList?.lotDetails ? userList?.lotDetails?.title : "Product View"}{" "}
@@ -449,14 +469,13 @@ function ProductView({
         </title>
         <meta
           name="description"
-          content={removeHTMLTags(userList?.lotDetails?.description)}
+          content={removeHTMLTags(userList?.lotDetails?.description)?.trim()}
         />
-        {console.log(windowLocation?.href, windowLocation, "windowLocation")}
         <meta property="og:url" content={windowLocation?.href} />
         <meta property="og:title" content={userList?.lotDetails?.title} />
         <meta
           property="og:description"
-          content={removeHTMLTags(userList?.lotDetails?.description)}
+          content={removeHTMLTags(userList?.lotDetails?.description)?.trim()}
         />
         <meta
           property="og:image"
@@ -484,22 +503,31 @@ function ProductView({
             {currentLotDetails &&
             Object.keys(currentLotDetails).length !== 0 ? (
               <>
+                <div className="customContainer">
+                  {isAuthenticated ? (
+                    currentLotDetails?.lotDetails?.auction ? (
+                      <BidStatus
+                        bidTopStatus={currentLotDetails.bidtopstatus}
+                      />
+                    ) : null
+                  ) : null}
+                </div>
                 {from === "slider" && (
                   <>
                     <CloseIcon
                       className="product-slider-close"
                       onClick={handleClose}
                     />
-                    {/* <Link
-                      href={`/productView/?auctionId=${location?.query.auctionId}&auctionLotId=${currentLotDetails?.lotDetails?.id}`}
-                    >
-                      <span className="material-icons">launch</span> View Full
-                      Details
-                    </Link> */}
-
                     <h4
                       onClick={() =>
-                        handleRedirectInternal(location, productUrl)
+                        handleRedirectInternal(
+                          location,
+                          `productView/${
+                            currentLotDetails?.lotDetails?.id
+                          }?auctionId=${
+                            currentLotDetails?.lotDetails?.lotof || 0
+                          }&title=${currentLotDetails?.lotDetails?.title}`
+                        )
                       }
                       className="viewFull d-flex justify-content-center align-items-center"
                     >
@@ -513,7 +541,8 @@ function ProductView({
                     {from !== "slider" && (
                       <Button
                         onClick={() => {
-                          location.back();
+                          history.goBack();
+                          window.scrollTo(0, 0);
                         }}
                         className="moveBack mb-2"
                       >
@@ -587,6 +616,17 @@ function ProductView({
                     ) : (
                       ""
                     )}
+
+                    <p className="estmtChkd">
+                      Location:{" "}
+                      {currentLotDetails?.lotDetails?.state &&
+                      currentLotDetails?.lotDetails?.country ? (
+                        <span>{`${currentLotDetails?.lotDetails?.state}, ${currentLotDetails?.lotDetails?.country}`}</span>
+                      ) : (
+                        "Not available"
+                      )}
+                    </p>
+
                     <div className="prTmrCntn">
                       <div className="d-flex justify-content-between align-items-center w-100 mb-2 flex-wrap">
                         <p className="estmtChkd">
@@ -600,48 +640,57 @@ function ProductView({
                           )}
                         </p>
 
-                        <div className="timerContent">
-                          <Timer
-                            date_added={currentLotDetails.lotDetails.date_added}
-                            date_closed={
-                              currentLotDetails.lotDetails.date_closed
-                            }
-                            withText={1}
-                            endText={"Time left:"}
-                            startText={"Starts in:"}
-                          />
-                        </div>
+                        {currentLotDetails.lotDetails.auction &&
+                        currentLotDetails.lotDetails.market_status ===
+                          "open" ? (
+                          <div className="timerContent">
+                            <Timer
+                              date_added={
+                                currentLotDetails.lotDetails.date_added
+                              }
+                              date_closed={
+                                currentLotDetails.lotDetails.date_closed
+                              }
+                              withText={1}
+                              endText={"Time left:"}
+                              startText={"Starts in:"}
+                            />
+                          </div>
+                        ) : null}
                       </div>
                     </div>
-                    <div className="pvPrimActions">
-                      <div className="d-flex justify-content-between align-items-center w-100">
-                        <h2>
-                          {currencyFormat(currentLotDetails.current_bid)}{" "}
-                          {/* <span>4 bids</span> */}
-                        </h2>
-                      </div>
-                      {auctionDtl && auctionDtl.auction_type !== 1 ? (
-                        <>
-                          <div className="bdFldLablel mb-2">
-                            <label>YOUR MAXIMUM BID:</label>
-                            <label className="scrLbl">
-                              <span className="material-icons">lock</span>
-                              SECURE
-                            </label>
-                          </div>
-                          <BiddingItemForward
-                            lotdetails={currentLotDetails}
-                            type="hard"
-                            size="medium"
-                            className="fs-16"
-                            auctionId={parseInt(
-                              currentLotDetails?.lotDetails?.lotof
-                            )}
-                            auctionDtl={auctionDtl}
-                            listOfCards={savedCards}
-                            setViewAddCredit={setViewAddCredit}
-                          />
-                          {/* <BiddingItem
+                    {currentLotDetails.lotDetails.auction ? (
+                      <div className="pvPrimActions">
+                        <div className="d-flex justify-content-between align-items-center w-100">
+                          <h2>
+                            {currencyFormat(currentLotDetails.current_bid)}{" "}
+                            {/* <span>4 bids</span> */}
+                          </h2>
+                        </div>
+                        {auctionDtl && auctionDtl.auction_type !== 1 ? (
+                          <>
+                            <div className="bdFldLablel mb-2">
+                              <label>YOUR MAXIMUM BID:</label>
+                              <label className="scrLbl">
+                                <span className="material-icons">lock</span>
+                                SECURE
+                              </label>
+                            </div>
+                            {currentLotDetails?.store_config?.hard_bid == 1 ? (
+                              <BiddingItemForward
+                                lotdetails={currentLotDetails}
+                                type="hard"
+                                size="medium"
+                                className="fs-16"
+                                auctionId={parseInt(
+                                  currentLotDetails?.lotDetails?.lotof
+                                )}
+                                auctionDtl={auctionDtl}
+                                listOfCards={savedCards}
+                                setViewAddCredit={setViewAddCredit}
+                              />
+                            ) : null}
+                            {/* <BiddingItem
                           lotdetails={currentLotDetails}
                           type="hard"
                           size="medium"
@@ -653,39 +702,45 @@ function ProductView({
                           listOfCards={savedCards}
                           setViewAddCredit={setViewAddCredit}
                         /> */}
-                          <h6 className="pvActDivider">OR</h6>
-                          <BiddingItemForward
-                            lotdetails={currentLotDetails}
-                            type="proxy"
-                            size="medium"
-                            className="fs-16"
-                            auctionId={parseInt(
-                              currentLotDetails?.lotDetails?.lotof
-                            )}
-                            listOfCards={savedCards}
-                            setViewAddCredit={setViewAddCredit}
-                            auctionDtl={auctionDtl}
+                            {currentLotDetails?.store_config?.proxy_bid == 1 &&
+                            currentLotDetails?.store_config?.hard_bid == 1 ? (
+                              <h6 className="pvActDivider">OR</h6>
+                            ) : null}
+                            {currentLotDetails?.store_config?.proxy_bid == 1 ? (
+                              <BiddingItemForward
+                                lotdetails={currentLotDetails}
+                                type="proxy"
+                                size="medium"
+                                className="fs-16"
+                                auctionId={parseInt(
+                                  currentLotDetails?.lotDetails?.lotof
+                                )}
+                                listOfCards={savedCards}
+                                setViewAddCredit={setViewAddCredit}
+                                auctionDtl={auctionDtl}
+                              />
+                            ) : null}
+                          </>
+                        ) : (
+                          <PrimaryButton
+                            label={"View More"}
+                            btnSize={"small mt-2"}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleRedirectInternal(
+                                location,
+                                `lotView/${searchQueryParam(
+                                  location.search,
+                                  "auctionId"
+                                )}/${currentLotDetails.lotDetails.id}/${
+                                  user && user.id ? user.id : 0
+                                }`
+                              );
+                            }}
                           />
-                        </>
-                      ) : (
-                        <PrimaryButton
-                          label={"View More"}
-                          btnSize={"small mt-2"}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            handleRedirectInternal(
-                              location,
-                              `lotview/${searchQueryParam(
-                                location.search,
-                                "auctionId"
-                              )}/${currentLotDetails.lotDetails.id}/${
-                                user && user.id ? user.id : 0
-                              }`
-                            );
-                          }}
-                        />
-                      )}
-                    </div>
+                        )}
+                      </div>
+                    ) : null}
                     <hr />
                     <div className="productTxtContainer">
                       <ul className="shpngPlcyDtl">
@@ -700,6 +755,29 @@ function ProductView({
                         </li>
                       </ul>
                     </div>
+                    {currentLotDetails.lotDetails.buynow &&
+                    currentLotDetails.lotDetails.market_status === "open" ? (
+                      <PrimaryButton
+                        label={
+                          isAuthenticated
+                            ? buynowbtnDisable
+                              ? "Loading..."
+                              : `${
+                                  buynow_cart_items.find(
+                                    (val) =>
+                                      val.project_id ==
+                                      currentLotDetails.lotDetails.id
+                                  )
+                                    ? "Remove From Cart"
+                                    : "Add To Cart"
+                                }`
+                            : "Login To Buy Now"
+                        }
+                        disabled={buynowbtnDisable}
+                        btnSize={"small"}
+                        onClick={handleBuyNowClick}
+                      />
+                    ) : null}
                   </div>
                 </div>
               </>
@@ -828,7 +906,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       userList: data.response,
-      contextData: aucLotId,
+      aucLotId: aucLotId[0],
     },
   };
 }

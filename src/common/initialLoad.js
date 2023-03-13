@@ -1,7 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import AuthContext from "@/context/auth/authContext";
 
 const InitialLoad = () => {
+  const authContext = useContext(AuthContext);
+
+  const { loadUser } = authContext;
+
   const loaded = useRef(false);
 
   // Loading Google Place API Script
@@ -29,14 +34,18 @@ const InitialLoad = () => {
     loaded.current = true;
   }
 
+  useEffect(() => {
+    if (localStorage.token) {
+      loadUser(localStorage.token);
+    } else {
+    }
+  }, []);
+
   global.ignoreCountry = [];
   global.defaultCountry = "US";
   global.ignoreStates = [];
 
-  // const { enqueueSnackbar } = useSnackbar()
-  // const classes = useStyles();
-  // warning error info success
-  return <></>;
+  return <> </>;
 };
 
 export default InitialLoad;

@@ -54,7 +54,7 @@ function Notifications() {
       };
       const response = await setPreference(payload);
       if (response.notify_status) {
-        setAlert(response.notify_status, "success");
+        setAlert('Updated successfully!', "success");
       }
     },
   });

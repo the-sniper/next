@@ -21,6 +21,7 @@ import {
   getImages_url_check,
   mapData,
   currencyFormat,
+  removeHTMLTags,
 } from "@/common/components";
 import csc from "country-state-city";
 import ProductContext from "@/context/product/productContext";
@@ -36,7 +37,6 @@ import { Pagination } from "@material-ui/lab";
 import { socket, socketForward } from "@/common/socket";
 import UserContext from "@/context/user/userContext";
 import Popup from "@/components/organisms/Popup";
-import AddCreditCard from "@/components/organisms/AddCreditCard";
 import Loaders from "@/components/molecules/Loaders";
 import { capitalize } from "@/common/components";
 import { useMediaQuery } from "react-responsive";
@@ -50,10 +50,13 @@ import DonorHistory from "@/components/organisms/DonarHistory";
 import ReadMoreReact from "read-more-react";
 import ReactHtmlParser from "react-html-parser";
 import { messageHandler } from "@/common/socketHandler";
+import AddCreditCard from "@/components/organisms/AddCreditCard";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
-function RegularView(props) {
+function RegularView({ auctionMetaData, ...props }) {
   const router = useRouter();
+  const search = router.query.search;
   const { getIndividualProductLotDetails, lot_details } =
     useContext(ProductContext);
   const {
@@ -208,8 +211,12 @@ function RegularView(props) {
   ];
 
   useEffect(() => {
+    setAuctionDetails(auctionMetaData);
+  }, []);
+
+  useEffect(() => {
     isMobile && setAuctionView("Grid");
-  });
+  }, []);
 
   const getAllSavedCards = async () => {
     const result = await getStripeCard({ userid: user.id });
@@ -228,7 +235,7 @@ function RegularView(props) {
         if (auctionResponse.status === "error") {
           setAlert("Auction Not Found", "warning");
           clearResponse();
-          handleRedirectInternal(router, "auctions");
+          // handleRedirectInternal(router, "auctions");
         }
       }
     }
@@ -256,6 +263,7 @@ function RegularView(props) {
 
   useEffect(() => {
     let auctionId = router.query.auctionId;
+    console.log(auctionId, "auctionIdCheck");
     if (auctionId) {
       setIsLoading(true);
       getAuctionDetails({
@@ -281,7 +289,7 @@ function RegularView(props) {
   }, []);
 
   useEffect(() => {
-    if (router?.query.pathname) {
+    if (router && router.query.search) {
       let viewTypes = router?.query.viewType;
       if (viewTypes === "grid") {
         setAuctionView("Grid");
@@ -309,25 +317,18 @@ function RegularView(props) {
       });
       getSellerInfo({ auctionid: auctionId });
     } else {
-      handleRedirectInternal(router, "auctions");
+      handleRedirectInternal(router, "searchAuction");
     }
   };
-
   const auctionViewType = (view) => {
     if (router?.asPath) {
-      let searchParams = new URLSearchParams(props.location.search);
+      let searchParams = router.asPath;
       if (view === "list") {
-        searchParams.set("viewType", "list");
-        router.push({
-          path: "/auctionView",
-          search: searchParams.toString(),
-        });
+        router.query.viewType = "list";
+        handleRedirectInternal(router, router.asPath.slice(1));
       } else if (view === "grid") {
-        searchParams.set("viewType", "grid");
-        router.push({
-          path: "/auctionView",
-          search: searchParams.toString(),
-        });
+        router.query.viewType = "grid";
+        handleRedirectInternal(router, router.asPath.slice(1));
       }
     }
   };
@@ -413,7 +414,7 @@ function RegularView(props) {
 
   useEffect(() => {
     if (Object.keys(auctiondetails).length > 0) {
-      setAuctionDetails(auctiondetails);
+      // setAuctionDetails(auctiondetails);
       setTimeout(() => {
         setIsLoading(false);
       }, 1500);
@@ -627,7 +628,7 @@ function RegularView(props) {
   };
   const onHandlePage = (e, page) => {
     setPage(page);
-    let auctionId = router.query.auctionId;
+    let auctionId = searchQueryParam(search, "auctionId");
     let customPage = {
       title: "",
       auctionId: auctionId,
@@ -1145,8 +1146,32 @@ function RegularView(props) {
     }
   }, [donar_response]);
 
+  let windowLocation = typeof window != "undefined" ? window.location : null;
+
   return (
     <div className="auctionViewContainer">
+      {console.log(router, router.asPath.slice(1), "routerCheck")}
+      <Head>
+        <title>{auctionMetaData?.title} | Auction.io</title>
+        <meta
+          name="description"
+          content={removeHTMLTags(auctionMetaData?.description)?.trim()}
+        />
+        <meta property="og:url" content={windowLocation?.href} />
+        <meta property="og:title" content={auctionMetaData?.title} />
+        <meta
+          property="og:description"
+          content={removeHTMLTags(auctionMetaData?.description)?.trim()}
+        />
+        <meta
+          property="og:image"
+          content={getImages_url_check(auctionMetaData?.avatar)}
+        />
+        <meta
+          property="og:image:secure_url"
+          content={getImages_url_check(auctionMetaData?.avatar)}
+        />
+      </Head>
       {isLoading ? (
         <div className="container-lg">
           <Loaders name="auction_view" isLoading={isLoading} />
@@ -1496,6 +1521,9 @@ function RegularView(props) {
                               <>
                                 <GridView
                                   data={data}
+                                  location={`${auctionDetails?.city.trim()}, ${
+                                    auctionDetails?.state
+                                  }, ${auctionDetails?.country}`}
                                   auctionDetails={auctionDetails}
                                   favId={`searchProd_${index}`}
                                   drawerHandler={toggleDrawer(
@@ -1505,7 +1533,7 @@ function RegularView(props) {
                                   )}
                                   updateData={() =>
                                     state.right &&
-                                    location.pathname === "/auctionView"
+                                    router.pathname === "/auctionView"
                                       ? handleDrawerOpenLot(data, true)
                                       : searchAuctionLot(true)
                                   }
@@ -1528,6 +1556,9 @@ function RegularView(props) {
                               <>
                                 <ListView
                                   auctionDetails={auctionDetails}
+                                  location={`${auctionDetails?.city.trim()}, ${
+                                    auctionDetails?.state
+                                  }, ${auctionDetails?.country}`}
                                   data={data}
                                   favId={`searchProd_${index}`}
                                   drawerHandler={toggleDrawer(
@@ -1537,7 +1568,7 @@ function RegularView(props) {
                                   )}
                                   updateData={() =>
                                     state.right &&
-                                    location.pathname === "/auctionView"
+                                    router.pathname === "/auctionView"
                                       ? handleDrawerOpenLot(data, true)
                                       : searchAuctionLot(true)
                                   }

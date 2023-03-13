@@ -4,7 +4,7 @@ cache: &cache
     paths:
     - node_modules
 auctioniobuyer-next-front-build:   
-    image: node:14-alpine
+    image: node:16.15.1-alpine
     stage: next
     rules:
         - if: '$CI_COMMIT_BRANCH == "nextjs"'
@@ -27,6 +27,11 @@ auctioniobuyer-next-front-build:
         - node -v
         - npm install
         - npm install env-cmd --save
+        - npm install pm2
         - npx prettier --write .
         - CI=false npm run build:staging
         - scp -r .next/ dsadmin@67.78.54.203:/usr/share/nginx/html/AuctionIO/auctionio_next/auctioniobuyer/
+        - ssh -o StrictHostKeyChecking=no dsadmin@67.78.54.203 "ls -la"
+        - chmod +x deploy/deploy.sh
+        - chmod +x deploy/server.sh
+        - bash deploy/deploy.sh

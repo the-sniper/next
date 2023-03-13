@@ -5,19 +5,19 @@ import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import RadioBox, { GreenRadio } from "../../../components/atoms/RadioBox";
+import RadioBox, { GreenRadio } from "@/components/atoms/RadioBox";
 import { useFormik, Formik } from "formik";
 import { Button } from "@material-ui/core";
-import CheckBox from "../../../components/atoms/CheckBox";
-import CommonContext from "../../../context/common/commonContext";
+import CheckBox from "@/components/atoms/CheckBox";
+import CommonContext from "@/context/common/commonContext";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
-import BuyerContext from "../../../context/buyer/buyerContext";
-import AuctionContext from "../../../context/auction/auctionContext";
-import ProductContext from "../../../context/product/productContext";
+import BuyerContext from "@/context/buyer/buyerContext";
+import AuctionContext from "@/context/auction/auctionContext";
+import ProductContext from "@/context/product/productContext";
 import moment from "moment";
 import { useRouter } from "next/router";
 const useStyles = makeStyles((theme) => ({
@@ -132,11 +132,11 @@ const FilterPanel = (props) => {
 
   const router = useRouter();
   useEffect(() => {
-    if (lotQty && router?.pathname === "/search") {
+    if (lotQty && router?.asPath === "/search") {
       setExpanded("panel3");
     }
 
-    if (lotPrice && router?.pathname === "/auctions") {
+    if (lotPrice && router?.asPath === "/auctions") {
       setExpanded("panel4");
     }
     if (category) {
@@ -328,7 +328,7 @@ const FilterPanel = (props) => {
       title: "Auction Type",
       type: "check",
       name: "auction_type",
-      show: router?.pathname === "/auctions" ? true : false,
+      show: router?.asPath.includes("/auctions") ? true : false,
       item: [
         { id: 1, description: "Live Auction" },
         { id: 0, description: "Timed Auction" },
@@ -338,7 +338,7 @@ const FilterPanel = (props) => {
       title: "Lot type",
       type: "radio",
       name: "type",
-      show: !router?.pathname?.includes("/auctions"),
+      show: !router?.asPath?.includes("/auctions"),
       item: [
         { id: 2, description: "All" },
         { id: 1, description: "Auction" },
@@ -363,28 +363,28 @@ const FilterPanel = (props) => {
           valueName: "auctionEndDate",
         },
       ],
-      show: router?.pathname === "/auctions" ? true : false,
+      show: router?.asPath.includes("/auctions") ? true : false,
     },
     // {
     //   title: "Lot Size",
     //   type: "slider",
     //   name: "lotSize",
     //   item: [{ id: 1, defaultValue: new Date(), name: "End Date" }],
-    //   show: router?.pathname === "/auctions" ? true : false,
+    //   show: router?.asPath === "/auctions" ? true : false,
     // },
     // {
     //   title: "Quantity",
     //   type: "slider",
     //   name: "quantity",
     //   item: [{ id: 1, defaultValue: formik.va, name: "End Date" }],
-    //   show: router?.pathname === "/search" ? true : false,
+    //   show: router?.asPath === "/search" ? true : false,
     // },
 
     {
       title: "Price",
       type: "radio",
       name: "price",
-      show: router?.pathname === "/search" ? true : false,
+      show: router?.route === "/search" ? true : false,
       item: [
         { id: 0, description: "All" },
         { id: 100, description: "$100 - $499" },
@@ -417,6 +417,7 @@ const FilterPanel = (props) => {
 
   return (
     <div className="filterPanel">
+      {console.log(router, "router?.asPath")}
       <div className="d-flex justify-content-between align-items-center filterTitleCnt">
         <h4 className="fpTitle">Refine your search</h4>
         {props.clearSearch && (

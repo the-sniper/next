@@ -53,7 +53,7 @@ function Cars(props) {
                     <div className="pcgImg">
                       <LazyLoadImage
                         src={`https://ecxlive.s3.us-west-2.amazonaws.com/public/uploads/product/${data.avatar}`}
-                        className="acImgLt cursorDecoy"
+                        className="acImgLt"
                         alt={data.title}
                         onError={(e) => noImageAvailable(e)}
                         effect="blur"
@@ -87,14 +87,15 @@ function Cars(props) {
                         {data.gi_mileage}
                       </h5>
                     </div>
-                    {/* <PrimaryButton
+                    <PrimaryButton
                       label="View Details"
                       onClick={() =>
+                        typeof window != undefined &&
                         window.open(
                           `https://europeancarxchange.com/product/view/${data.id}`
                         )
                       }
-                    /> */}
+                    />
                   </div>
                 ))}
           </div>

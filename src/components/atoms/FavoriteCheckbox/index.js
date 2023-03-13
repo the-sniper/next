@@ -2,8 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import ProductContext from "../../../context/product/productContext";
 import AuthContext from "../../../context/auth/authContext";
 import AlertContext from "../../../context/alert/alertContext";
-import { useHistory, useLocation } from "react-router";
-import { colors } from "@material-ui/core";
+import { useRouter } from "next/router";
 
 const FavoriteCheckbox = ({
   watchlisted,
@@ -12,7 +11,7 @@ const FavoriteCheckbox = ({
   withLabel,
   updateData,
 }) => {
-  const history = useHistory();
+  const router = useRouter();
   const { addWatchlist, removeWatchlist, searchAllLots } =
     useContext(ProductContext);
   const { setAlert } = useContext(AlertContext);
@@ -53,7 +52,7 @@ const FavoriteCheckbox = ({
   };
 
   const handleRedirect = () => {
-    history.push("/login");
+    router.push("/login");
   };
 
   return (

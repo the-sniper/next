@@ -166,8 +166,8 @@ function Home() {
     // console.log(data, "this is from the home page");
     if (data && Object.keys(data).length !== 0) {
       router.push({
-        pathname: "/auctionView",
-        search: `?auctionId=${data.id}&viewType=list`,
+        pathname: `/auctionView/${data.id}`,
+        search: `?auctionId=${data.id}&viewType=list&title=${data.title}`,
       });
     }
   };
@@ -673,11 +673,7 @@ function Home() {
                     data-aos="fade-up"
                     // data-aos-delay="500"
                   >
-                    <Button
-                      onClick={() =>
-                        router.push("/searchAuction?auctionType=0")
-                      }
-                    >
+                    <Button onClick={() => router.push("/auctions")}>
                       See All
                     </Button>
                     <h2>
@@ -782,9 +778,7 @@ function Home() {
                     data-aos-once="true"
                   >
                     <Button
-                      onClick={() =>
-                        router.push("/searchAuction?auctionType=1")
-                      }
+                      onClick={() => router.push("/auctions?auctionType=1")}
                     >
                       See All
                     </Button>
@@ -907,7 +901,9 @@ function Home() {
                           >
                             <GridView
                               data={data}
-                              location={`${sponsoredDetails?.state}, ${sponsoredDetails?.country}`}
+                              location={`${sponsoredDetails?.city.trim()}, ${
+                                sponsoredDetails?.state
+                              }, ${sponsoredDetails?.country}`}
                               auctionType={
                                 data.con_check === 1 ? "live" : "timed"
                               }
@@ -944,7 +940,9 @@ function Home() {
           data-aos-delay="500"
           data-aos-once="true"
         >
-          <Button onClick={() => router.push("/car_auction")}>See All</Button>
+          <Button onClick={() => router.push("/search/carAuctions")}>
+            See All
+          </Button>
           <h2>
             <span>Car</span>
             Auctions

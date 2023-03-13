@@ -201,23 +201,23 @@ function LiveLots(props) {
   useEffect(() => {
     let auctionId = router?.query.auctionId;
     // console.log("auctionid props.match.params.auction", auctionId);
-    if (auctionId) {
-      getAllLots({
-        limit: 1000,
-        orserby: 2,
-        page: 1,
-        lotof: auctionId,
-        order: 1,
-        userid: router?.query.userId,
-        is_auctionio: 1,
-      });
-      getAllAuctionMessages({
-        auctionid: auctionId,
-      });
-      auctionPercentage({ auctionid: auctionId });
-    } else {
-      handleRedirectInternal(router, "auctions");
-    }
+    // if (auctionId) {
+    getAllLots({
+      limit: 1000,
+      orserby: 2,
+      page: 1,
+      lotof: auctionId,
+      order: 1,
+      userid: router?.query.userId,
+      is_auctionio: 1,
+    });
+    getAllAuctionMessages({
+      auctionid: auctionId,
+    });
+    auctionPercentage({ auctionid: auctionId });
+    // } else {
+    //   handleRedirectInternal(router, "auctions");
+    // }
   }, [router?.query.auctionId]);
 
   useEffect(() => {
@@ -355,7 +355,7 @@ function LiveLots(props) {
         ) {
           handleRedirectInternal(
             router,
-            `lotview/${router?.query.auctionId}/${
+            `lotView/${router?.query.auctionId}/${
               allLotsData.results[currentLotIndex + 1]?.id
             }/${router?.query.userId}`
           );
@@ -385,7 +385,7 @@ function LiveLots(props) {
           position: "center",
         }).then(function (data) {
           if (data.isConfirmed) {
-            return router.push("/searchAuction?title=&catgId=");
+            return router.push("/auctions?title=&catgId=");
           }
         });
       }
@@ -675,7 +675,7 @@ function LiveLots(props) {
         // );
         handleRedirectInternal(
           router,
-          `lotview/${router?.query.auctionId}/${allLotsData.results[currentLotIndex]?.id}/${router?.query.userId}`
+          `lotView/${router?.query.auctionId}/${allLotsData.results[currentLotIndex]?.id}/${router?.query.userId}`
         );
       }
     }
@@ -845,7 +845,7 @@ function LiveLots(props) {
             <div className="col-md-6 col-12 lotSection ">
               <div className="topShftNav mb-5">
                 <a
-                  href={`/auctionView?auctionId=${auction.id}&viewType=list`}
+                  href={`/auctionView?auctionId=${auction.id}&viewType=list&title=${auction.title}`}
                   className="vwActnBtn d-flex align-items-center mr-auto"
                 >
                   <span className="material-icons">chevron_left</span> View
@@ -943,7 +943,7 @@ function LiveLots(props) {
                   )}
                 </div>
 
-                {allLotsData &&
+                {/* {allLotsData &&
                   allLotsData.results.length &&
                   new Date() < new Date(lotDetails.lotDetails.date_closed) && (
                     <>
@@ -971,7 +971,7 @@ function LiveLots(props) {
                         )
                       )}
                     </>
-                  )}
+                  )} */}
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default (state, action) => {
         allRegister: action.payload.data,
       };
     case LOGOUT:
-      typeof window !== "undefined" && localStorage.removeItem("token");
+      localStorage.removeItem("token");
       sessionStorage.removeItem("token");
       return {
         ...state,

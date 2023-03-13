@@ -113,7 +113,7 @@ export default function HorizontalNonLinearStepper(props) {
       var temp3_section_one = "";
       var temp3_section_two = "";
       var logo =
-        process.env.NEXT_PUBLIC_DOMAIN +
+        process.env.NEXT_PUBLIC_SELLER_DOMAIN +
         "/uploads/store/" +
         store_details?.logo;
       var viewAllUrl = window.location.origin + "/search";
@@ -129,7 +129,7 @@ export default function HorizontalNonLinearStepper(props) {
           val.id;
         var pro_img = val.avatar
           ? val.content_head1 == 0
-            ? process.env.NEXT_PUBLIC_FORWARD_DOMAIN +
+            ? process.env.NEXT_PUBLIC_API_DOMAIN +
               "/uploads/product/" +
               val.avatar
             : process.env.NEXT_PUBLIC_IMAGE_URL + val.avatar

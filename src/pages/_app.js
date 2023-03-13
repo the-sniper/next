@@ -7,6 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "../lib/material-ui/theme";
 import "allsettled-polyfill";
 import { StylesProvider } from "@material-ui/core";
+import { socket } from "@/common/socket";
 
 import "../styles/app.css";
 import "../index.css";
@@ -83,10 +84,11 @@ import AuthState from "@/context/auth/authState";
 import { keepTheme } from "src/Utils/theme";
 import CommonTemplate from "@/components/templates/commonTemplate";
 import { useRouter } from "next/router";
+import InitialLoad from "@/common/initialLoad";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-global.site_url = process.env.NEXT_PUBLIC_FORWARD_DOMAIN;
+global.site_url = process.env.NEXT_PUBLIC_API_DOMAIN;
 global.images_url = process.env.NEXT_PUBLIC_IMAGE_URL;
 
 function App(props) {
@@ -153,6 +155,7 @@ function App(props) {
                         <StylesProvider injectFirst>
                           <div className="App">
                             <Alerts />
+                            {/* <InitialLoad /> */}
                             <CommonTemplate>
                               <Component {...pageProps} />
                             </CommonTemplate>

@@ -51,7 +51,7 @@ function Login(props) {
       .email("Invalid email format")
       .max(250, "250 characters max")
       .required("Required"),
-    password: Yup.string().min(6, "Minimum 6 characters").required("Required"),
+    password: Yup.string().min(8, "Minimum 8 characters").required("Required"),
   });
 
   let [passwordShown, setPasswordShown] = useState(false);

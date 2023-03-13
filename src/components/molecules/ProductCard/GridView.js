@@ -88,11 +88,12 @@ const Grid = (props) => {
       (router.pathname === "/" && product) ||
       (router.pathname === "/search" && product) ||
       (router.pathname === "/myBids" && product) ||
-      (router.pathname === "/auctionView" && product)
+      (router.pathname.includes("/auctionView") && product)
     ) {
       formik.setFieldValue(
         "auction_id",
-        router.pathname === "/search" || router.pathname === "/auctionView"
+        router.pathname === "/search" ||
+          router.pathname.includes("/auctionView")
           ? product.lotof
           : product.auction_id
       );
@@ -132,7 +133,7 @@ const Grid = (props) => {
         id: product ? product.id : "",
         userid: user && user.id ? user.id : "",
         last_name: user && user.last_name ? user.last_name : "",
-        producturl: `http://${window.location.hostname}/productView/${product.id}?auctionId=${product.auction_id}&auctionLotId=${product.id}`,
+        producturl: `${window.location.origin}/productView/${product.id}?auctionId=${product.auction_id}&auctionLotId=${product.id}`,
         wsprice: values.amount,
       };
       // if (!Boolean(props.listOfCards.length)) {
@@ -212,7 +213,6 @@ const Grid = (props) => {
   return (
     <Fade in={true} timeout={600}>
       <div className="productCardGrid">
-        {console.log(product, "checkRouter")}
         {product ? (
           <>
             <div className="pcgImg">
@@ -333,7 +333,7 @@ const Grid = (props) => {
                 onClick={() =>
                   handleRedirectInternal(
                     router,
-                    `lotview/${router?.query.auctionId || product.auction_id}/${
+                    `lotView/${router?.query.auctionId || product.auction_id}/${
                       product.id
                     }/${user.id ? user.id : 0}`
                   )
@@ -367,10 +367,14 @@ const Grid = (props) => {
               <span>Location:</span>
               {props.location ? (
                 <span>{props.location}</span>
-              ) : product.state && product.country ? (
-                <span>{`${product.state}, ${product.country}`}</span>
               ) : (
-                "Not available"
+                product.city &&
+                product.state &&
+                product.country && (
+                  <span>{`${product.city.trim()}, ${product.state}, ${
+                    product.country
+                  }`}</span>
+                )
               )}
             </p>
             {product.market_status === "open" ? (
@@ -398,11 +402,11 @@ const Grid = (props) => {
                         </>
                       ) : (
                         <span>
-                          {product.bid_count &&
-                          typeof product.bid_cnt != undefined
+                          {product.bid_count
                             ? product.bid_count
-                            : product.bidcnt &&
-                              typeof product.bidcnt != undefined
+                            : typeof product.bid_cnt != undefined
+                            ? product.bid_cnt
+                            : typeof product.bidcnt != undefined
                             ? product.bidcnt
                             : 0}{" "}
                           bids
@@ -609,7 +613,7 @@ const Grid = (props) => {
                     onClick={() =>
                       handleRedirectInternal(
                         router,
-                        `lotview/${
+                        `lotView/${
                           router?.query.auctionId || product.auction_id
                         }/${product.id}/${user?.id ? user.id : 0}`
                       )

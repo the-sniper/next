@@ -58,6 +58,10 @@ function Auctions(props) {
     isMobile && setAuctionView("Grid");
   });
 
+  let getAuctionType = router?.query?.auctionType
+    ? router?.query?.auctionType[0]
+    : "";
+
   useEffect(() => {
     let url = router.query.searchUrl;
     let title = "";
@@ -82,14 +86,12 @@ function Auctions(props) {
       country: "",
       page: 1,
       perpage:
-        typeof window != "undefined" && window.location.pathname === "/events"
-          ? 400
-          : 45,
+        typeof window != "undefined" && getAuctionType === "events" ? 400 : 45,
       auctionDate: "",
       sellername: "",
       locations: [],
       auctionEndDate: "",
-      auction_type: auctionType,
+      auction_type: auctionType[0],
 
       price: "",
     });
@@ -117,9 +119,7 @@ function Auctions(props) {
           : "",
         perpage: search.perpage,
         auction_type:
-          search.auction_type.length === 2
-            ? ""
-            : search.auction_type.toString(),
+          search.auction_type?.length === 2 ? "" : search.auction_type,
 
         location: JSON.stringify(
           locationValues.filter(function (obj) {
@@ -262,8 +262,8 @@ function Auctions(props) {
   const auctionLotView = (auctionData) => {
     if (Object.keys(auctionData).length) {
       router.push({
-        pathname: "/auctionView",
-        search: `?auctionId=${auctionData.id}&viewType=list`,
+        pathname: `/auctionView/${auctionData.id}`,
+        search: `?auctionId=${auctionData.id}&viewType=list&title=${auctionData.title}`,
       });
     }
   };
@@ -275,11 +275,12 @@ function Auctions(props) {
   return (
     <div
       className={`search customContainer footerFixer ${
-        typeof window != "undefined" && window.location.pathname === "/events"
+        typeof window != "undefined" && getAuctionType === "events"
           ? "eventContainer"
           : ""
       }`}
     >
+      {console.log(search, "auctionTypeSearch")}
       <div className="filterAction">
         <Button
           className="filterTrigger"
@@ -287,54 +288,50 @@ function Auctions(props) {
         >
           <span className="material-icons">filter_list</span> Filters
         </Button>
-        {typeof window != "undefined" &&
-          window.location.pathname != "/events" && (
-            <SearchField
-              setSearch={setSearch}
-              clearSearch={clearSearchFilter}
-              search={search}
-            />
-          )}
-      </div>
-      {typeof window != "undefined" &&
-        window.location.pathname != "/events" && (
-          <>
-            {!isMobile && (
-              <div className="gridListToggle">
-                <Button
-                  className={auctionView === "Grid" ? "active" : ""}
-                  onClick={() => setAuctionView("Grid")}
-                >
-                  <span className="material-icons">apps</span>GRID
-                </Button>
-                <Button
-                  className={auctionView === "List" ? "active" : ""}
-                  onClick={() => setAuctionView("List")}
-                >
-                  <span className="material-icons">view_list</span>LIST
-                </Button>
-              </div>
-            )}
-          </>
+        {typeof window != "undefined" && getAuctionType != "events" && (
+          <SearchField
+            setSearch={setSearch}
+            clearSearch={clearSearchFilter}
+            search={search}
+          />
         )}
-      <div className="searchCnt d-flex justify-content-start align-items-start">
-        {typeof window != "undefined" &&
-          window.location.pathname != "/events" && (
-            <div className="searchLt">
-              <div className="deskFilter">
-                <FilterPanel
-                  setSearch={setSearch}
-                  clearSearch={clearSearchFilter}
-                  search={search}
-                  {...props}
-                />
-              </div>
+      </div>
+      {typeof window != "undefined" && getAuctionType != "events" && (
+        <>
+          {!isMobile && (
+            <div className="gridListToggle">
+              <Button
+                className={auctionView === "Grid" ? "active" : ""}
+                onClick={() => setAuctionView("Grid")}
+              >
+                <span className="material-icons">apps</span>GRID
+              </Button>
+              <Button
+                className={auctionView === "List" ? "active" : ""}
+                onClick={() => setAuctionView("List")}
+              >
+                <span className="material-icons">view_list</span>LIST
+              </Button>
             </div>
           )}
+        </>
+      )}
+      <div className="searchCnt d-flex justify-content-start align-items-start">
+        {typeof window != "undefined" && getAuctionType != "events" && (
+          <div className="searchLt">
+            <div className="deskFilter">
+              <FilterPanel
+                setSearch={setSearch}
+                clearSearch={clearSearchFilter}
+                search={search}
+                {...props}
+              />
+            </div>
+          </div>
+        )}
         <div
           className={`searchRt ${
-            typeof window != "undefined" &&
-            window.location.pathname === "/events"
+            typeof window != "undefined" && getAuctionType === "events"
               ? "evntRt mt-5"
               : ""
           }`}
@@ -344,8 +341,7 @@ function Auctions(props) {
             <Loaders name="product_grid_view" isLoading={isLoading} loop={8} />
           ) : viewAuction.length > 0 ? (
             <>
-              {typeof window != "undefined" &&
-              window.location.pathname === "/events" ? (
+              {typeof window != "undefined" && getAuctionType === "events" ? (
                 <div className={`searchResultsAuction ${auctionView}`}>
                   {viewAuction
                     .filter((ele) => ele.event_enable == 1)

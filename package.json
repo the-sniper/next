@@ -31,7 +31,6 @@
     "country-code-lookup": "0.0.19",
     "country-state-city": "^1.0.5",
     "date-fns": "^2.23.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "formik": "^2.1.5",
     "jss-rtl": "^0.3.0",
     "lodash.debounce": "^4.0.8",

@@ -5,15 +5,15 @@ import AuthContext from "@/context/auth/authContext";
 import AlertContext from "@/context/alert/alertContext";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import ListView from "@/components/molecules/ProductCard/ListView";
-import { useHistory } from "react-router-dom";
 import { Pagination } from "@material-ui/lab";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
+import { useRouter } from "next/router";
 
 const Won = ({ auctionView }) => {
   const { getDashboardMybids, dashboardMyBids } = useContext(ProductContext);
   const { user } = useContext(AuthContext);
   const { setAlert } = useContext(AlertContext);
-  const history = useHistory();
+  const router = useRouter();
   const [lots, setLots] = useState([]);
   const [invoice, setInvoice] = useState([]);
   const [data, setData] = useState({
@@ -38,11 +38,12 @@ const Won = ({ auctionView }) => {
     }
   }, [dashboardMyBids]);
   const mybidsRedirect = (data) => {
-    history.push({
-      pathname: "/productView",
-      search: `?auctionId=${data.auction_id}&auctionLotId=${data.id}`,
+    router.push({
+      pathname: `/productView/${data.id}`,
+      search: `?auctionLotId=${data.auction_id}`,
     });
   };
+
   const onHandlePage = (event, page) => setData({ ...data, page });
 
   const addToCheckout = (data) => {
@@ -69,7 +70,7 @@ const Won = ({ auctionView }) => {
   const handleSubmit = () => {
     let invoice_id = [];
     invoice.map((val) => invoice_id.push(val.common_invoice));
-    history.push(`/checkout/auction?id=${invoice_id.join("&id=")}`);
+    router.push(`/checkout/auction?id=${invoice_id.join("&id=")}`);
   };
   return (
     <div>

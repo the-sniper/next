@@ -572,6 +572,7 @@ button:focus {
   width: 100%;
   margin: 0;
   text-align: start;
+  flex-wrap: wrap;
 }
 
 .theme-dark .MuiSelect-select:not([multiple]) option,
@@ -1335,7 +1336,7 @@ input[type="number"] {
   transform: none;
 }
 
-.flscrnDscrptnPopup{
+.flscrnDscrptnPopup {
   overflow: hidden;
 }
 

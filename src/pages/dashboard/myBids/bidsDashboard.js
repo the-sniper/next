@@ -37,8 +37,8 @@ const BidsDashboard = ({ auctionView, type }) => {
   }, [dashboardMyBids]);
   const mybidsRedirect = (data) => {
     router.push({
-      pathname: "/productView",
-      search: `?auctionId=${data.auction_id}&auctionLotId=${data.id}`,
+      pathname: `/productView/${data.id}`,
+      search: `?auctionLotId=${data.auction_id}`,
     });
   };
   const onHandlePage = (event, page) => setData({ ...data, page });

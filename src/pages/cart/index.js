@@ -142,7 +142,7 @@ function Cart() {
             </h6>
             <PrimaryButton
               label="Continue Shopping"
-              onClick={() => router.push("/searchAuction")}
+              onClick={() => router.push("/auctions")}
             />
           </div>
         )}

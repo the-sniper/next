@@ -15,14 +15,15 @@ import {
 const AuthState = (props) => {
   const initialState = {
     token:
-      typeof window !== "undefined" &&
+      typeof window != "undefined" &&
       (sessionStorage.getItem("token") || localStorage.getItem("token")),
     isAuthenticated: null,
     isAdmin: null,
     loading: true,
     user: null,
+
     allLogin:
-      typeof window !== "undefined" &&
+      typeof window != "undefined" &&
       (localStorage.getItem("allLogin")
         ? JSON.parse(localStorage.getItem("allLogin"))
         : []),
@@ -72,7 +73,7 @@ const AuthState = (props) => {
         apiCall("post", "login", formData, "", ""),
       ]);
       resp.commonResponse(res.data, "login");
-      if (res.data.status === "success" && typeof window !== "undefined") {
+      if (res.data.status === "success") {
         dispatch({
           type: LOAD_ALL_LOGIN,
           payload: {
@@ -83,6 +84,7 @@ const AuthState = (props) => {
           "allLogin",
           JSON.stringify(res.data.response.other_login)
         );
+        console.log(JSON.stringify(res), "resCheck");
         if (global.session) {
           sessionStorage.setItem("token", res.data.response.token);
         } else {
@@ -110,12 +112,10 @@ const AuthState = (props) => {
   };
 
   const loadUser = async () => {
-    if (typeof window !== "undefined") {
-      if (localStorage.token && !global.session) {
-        setAuthToken(localStorage.token);
-      } else if (sessionStorage.token) {
-        setAuthToken(sessionStorage.token);
-      }
+    if (localStorage.token && !global.session) {
+      setAuthToken(localStorage.token);
+    } else if (sessionStorage.token) {
+      setAuthToken(sessionStorage.token);
     }
 
     const [res] = await Promise.all([
@@ -338,7 +338,7 @@ const AuthState = (props) => {
       const [res] = await Promise.all([
         apiCall(
           "post",
-          "plugin/ticketing/seat/order/myTickets",
+          "/plugin/ticketing/seat/order/myTickets",
           formData,
           "",
           ""

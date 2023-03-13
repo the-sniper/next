@@ -9,7 +9,7 @@ import {
 import PrimaryButton from "../../atoms/PrimaryButton";
 import { Button, IconButton, Tooltip } from "@material-ui/core";
 import FormDialog from "../Dialog";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
@@ -21,6 +21,7 @@ import CommonContext from "../../../context/common/commonContext";
 import AlertContext from "../../../context/alert/alertContext";
 import csc from "country-state-city";
 import Dialog from "@material-ui/core/Dialog";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,6 +49,7 @@ function Plugins() {
     iconsrc: "/assets/svg/inventory.svg",
     title: "Inventory",
     description: "",
+    video_link: "",
   });
   const [buyNowPopup, setBuyNowPopup] = useState(false);
   const [statesInLocal, setStatesinLocal] = useState([]);
@@ -406,6 +408,7 @@ function Plugins() {
                       iconsrc: process.env.NEXT_PUBLIC_IMAGE_URL + value.image,
                       title: value.menu_name,
                       description: value.description,
+                      video_link: value.video_link,
                     })
                   }
                 >
@@ -577,7 +580,7 @@ function Plugins() {
     {
       label: [
         "I agree to accept the ",
-        <Link to="/terms" className="ml-1" target="blank">
+        <Link href="/terms" className="ml-1" target="blank">
           {" "}
           {" Terms & Conditions"}
         </Link>,
@@ -686,6 +689,7 @@ function Plugins() {
       value: "",
       iconsrc: "",
       title: "",
+      video_link: "",
     });
   };
 
@@ -833,6 +837,7 @@ function Plugins() {
                       value: "",
                       iconsrc: "",
                       title: "",
+                      video_link: "",
                     })
                   }
                 >
@@ -847,10 +852,14 @@ function Plugins() {
                 value: "",
                 iconsrc: "",
                 title: "",
+                video_link: "",
               })
             }
           >
             <div className="pt-2">
+              <video width="100%" height="275" controls>
+                <source src={triggerPopup.video_link} type="video/mp4" />
+              </video>
               <p className="shortDesc">{triggerPopup.description} </p>
               <p
                 className="vmMoreLnk"

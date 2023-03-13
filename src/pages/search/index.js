@@ -284,7 +284,9 @@ function Search() {
 
   const onHandlePage = (event, value) => {
     setSearch({ ...search, page: value });
+    window.scrollTo(0, 0);
   };
+
   useEffect(() => {
     if (allLots && allLots.results && allLots.results.length !== 0) {
       socket.on("bidoffers", (data) => {
@@ -407,7 +409,6 @@ function Search() {
 
   return (
     <div className="search customContainer">
-      {console.log(searchLot, "checkSearch")}
       <div className="filterAction">
         <Button
           className="filterTrigger"

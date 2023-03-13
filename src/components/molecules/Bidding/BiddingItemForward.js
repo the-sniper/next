@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useHistory } from "react-router";
-import CustomInput from "../../atoms/Inputs/CustomInput";
-import PrimaryButton from "../../atoms/PrimaryButton";
 import {
   mapData,
   currencyFormat,
   handleRedirectInternal,
-} from "../../../common/components";
-import AuthContext from "../../../context/auth/authContext";
-import BuyerContext from "../../../context/buyer/buyerContext";
-import AlertContext from "../../../context/alert/alertContext";
-import AuctionContext from "../../../context/auction/auctionContext";
+} from "@/common/components";
+import AuthContext from "@/context/auth/authContext";
+import BuyerContext from "@/context/buyer/buyerContext";
+import AlertContext from "@/context/alert/alertContext";
+import AuctionContext from "@/context/auction/auctionContext";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { biddercheck } from "../../../common/bidcheck";
+import { biddercheck } from "@/common/bidcheck";
+import PrimaryButton from "@/components/atoms/PrimaryButton";
+import { useRouter } from "next/router";
 
 const BiddingItemForward = ({
   type,
@@ -29,7 +28,7 @@ const BiddingItemForward = ({
   const { isAuthenticated, user } = useContext(AuthContext);
   const { bidConfirm, mobileConfirm } = useContext(BuyerContext);
   const { setAlert } = useContext(AlertContext);
-  const history = useHistory();
+  const history = useRouter();
   const [offerbtnDisable, setOfferbtnDisable] = useState(false);
   const { bidOffer, bidLive } = useContext(AuctionContext);
   const validationArray = Yup.object({
@@ -47,7 +46,6 @@ const BiddingItemForward = ({
   });
 
   //console.log("auction details",auctionDtl,lotdetails)
-
   const formik = useFormik({
     initialValues: {
       // wsprice: "",
@@ -66,7 +64,7 @@ const BiddingItemForward = ({
       id: 0,
       userid: "",
       last_name: "",
-      producturl: `http://${window.location.hostname}/productView/${lotdetails.lotDetails?.id}?auctionId=${auctionDtl?.id}&auctionLotId=${lotdetails.lotDetails?.id}`,
+      producturl: `${window.location.origin}/productView/${lotdetails.lotDetails?.id}?auctionId=${auctionDtl?.id}&auctionLotId=${lotdetails.lotDetails?.id}`,
       wsprice: "",
     },
     validationSchema: validationArray,
@@ -191,7 +189,7 @@ const BiddingItemForward = ({
               />
             ) : (
               <PrimaryButton
-                label={type === "hard" ? "Submit bid" : "Submit Max bid"}
+                label={"Login to bid"}
                 btnSize={size ? size : "small"}
                 onClick={(e) => {
                   e.preventDefault();

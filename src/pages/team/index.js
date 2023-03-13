@@ -12,7 +12,7 @@ function OurTeam() {
     {
       name: "Mark Walpole",
       image: "/assets/images/team/Mark.png",
-      title: "Director of Sales",
+      title: "VP Business Development & Sales",
       description: "",
     },
     {

@@ -7,6 +7,7 @@ import DashboardLayout from "@/components/templates/DashboardLayout";
 import UserContext from "@/context/user/userContext";
 import AuthContext from "@/context/auth/authContext";
 import ProductContext from "@/context/product/productContext";
+import NoRecordsFound from "@/components/atoms/NoRecordsFound";
 
 function Watchlist() {
   const [auctionView, setAuctionView] = useState("Grid");
@@ -100,35 +101,40 @@ function Watchlist() {
         </div>
       }
     >
-      <div className={`searchResults ${auctionView}`}>
-        {viewProducts?.map((data, index) => (
-          <>
-            {auctionView === "Grid" ? (
-              <>
-                <GridView
-                  key={index}
-                  data={data}
-                  favId={`searchProd_${index}`}
-                  updateData={getWatchlistProduct}
-                  drawerHandler={toggleDrawer("right", true, data)}
-                  listOfCards={savedCards}
-                />
-              </>
-            ) : (
-              <>
-                <ListView
-                  key={index}
-                  data={data}
-                  favId={`searchProd_${index}`}
-                  updateData={getWatchlistProduct}
-                  listOfCards={savedCards}
-                  drawerHandler={toggleDrawer("right", true, data)}
-                />
-              </>
-            )}
-          </>
-        ))}
-      </div>
+      {totalViewProducts > 0 ? (
+        <div className={`searchResults ${auctionView}`}>
+          {viewProducts?.map((data, index) => (
+            <>
+              {auctionView === "Grid" ? (
+                <>
+                  <GridView
+                    key={index}
+                    data={data}
+                    favId={`searchProd_${index}`}
+                    updateData={getWatchlistProduct}
+                    drawerHandler={toggleDrawer("right", true, data)}
+                    listOfCards={savedCards}
+                  />
+                </>
+              ) : (
+                <>
+                  <ListView
+                    key={index}
+                    data={data}
+                    favId={`searchProd_${index}`}
+                    updateData={getWatchlistProduct}
+                    listOfCards={savedCards}
+                    drawerHandler={toggleDrawer("right", true, data)}
+                  />
+                </>
+              )}
+            </>
+          ))}
+        </div>
+      ) : (
+        <NoRecordsFound />
+      )}
+
       <Drawer
         className="rightDrawer productViewDrawer"
         anchor={"right"}

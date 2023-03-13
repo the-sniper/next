@@ -428,6 +428,17 @@
   margin-bottom: 20px;
 }
 
+.productCardList .listActBtn .biddingCnt {
+  flex-wrap: wrap;
+}
+
+.productCardList .listActBtn .biddingCnt .customInput,
+.productCardList .listActBtn .biddingCnt .customInput .MuiInputBase-root fieldset,
+.productCardList .listActBtn .biddingCnt .primButton,
+.productCardList .listActBtn .biddingCnt .primButton button {
+  width: 100%;
+}
+
 .productCardList .listLotDetails {
   margin-bottom: 20px;
 }
@@ -1075,6 +1086,7 @@
   align-items: center;
   margin-top: 10px;
   margin-bottom: 0;
+  text-transform: capitalize;
 }
 
 .product-loc-bid .location > p .material-icons {
@@ -1147,7 +1159,7 @@
   width: max-content;
 }
 
-.searchResultsAuction.List .primary-image{
+.searchResultsAuction.List .primary-image {
   position: relative;
 }
 

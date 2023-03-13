@@ -112,7 +112,7 @@ const ListView = (props) => {
         id: product ? product.id : "",
         userid: user && user.id ? user.id : "",
         last_name: user && user.last_name ? user.last_name : "",
-        producturl: `http://${window.location.hostname}/productView/${product.id}?auctionId=${product.auction_id}&auctionLotId=${product.id}`,
+        producturl: `${window.location.hostname}/productView/${product.id}?auctionId=${product.auction_id}&auctionLotId=${product.id}`,
         wsprice: values.amount,
       };
       // if (!Boolean(props.listOfCards.length)) {
@@ -240,24 +240,22 @@ const ListView = (props) => {
               }
             </div>
           </div>
-
+          {console.log(props.auctionType, "viewRoute")}
           <div className="listContent">
             {props.auctionType === "live" ? (
               <h2
                 onClick={() =>
                   handleRedirectInternal(
                     router,
-                    `lotview/${searchQueryParam(
-                      location.search,
-                      "auctionId"
-                    )}/${product.id}/${user.id ? user.id : 0}`
+                    `lotView/${router.query.auctionId}/${product.id}/${
+                      user.id ? user.id : 0
+                    }`
                   )
                 }
                 className="listProdTitle"
               >
                 <div
                   className="content"
-                  style={{ width: "1000px" }}
                   dangerouslySetInnerHTML={{
                     __html: product.title,
                   }}
@@ -267,7 +265,6 @@ const ListView = (props) => {
               <h2 onClick={props.drawerHandler} className="listProdTitle">
                 <div
                   className="content"
-                  style={{ width: "1000px" }}
                   dangerouslySetInnerHTML={{
                     __html: product.title,
                   }}
@@ -387,11 +384,17 @@ const ListView = (props) => {
               </p>
 
               <p className="lot-id">
-                <span>Location:</span>
-                {product.state && product.country ? (
-                  <span className="lot-no">{`${product.state}, ${product.country}`}</span>
+                <span>Location: </span>
+                {props.location ? (
+                  <span>{props.location}</span>
                 ) : (
-                  "Not available"
+                  product.city &&
+                  product.state &&
+                  product.country && (
+                    <span className="lot-no">{`${product.city.trim()}, ${
+                      product.state
+                    }, ${product.country}`}</span>
+                  )
                 )}
               </p>
               <p className="lot-id">
@@ -641,7 +644,7 @@ const ListView = (props) => {
                 onClick={() =>
                   handleRedirectInternal(
                     router,
-                    `lotview/${
+                    `lotView/${
                       searchQueryParam(location.search, "auctionId") ||
                       product.auction_id
                     }/${product.id}/${user?.id ? user.id : 0}`

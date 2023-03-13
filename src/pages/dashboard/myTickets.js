@@ -14,6 +14,7 @@ import {
 } from "../../common/components";
 import { useHistory, Link } from "react-router-dom";
 import { Pagination } from "@material-ui/lab";
+import NoRecordsFound from "@/components/atoms/NoRecordsFound";
 function MyTickets() {
   const { getPreference, setPreference } = useContext(UserContext);
   const {
@@ -34,7 +35,6 @@ function MyTickets() {
       get_booked_tickets({ user_id: user.id, perpage: 10, page: 1 });
     }
   }, [user]);
-
   useEffect(() => {
     if (book_ticket_status) {
       if (book_ticket_status.from === "booked_ticket_status") {
@@ -97,7 +97,7 @@ function MyTickets() {
           will be sent regardless of your email preference settings.
         </h5> */}
         {Loading ? (
-          ""
+          "Loading"
         ) : (
           <div className="table-responsive aiTable">
             {ticket_details.length > 0 ? (
@@ -153,7 +153,7 @@ function MyTickets() {
                       <div className="tcktStatus">
                         <div className="qrContianer">
                           <img
-                            src={`${process.env.NEXT_PUBLIC_FORWARD_DOMAIN}/images/qr/${data.qr_code}`}
+                            src={`${process.env.NEXT_PUBLIC_API_DOMAIN}/images/qr/${data.qr_code}`}
                           />
                         </div>
                         <p>BOOKED</p>
@@ -163,7 +163,7 @@ function MyTickets() {
                 </div>
               </>
             ) : (
-              <div className="np-pro-box">{"No tickets found"}</div>
+              <NoRecordsFound />
             )}
           </div>
         )}

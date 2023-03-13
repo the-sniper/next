@@ -426,7 +426,7 @@ const ProductState = (props) => {
       const [res] = await Promise.all([
         apiCall(
           "post",
-          "plugin/common/site/api/get-subscription-list",
+          "/plugin/common/site/api/get-subscription-list",
           formData,
           "",
           ""
@@ -456,7 +456,7 @@ const ProductState = (props) => {
       const [res] = await Promise.all([
         apiCall(
           "post",
-          "plugin/common/site/api/available-plugin-list",
+          "/plugin/common/site/api/available-plugin-list",
           formData,
           "",
           ""

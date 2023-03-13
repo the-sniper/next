@@ -125,7 +125,7 @@ function Profile(props) {
     phone: Yup.string()
       .trim()
       .matches(/^[0-9- +()]*$/g, "Only numbers are allowed")
-      .min(15, "Minimum 10 digits phone number")
+      .min(10, "Minimum 10 digits phone number")
       .required("Required"),
     country: Yup.string().trim().required("Required!"),
     city: Yup.string()
@@ -148,10 +148,10 @@ function Profile(props) {
 
   const validationPassword = Yup.object({
     old_password: Yup.string()
-      .min(6, "Minimum 6 characters")
+      .min(8, "Minimum 8 characters")
       .required("Required!"),
     new_password: Yup.string()
-      .min(6, "Minimum 6 characters")
+      .min(8, "Minimum 8 characters")
       .required("Required!"),
     confirm_password: Yup.string()
       .oneOf([Yup.ref("new_password")], "Password's not match")

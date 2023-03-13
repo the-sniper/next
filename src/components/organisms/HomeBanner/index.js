@@ -1,25 +1,25 @@
-import React, { useState, useEffect, useContext } from 'react';
-import PrimaryButton from '../../atoms/PrimaryButton';
-import { makeStyles } from '@material-ui/core/styles';
-import Slider from 'react-slick';
-import Typist from 'react-typist';
-import { noImageAvailable } from '../../../common/components';
-import ReactPlayer from 'react-player';
-import { Button } from '@material-ui/core';
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
-import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import CloseIcon from '@material-ui/icons/Close';
-import Slide from '@material-ui/core/Slide';
+import React, { useState, useEffect, useContext } from "react";
+import PrimaryButton from "../../atoms/PrimaryButton";
+import { makeStyles } from "@material-ui/core/styles";
+import Slider from "react-slick";
+import Typist from "react-typist";
+import { noImageAvailable } from "../../../common/components";
+import ReactPlayer from "react-player";
+import { Button } from "@material-ui/core";
+import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import Dialog from "@material-ui/core/Dialog";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import CloseIcon from "@material-ui/icons/Close";
+import Slide from "@material-ui/core/Slide";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    position: 'relative',
-    background: 'transparent',
-    boxShadow: 'none',
+    position: "relative",
+    background: "transparent",
+    boxShadow: "none",
   },
   title: {
     marginLeft: theme.spacing(2),
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction='up' ref={ref} {...props} />;
+  return <Slide direction="up" ref={ref} {...props} />;
 });
 
 function HomeBanner(props) {
@@ -37,7 +37,7 @@ function HomeBanner(props) {
   const [previousSlideIndex, setPreviousSlideIndex] = useState(0);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [nextSlideIndex, setNextSlideIndex] = useState(0);
-  const [currCategory, setCurrCategory] = useState('Products');
+  const [currCategory, setCurrCategory] = useState("Products");
   const [categories, setCategories] = useState([]);
   // const [isPlayerOn, setIsPlayerOn] = useState(true);
 
@@ -81,16 +81,16 @@ function HomeBanner(props) {
     afterChange: (current) => setNextSlideIndex(current),
   };
   const categoriess = [
-    { img: '/assets/images/art.jpg', title: 'Art' },
-    { img: '/assets/images/banner.jpg', title: 'Asian Antiques' },
-    { img: '/assets/images/automobile.jpg', title: 'Automobile' },
-    { img: '/assets/images/coin.jpg', title: 'Collectible Coins' },
-    { img: '/assets/images/electronic.jpg', title: 'Electronics' },
-    { img: '/assets/images/furniture.jpg', title: 'Furniture' },
-    { img: '/assets/images/jewelry.jpg', title: 'Jewelry' },
-    { img: '/assets/images/home.jpg', title: 'Homes' },
-    { img: '/assets/images/livestock.jpg', title: 'Live Stock' },
-    { img: '/assets/images/others.jpg', title: 'Others' },
+    { img: "/assets/images/art.jpg", title: "Art" },
+    { img: "/assets/images/banner.jpg", title: "Asian Antiques" },
+    { img: "/assets/images/automobile.jpg", title: "Automobile" },
+    { img: "/assets/images/coin.jpg", title: "Collectible Coins" },
+    { img: "/assets/images/electronic.jpg", title: "Electronics" },
+    { img: "/assets/images/furniture.jpg", title: "Furniture" },
+    { img: "/assets/images/jewelry.jpg", title: "Jewelry" },
+    { img: "/assets/images/home.jpg", title: "Homes" },
+    { img: "/assets/images/livestock.jpg", title: "Live Stock" },
+    { img: "/assets/images/others.jpg", title: "Others" },
   ];
 
   useEffect(() => {
@@ -104,7 +104,7 @@ function HomeBanner(props) {
     let catToDisplay = [];
     if (props.allCategory.length > 0) {
       props.allCategory.map((category) => {
-        catToDisplay.push({ img: '', title: category.name });
+        catToDisplay.push({ img: "", title: category.name });
       });
     }
     setCategories(catToDisplay);
@@ -115,14 +115,14 @@ function HomeBanner(props) {
   };
 
   return (
-    <div className='homeBanner'>
+    <div className="homeBanner test">
       {categoriess && categoriess.length > 0 ? (
         <>
           {/* <div className='tagline customContainer'>
             <h4>THE NUMBER ONE AUCTION ON THE WEB</h4>
           </div> */}
-          <div className='hbCnt'>
-            <div className='hbLt w-100 text-center'>
+          <div className="hbCnt">
+            <div className="hbLt w-100 text-center">
               {/* <h1>
                 Find Your
                 <Typist
@@ -134,14 +134,14 @@ function HomeBanner(props) {
                 </Typist>{' '}
                 Locally
               </h1> */}
-              <div className='btnWrpr d-flex align-items-center justify-content-center'>
+              <div className="btnWrpr d-flex align-items-center justify-content-center">
                 <PrimaryButton
-                  label='Explore'
-                  btnSize='small'
+                  label="Explore"
+                  btnSize="small"
                   onClick={handleExploreButtonClick}
                 />
-                <Button className='otlnButton' onClick={handleClickOpen}>
-                  Watch Video <PlayCircleOutlineIcon className='ml-2' />
+                <Button className="otlnButton" onClick={handleClickOpen}>
+                  Watch Video <PlayCircleOutlineIcon className="ml-2" />
                 </Button>
               </div>
             </div>
@@ -190,33 +190,33 @@ function HomeBanner(props) {
             {/* )} */}
           </div>
           <Dialog
-            className='videoDialogWrapper'
+            className="videoDialogWrapper"
             fullScreen
             open={open}
             onClose={handleClose}
             TransitionComponent={Transition}
           >
             <AppBar className={classes.appBar}>
-              <div className='d-flex align-items-center justify-content-end'>
+              <div className="d-flex align-items-center justify-content-end">
                 <IconButton
-                  edge='start'
-                  color='inherit'
+                  edge="start"
+                  color="inherit"
                   onClick={handleClose}
-                  aria-label='close'
+                  aria-label="close"
                 >
                   <CloseIcon />
                 </IconButton>
               </div>
             </AppBar>
             <ReactPlayer
-              className='cstmVdoPlayer'
-              url='https://vimeo.com/591863269'
-              playing='true'
+              className="cstmVdoPlayer"
+              url="https://vimeo.com/591863269"
+              playing="true"
             />
           </Dialog>
         </>
       ) : (
-        ''
+        ""
       )}
     </div>
   );

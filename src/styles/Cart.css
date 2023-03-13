@@ -120,12 +120,15 @@
 
 .emptyCart {
   text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .emptyCart > img {
   width: 280px;
   height: 280px;
   margin: 30px auto;
+  margin-left: 60px;
   object-fit: contain;
   opacity: 0.5;
 }

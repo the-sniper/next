@@ -37,7 +37,7 @@ const SideNav = () => {
           </Link>
         </ListItem>
         <ListItem button>
-          <Link activeClassName="active" href="/dashboard/myBids?s=0">
+          <Link activeClassName="active" href="/dashboard/myBids/0">
             My Bids
           </Link>
         </ListItem>
@@ -51,11 +51,11 @@ const SideNav = () => {
             My Tickets
           </Link>
         </ListItem>
-        <ListItem button>
+        {/* <ListItem button>
           <Link activeClassName="active" href="/dashboard/savedCards">
             Saved Cards
           </Link>
-        </ListItem>
+        </ListItem> */}
         <ListItem button>
           <Link activeClassName="active" href="/dashboard/savedSearch">
             Saved Searches

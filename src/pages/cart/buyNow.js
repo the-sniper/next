@@ -138,7 +138,7 @@ function Cart() {
             </h6>
             <PrimaryButton
               label="Continue Shopping"
-              onClick={() => handleRedirectInternal(router, "searchAuction")}
+              onClick={() => handleRedirectInternal(router, "auctions")}
             />
           </div>
         )}

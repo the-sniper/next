@@ -157,7 +157,7 @@ const Checkout = () => {
               "You paid this item already.if not please check invoice id!",
               "error"
             );
-            return router.push(`/mybids?s=1`);
+            return router.push(`/dashboard/mybids/1`);
           }
         }
       }
@@ -381,10 +381,10 @@ const Checkout = () => {
               src="/assets/svg/emptyCart.svg"
               alt="Empty cart illustration"
             />
-            <h5>No Invoice Found For This Invoice Id</h5>
+            <h5>Your cart seems to be empty!</h5>
             <PrimaryButton
               label="Continue Shopping"
-              onClick={() => router.push("/searchAuction")}
+              onClick={() => router.push("/auctions")}
             />
           </div>
         )}

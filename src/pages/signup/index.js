@@ -141,7 +141,7 @@ function Signup() {
     {
       label: [
         "I agree to accept the ",
-        <Link href="/terms" className="ml-1" target="blank">
+        <Link href="/static/terms" className="ml-1" target="blank">
           {" "}
           {" Terms & Conditions"}
         </Link>,

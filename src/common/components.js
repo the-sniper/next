@@ -124,7 +124,6 @@ export const getImages_url_check = (img, flag) => {
     return `${global.images_url}${img}`;
   } else {
     return `${process.env.NEXT_PUBLIC_FORWARD_DOMAIN}/uploads/product/${img}`;
-    //return `https://forwardapidev.auctionsoftware.com/uploads/product/${img}`
   }
 };
 
@@ -941,10 +940,10 @@ export const useCustomMediaQuery = (queryString) => {
 };
 
 export const removeHTMLTags = (data) => {
-  if (typeof window !== 'undefined') {
-      let tempEle = document.createElement('span')
-      tempEle.innerHTML = data
-      let convertedText = tempEle.textContent || tempEle.innerText || ''
-      return convertedText
+  if (typeof window !== "undefined") {
+    let tempEle = document.createElement("span");
+    tempEle.innerHTML = data;
+    let convertedText = tempEle.textContent || tempEle.innerText || "";
+    return convertedText;
   }
-}
+};

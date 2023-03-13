@@ -1,6 +1,8 @@
 import axios from "axios";
 const biddercheck = async (data) => {
-  let site_url = `${global.site_url}/api/bidderchecker`;
+  let site_url = `${global.site_url}?endpoint=${encodeURIComponent(
+    "/api/bidderchecker"
+  )}`;
 
   let type = "application/json";
 

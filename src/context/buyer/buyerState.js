@@ -46,7 +46,7 @@ const BuyerState = (props) => {
     try {
       formData.is_auctionio=1;
       const [res] = await Promise.all([
-        apiCall("post", "mobileapi/mobileconfirmAuctionIO", formData, "", ""),
+        apiCall("post", "/mobileapi/mobileconfirmAuctionIO", formData, "", ""),
       ]);
       if (res.data == "ok") {
         return true;

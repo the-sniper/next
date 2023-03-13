@@ -15,6 +15,6 @@
       <path id="Path_12" data-name="Path 12" d="M104.206,323s.121,4.326.023,6.345a1.384,1.384,0,0,1-2.173,1.239c-1.492-.811-3-1.6-4.428-2.511-.174-.111-.64-.533-.793-.651s.674-.528,1.047-.793c.806-.578,1.692-1.023,2.539-1.534a34.593,34.593,0,0,1,3.15-1.7A6.822,6.822,0,0,0,104.206,323Z" transform="translate(-87.496 -291.91)" fill="#720000"/>
       <path id="Path_13" data-name="Path 13" d="M100.594,289.362a2.837,2.837,0,0,0-.885.353c-1.717.839-3.327,1.867-4.979,2.823a2.569,2.569,0,0,0-1.223,1.245,1.721,1.721,0,0,1-.662-1.423,12.737,12.737,0,0,1,.1-2.3c.02-.247.2-.344.373-.464a58.891,58.891,0,0,1,5.445-3.243q.713-.4,1.422-.8c.2-.116.344-.179.347.165C100.537,286.927,100.57,288.141,100.594,289.362Z" transform="translate(-83.885 -257.983)" fill="#3bc7dc"/>
     </g>
-    <text id="Auctionsoftware.com" transform="translate(611 92)" font-size="31" font-family="DINCondensed-Bold, DIN Condensed" font-weight="700"><tspan x="0" y="0">Auctionsoftware.com</tspan></text>
+    <text id="Auctionsoftware.com" transform="translate(611 92)" font-size="31" font-family="DINCondensed-Bold, DDINCondensed" font-weight="700"><tspan x="0" y="0">Auctionsoftware.com</tspan></text>
   </g>
 </svg>

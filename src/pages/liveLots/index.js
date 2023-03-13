@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
 
 function LiveLots(props) {
   const router = useRouter();
-  const search = router.query.search;
+  const search = router.query.auctionId;
   const [auction, setAuction] = useState({});
   const [lotDetails, setLotDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -181,26 +181,22 @@ function LiveLots(props) {
   }, [user]);
 
   useEffect(() => {
-    let auctionId = router?.query.auctionId;
-    let userId = router?.query.uid;
-    if (auctionId) {
-      getAuctionDetails({
-        title: "",
-        auctionId: auctionId,
-        userid: userId,
-        page: "",
-        perpage: "2000",
-        auctionDate: "",
-        orderby: 1,
-        is_auctionio: 1,
-      });
-      getAllAuctionMessages({
-        auctionid: auctionId,
-      });
-      auctionPercentage({ auctionid: auctionId });
-    } else {
-      handleRedirectInternal(router, "auctions");
-    }
+    let initialAuctionId = router?.query?.auctionId;
+    let initialUserId = router?.query?.uid;
+    getAuctionDetails({
+      title: "",
+      auctionId: initialAuctionId,
+      userid: initialUserId,
+      page: "",
+      perpage: "2000",
+      auctionDate: "",
+      orderby: 1,
+      is_auctionio: 1,
+    });
+    getAllAuctionMessages({
+      auctionid: initialAuctionId,
+    });
+    auctionPercentage({ auctionid: initialAuctionId });
   }, [search]);
 
   useEffect(() => {
@@ -243,7 +239,7 @@ function LiveLots(props) {
           position: "center",
         }).then(function (data) {
           if (data.isConfirmed) {
-            return router.push("/searchAuction");
+            return router.push("/auctions");
           }
         });
       }
@@ -328,7 +324,7 @@ function LiveLots(props) {
           position: "center",
         }).then(function (data) {
           if (data.isConfirmed) {
-            return router.push("/searchAuction?auctionType=1&catgId=");
+            return router.push("/auctions?auctionType=1&catgId=");
           }
         });
       }
@@ -754,7 +750,7 @@ function LiveLots(props) {
           // console.log('clear response status', auctionResponse);
           setAlert("Auction Not Found", "warning");
           clearResponse();
-          handleRedirectInternal(router, "auctions");
+          // handleRedirectInternal(router, "auctions");
         }
       }
     }
@@ -762,6 +758,7 @@ function LiveLots(props) {
 
   return (
     <>
+      {console.log(router?.query?.auctionId, "routerCheck")}
       {isLoading ? (
         <div className="liveLotsLoader">
           <Loaders name="live_auction" isLoading={isLoading} />
@@ -859,7 +856,7 @@ function LiveLots(props) {
               <div className="bidCnt">
                 <h2>{currencyFormat(lotDetails.current_bid)}</h2>
 
-                {new Date() < new Date(auction.date_added) ? (
+                {/* {new Date() < new Date(auction.date_added) ? (
                   <div className="lvNtStBtn">
                     <PrimaryButton
                       label={
@@ -887,7 +884,7 @@ function LiveLots(props) {
                       cancelBid={cancelBid}
                     />
                   )
-                )}
+                )} */}
               </div>
             </div>
             <div className="col-md-3 col-12">

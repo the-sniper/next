@@ -287,7 +287,7 @@ const Payment = ({ items, total, cart_ids }) => {
         user_id: user.id,
       });
     }
-    router.push(`/myBids?s=1`);
+    router.push(`/dashboard/myBids/1`);
   };
   const onChange = (e) => {
     e.target.checked ? setCardData(e.target.value) : setCardData("nocard");

@@ -27,6 +27,7 @@ import BidHistory from "@/components/organisms/BidHistory";
 import csc from "country-state-city";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Head from "next/head";
 
 const Header = () => {
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -131,8 +132,8 @@ const Header = () => {
   useEffect(() => {
     if (isAuthenticated && Object.keys(user).length > 0) {
       if (!user.country || !user.state || !user.city || !user.address1) {
-        handleRedirectInternal(router, "verified");
-      } else if (router.pathname === "/verified") {
+        handleRedirectInternal(router, "signup/verified");
+      } else if (router.pathname === "/signup/verified") {
         handleRedirectInternal(router, "");
       }
     }
@@ -293,7 +294,9 @@ const Header = () => {
                     </li>
                     <li>
                       <Button
-                        onClick={() => handleRedirectInternal(router, "events")}
+                        onClick={() =>
+                          handleRedirectInternal(router, "auctions/events")
+                        }
                       >
                         <span className="material-icons-round nav-icons">
                           local_activity
@@ -353,14 +356,21 @@ const Header = () => {
                           }}
                         >
                           {/* {!isAuthenticated && ( */}
-                          <MenuItem onClick={() => router.push("/signup")}>
+                          <MenuItem
+                            onClick={() => {
+                              router.push("/signup"), handleSellerClose();
+                            }}
+                          >
                             Register as a buyer
                           </MenuItem>
                           {/* )} */}
                           <MenuItem
-                            onClick={() =>
-                              window.open("https://app.auction.io/login?plan=1")
-                            }
+                            onClick={() => {
+                              window.open(
+                                "https://app.auction.io/login?plan=1"
+                              ),
+                                handleSellerClose();
+                            }}
                           >
                             Register as a seller
                           </MenuItem>
@@ -551,7 +561,7 @@ const Header = () => {
                             </MenuItem>
                             <MenuItem
                               onClick={() =>
-                                handleClose(router, "dashboard/myBids?s=0")
+                                handleClose(router, "dashboard/myBids/0")
                               }
                             >
                               My Bids
@@ -676,7 +686,7 @@ const Header = () => {
                     </Link>
                   </ListItem>
                   <ListItem button>
-                    <Link activeClassName="active" href="/searchAuction" exact>
+                    <Link activeClassName="active" href="/auctions" exact>
                       <span className="material-icons">event</span> Calendar
                     </Link>
                   </ListItem>
@@ -704,7 +714,7 @@ const Header = () => {
                       <ListItem button>
                         <Link
                           activeClassName="active"
-                          href="/dashboard/myBids?s=0"
+                          href="/dashboard/myBids/0"
                           exact
                         >
                           <span className="material-icons">gavel</span> My Bids

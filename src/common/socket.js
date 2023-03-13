@@ -69,7 +69,7 @@ socketForward.on("disconnect", function () {
 
 // function reInitializeSocket() {
 //   socket.close();
-//   socket = openSocket(`${process.env.NEXT_PUBLIC_DOMAIN}/`);
+//   socket = openSocket(`${process.env.NEXT_PUBLIC_SELLER_DOMAIN}/`);
 // }
 
 export {
