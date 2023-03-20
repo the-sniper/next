@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { AddCircleRounded } from "@material-ui/icons";
+import { AddCircleRounded } from "@mui/icons-material";
 import { handleRedirectInternal, mapData } from "@/common/components";
 import AuthContext from "@/context/auth/authContext";
 import UserContext from "@/context/user/userContext";
@@ -7,7 +7,7 @@ import AlertContext from "@/context/alert/alertContext";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 import "./addCreditCard.module.css"
 
 const AddCreditCard = (props) => {

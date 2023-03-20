@@ -1,5 +1,5 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
+import TextField from "@mui/material/TextField";
 
 const CustomInput = (props) => {
   const shrink = props.shrink ? props.shrink.toString() : "false";
@@ -10,7 +10,7 @@ const CustomInput = (props) => {
           <label>{props.label}</label>
           <TextField
             multiline
-            rowsMax={4}
+            maxRows={4}
             rows={props.rows}
             value={props.value}
             autoFocus={props.autoFocus}
@@ -35,7 +35,7 @@ const CustomInput = (props) => {
       ) : (
         <TextField
           multiline
-          rowsMax={4}
+          maxRows={4}
           rows={props.rows}
           value={props.value}
           autoFocus={props.autoFocus}

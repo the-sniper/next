@@ -122,12 +122,12 @@
   left: 59px;
 }
 
-.vdoVwWrpr .backButton .MuiButton-label {
+.vdoVwWrpr .backButton .MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
   font-size: 16px;
 }
 
-.vdoVwWrpr .backButton .MuiButton-label .material-icons {
+.vdoVwWrpr .backButton .MuiButtonBase-root.MuiButton-root .material-icons {
   margin-right: 10px;
 }
 

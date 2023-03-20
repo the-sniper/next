@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import FilterPanel from "@/components/organisms/FilterPanel";
-import { Button, Fade, Drawer } from "@material-ui/core";
+import { Button, Fade, Drawer } from "@mui/material";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import AuctionGridView from "@/components/molecules/ProductCard/AuctionGridCard";
 import AuctionListView from "@/components/molecules/ProductCard/AuctionListCard";
@@ -13,7 +13,7 @@ import { handleRedirectInternal } from "@/common/components";
 import BuyerContext from "@/context/buyer/buyerContext";
 import ProductContext from "@/context/product/productContext";
 import moment from "moment";
-import { Pagination } from "@material-ui/lab";
+import { Pagination } from '@mui/material';
 import { date } from "yup";
 import NoRecordsFound from "@/components/atoms/NoRecordsFound";
 import Loaders from "@/components/molecules/Loaders";

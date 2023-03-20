@@ -1,10 +1,10 @@
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import React, { useState } from "react";
 import DashboardLayout from "@/components/templates/DashboardLayout";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 import Won from "./Won";
 import BidsDashboard from "./bidsDashboard";
 import { useEffect } from "react";

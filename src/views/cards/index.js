@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useContext } from "react";
-import Container from "@material-ui/core/Container";
-import { Button } from "@material-ui/core";
+import Container from "@mui/material/Container";
+import { Button } from "@mui/material";
 
 import StripeCustomerContext from "@/context/stripe/customer/customerContext";
 import StripeCardContext from "@/context/stripe/card/cardContext";

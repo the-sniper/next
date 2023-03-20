@@ -116,11 +116,15 @@
   margin-bottom: 10px;
 }
 
+.dashboard .gridListToggle button {
+  color: #939393;
+}
+
 .dashboard .gridListToggle button.active {
   color: var(--primColor);
 }
 
-.dashboard .gridListToggle button .MuiButton-label {
+.dashboard .gridListToggle .MuiButton-root {
   font-family: var(--FuturaStdMedium);
 }
 
@@ -186,7 +190,7 @@
     width: 175px;
   }
 
-  .MuiButton-root.filterBtn .MuiButton-label {
+  .MuiButton-root.filterBtn .MuiButtonBase-root.MuiButton-root {
     font-family: var(--FuturaStdExtraBold);
   }
 }

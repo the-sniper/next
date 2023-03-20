@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import React, { useState, useRef, useEffect, useContext } from "react";
 import CustomInput from "../../atoms/Inputs/CustomInput";
 import { useHistory } from "react-router-dom";

@@ -141,7 +141,7 @@
   padding-right: 15px;
 }
 
-.productView .pvMiscActions .MuiButton-root .MuiButton-label {
+.productView .pvMiscActions .MuiButton-root .MuiButtonBase-root.MuiButton-root {
   color: #fff;
   font-size: 15px;
   font-family: var(--FuturaStdMedium);

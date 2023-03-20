@@ -95,7 +95,7 @@
   padding-bottom: 30px;
 }
 
-.marketingLocation.actvUseIno{
+.marketingLocation.actvUseIno {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
@@ -139,7 +139,7 @@
   display: block;
 }
 
-.marketingLocation .activeInfo .MuiButton-label {
+.marketingLocation .activeInfo .MuiButtonBase-root.MuiButton-root {
   color: #2e2d2d;
   font-size: 16px;
   font-family: var(--FuturaStdMedium);
@@ -291,12 +291,12 @@
   width: 100%;
 }
 
-.locationPopup .checkAll .MuiButton-label {
+.locationPopup .checkAll .MuiButtonBase-root.MuiButton-root {
   font-size: 15px;
   text-transform: initial;
 }
 
-.locationPopup .checkAll .MuiButton-label .material-icons {
+.locationPopup .checkAll .MuiButtonBase-root.MuiButton-root .material-icons {
   margin-right: 25px;
   color: var(--primColor);
 }
@@ -313,7 +313,7 @@
   border-radius: 25px;
 }
 
-.templateViewBtn .MuiButton-label {
+.templateViewBtn .MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
 }
 

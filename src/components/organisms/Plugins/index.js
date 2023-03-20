@@ -7,20 +7,20 @@ import {
   handleRedirectInternal,
 } from "../../../common/components";
 import PrimaryButton from "../../atoms/PrimaryButton";
-import { Button, IconButton, Tooltip } from "@material-ui/core";
+import { Button, IconButton, Tooltip } from "@mui/material";
 import FormDialog from "../Dialog";
 import { useHistory } from "react-router-dom";
 
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepLabel from "@material-ui/core/StepLabel";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Typography from "@mui/material/Typography";
+import makeStyles from "@mui/styles/makeStyles";
 import ProductContext from "../../../context/product/productContext";
 import CommonContext from "../../../context/common/commonContext";
 import AlertContext from "../../../context/alert/alertContext";
 import csc from "country-state-city";
-import Dialog from "@material-ui/core/Dialog";
+import Dialog from "@mui/material/Dialog";
 import Link from "next/link";
 
 const useStyles = makeStyles((theme) => ({
@@ -840,6 +840,7 @@ function Plugins() {
                       video_link: "",
                     })
                   }
+                  size="large"
                 >
                   <span className="material-icons">clear</span>
                 </IconButton>
@@ -915,6 +916,7 @@ function Plugins() {
                   <IconButton
                     className="clrButton"
                     onClick={() => setBuyNowPopup(false)}
+                    size="large"
                   >
                     <span className="material-icons">clear</span>
                   </IconButton>

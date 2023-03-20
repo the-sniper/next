@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
-import { Button, Fade, Tooltip } from "@material-ui/core";
+import { Button, Fade, Tooltip } from "@mui/material";
 import { useHistory, useLocation } from "react-router-dom";
 import CustomInput from "@/components/atoms/Inputs/CustomInput";
 import PrimaryButton from "@/components/atoms/PrimaryButton";

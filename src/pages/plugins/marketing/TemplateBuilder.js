@@ -14,7 +14,7 @@ import * as Yup from 'yup'
 import AlertContext from '@/context/alert/alertContext'
 import Block4 from './TemplateBlocks/Block4'
 import Block5 from './TemplateBlocks/Block5'
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import { useSnackbar } from 'notistack'
 import { useRouter } from 'next/router'
 

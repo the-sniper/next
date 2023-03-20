@@ -22,7 +22,7 @@
   padding-inline-end: 5px;
 }
 
-.search .searchHead button .MuiButton-label {
+.search .searchHead .MuiButton-root {
   color: var(--secColor);
   text-transform: initial;
   font-weight: 700;
@@ -62,11 +62,15 @@
   margin-bottom: 10px;
 }
 
+.search .gridListToggle button {
+  color: #939393;
+}
+
 .search .gridListToggle button.active {
   color: var(--primColor);
 }
 
-.search .gridListToggle button .MuiButton-label {
+.search .gridListToggle .MuiButton-root {
   font-family: var(--FuturaStdMedium);
 }
 
@@ -147,7 +151,7 @@
     border: 1px solid rgb(25 157 229 / 20%) !important;
   }
 
-  .searchAuctions button .MuiButton-label {
+  .searchAuctions .MuiButton-root {
     font-size: 13px;
   }
 }

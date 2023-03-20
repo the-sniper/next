@@ -1,5 +1,5 @@
 import CKEditor from 'ckeditor4-react'
-import { Button, Dialog } from '@material-ui/core'
+import { Button, Dialog } from '@mui/material'
 import React from 'react'
 
 const TextEditor = ({ template, setTemplate, index, textPopup, text, textName }) => {

@@ -17,6 +17,10 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="google-site-verification"
+            content="DhCdTa7Qlgr5UVo58OQ4BSdMOlwBFkwfjkqyajUS5m0"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -105,8 +109,8 @@ class MyDocument extends Document {
             media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
             href="/192.png"
           />
-          {/* <meta property="og:url" content="https://www.auction.io" />
-          <meta property="og:type" content="website" /> */}
+          <meta property="og:url" content="https://www.auction.io" />
+          <meta property="og:type" content="website" />
           <title>Auction.io</title>
           {/* <meta property="og:title" content="Auction.io" />
           <meta
@@ -115,8 +119,8 @@ class MyDocument extends Document {
           />
           <meta property="og:image" content="/logoShort.png" />
           <meta property="og:image:secure_url" content="/logoShort.png" /> */}
-          {/* <meta property="og:image:width" content="400" />
-          <meta property="og:image:height" content="300" /> */}
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="300" />
         </Head>
         <body className="kaxsdc" data-event="load">
           <Main />

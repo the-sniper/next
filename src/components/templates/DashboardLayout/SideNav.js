@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Divider, ListItem } from "@material-ui/core";
+import { Divider, ListItem } from "@mui/material";
 import { useHistory } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import Link from "next/link";
 
 const useStyles = makeStyles((theme) => ({

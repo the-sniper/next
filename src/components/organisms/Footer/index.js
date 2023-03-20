@@ -1,5 +1,5 @@
 import React from "react";
-import { ListItem } from "@material-ui/core";
+import { ListItem } from "@mui/material";
 import PrimaryButton from "../../atoms/PrimaryButton";
 import Link from "next/link";
 

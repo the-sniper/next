@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Button, Dialog } from '@material-ui/core'
+import { Button, Dialog } from '@mui/material'
 import ProductContext from '../../../../../context/product/productContext'
 
 const ImageEditor = ({ template, setTemplate, index, imagePopup, imageName }) => {

@@ -5,14 +5,14 @@ import React, {
   useCallback,
   useRef,
 } from "react";
-import { Breadcrumbs, Drawer, Button } from "@material-ui/core";
+import { Breadcrumbs, Drawer, Button } from "@mui/material";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
 import SecondaryButton from "@/components/atoms/SecondaryButton";
 import CustomSelect from "@/components/atoms/Inputs/CustomSelect";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import NoRecordsFound from "@/components/atoms/NoRecordsFound";
 import ListView from "@/components/molecules/ProductCard/ListView";
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
 import ProductViewSlider from "@/components/organisms/ProductViewSlider";
 import {
   handleRedirectInternal,
@@ -30,9 +30,9 @@ import CommonContext from "@/context/common/commonContext";
 import AuthContext from "@/context/auth/authContext";
 import AlertContext from "@/context/alert/alertContext";
 import moment from "moment";
-import CloseIcon from "@material-ui/icons/Close";
+import CloseIcon from "@mui/icons-material/Close";
 import { date, object } from "yup";
-import { Pagination } from "@material-ui/lab";
+import { Pagination } from '@mui/material';
 
 import { socket, socketForward } from "@/common/socket";
 import UserContext from "@/context/user/userContext";

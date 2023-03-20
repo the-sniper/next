@@ -10,7 +10,7 @@
   border: 1px dashed #727b88 !important;
 }
 
-.savedCard .MuiButton-label {
+.savedCard .MuiButtonBase-root.MuiButton-root {
   text-align: left;
   text-transform: initial;
   font-family: var(--FuturaStdMedium);
@@ -62,7 +62,6 @@
   margin-top: -10px;
   margin-right: -10px;
 }
-
 
 .theme-dark .savedCard .removeSS {
   color: #4e5765;

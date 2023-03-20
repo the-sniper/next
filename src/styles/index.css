@@ -1,13 +1,25 @@
 body {
   margin: 0;
-  font-family: var(--fontFamily), 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--fontFamily), "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.loadingCommon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 150000;
 }
 
 .cursorPointer {
@@ -211,15 +223,15 @@ footer {
   margin-top: 15px;
 }
 
-input[value='']::-webkit-datetime-edit {
+input[value=""]::-webkit-datetime-edit {
   color: transparent;
 }
 input:focus::-webkit-datetime-edit {
   color: #000;
 }
 
-button .MuiButton-label {
-  font-family: 'Open Sans';
+.MuiButton-root {
+  font-family: "Open Sans";
   font-weight: 600;
 }
 
@@ -454,13 +466,23 @@ button .MuiButton-label {
     width: 100%;
   }
 
-  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
-  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
     width: 25%;
     z-index: 100;
   }
 
-  .responsiveFilterDrawer .filterPanel .filterAcc .MuiAccordionSummary-root.Mui-expanded {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterAcc
+    .MuiAccordionSummary-root.Mui-expanded {
     background: rgb(174 34 7 / 8%);
     border-color: rgb(174 34 7 / 51%);
   }
@@ -478,8 +500,15 @@ button .MuiButton-label {
 }
 
 @media (max-width: 800px) {
-  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
-  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
     width: 32%;
   }
 
@@ -519,8 +548,15 @@ button .MuiButton-label {
     margin: 0 auto;
     margin-bottom: 10px;
   }
-  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
-  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
     width: 50%;
   }
   .home .hmSearch .searchInput {
@@ -540,8 +576,15 @@ button .MuiButton-label {
     height: 40px;
     margin-bottom: 10px;
   }
-  .responsiveFilterDrawer .filterPanel .filterCheck .MuiFormGroup-root.MuiFormGroup-row,
-  .responsiveFilterDrawer .filterPanel .filterCheck .RadioBox .MuiFormControlLabel-root {
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .MuiFormGroup-root.MuiFormGroup-row,
+  .responsiveFilterDrawer
+    .filterPanel
+    .filterCheck
+    .RadioBox
+    .MuiFormControlLabel-root {
     width: 100%;
   }
   .responsiveFilterDrawer .MuiPaper-root.MuiDrawer-paper {

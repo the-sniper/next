@@ -1,4 +1,4 @@
-import { Pagination } from "@material-ui/lab";
+import { Pagination } from '@mui/material';
 import moment from "moment";
 import React, { useState, useEffect } from "react";
 import { DirectAPICAll, noImageAvailable } from "../../../common/components";

@@ -1,15 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import AuctionContext from "@/context/auction/auctionContext";
-import Pagination from "@material-ui/lab/Pagination";
+import Pagination from '@mui/material/Pagination';
 import Slider from "react-slick";
-import Dialog from "@material-ui/core/Dialog";
-import MuiDialogTitle from "@material-ui/core/DialogTitle";
-import MuiDialogContent from "@material-ui/core/DialogContent";
-import Popover from "@material-ui/core/Popover";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import Dialog from "@mui/material/Dialog";
+import MuiDialogTitle from "@mui/material/DialogTitle";
+import MuiDialogContent from "@mui/material/DialogContent";
+import Popover from "@mui/material/Popover";
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from "@mui/material/Typography";
 import FavouriteCheckbox from "@/components/atoms/FavoriteCheckbox";
-import { Divider } from "@material-ui/core";
+import { Divider } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   typography: {

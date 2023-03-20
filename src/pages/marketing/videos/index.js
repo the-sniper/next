@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 // } from "swiper/react/swiper-react";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
-import { Fade, IconButton } from "@material-ui/core";
+import { Fade, IconButton } from "@mui/material";
 import { handleRedirectInternal } from "@/common/components";
 import { useRouter } from "next/router";
 
@@ -95,7 +95,7 @@ const Videos = () => {
                   "marketing/videos/videosView/tamizhum_saraswathiyum"
                 )
               }
-            >
+              size="large">
               <span className="material-icons">play_arrow</span>
             </IconButton>
           </Fade>
@@ -109,7 +109,7 @@ const Videos = () => {
                   "marketing/videos/videosView/super_singer"
                 )
               }
-            >
+              size="large">
               <span className="material-icons">play_arrow</span>
             </IconButton>
           </Fade>
@@ -123,7 +123,7 @@ const Videos = () => {
                   "marketing/videos/videosView/pandian_stores"
                 )
               }
-            >
+              size="large">
               <span className="material-icons">play_arrow</span>
             </IconButton>
           </Fade>
@@ -137,7 +137,7 @@ const Videos = () => {
                   "marketing/videos/videosView/eeramana_rojave"
                 )
               }
-            >
+              size="large">
               <span className="material-icons">play_arrow</span>
             </IconButton>
           </Fade>
@@ -151,7 +151,7 @@ const Videos = () => {
                   "marketing/videos/videosView/cooku_with_comali"
                 )
               }
-            >
+              size="large">
               <span className="material-icons">play_arrow</span>
             </IconButton>
           </Fade>
@@ -171,7 +171,7 @@ const Videos = () => {
                   "marketing/videos/videosView/big_boss"
                 )
               }
-            >
+              size="large">
               <span className="material-icons">play_arrow</span>
             </IconButton>
           </Fade>

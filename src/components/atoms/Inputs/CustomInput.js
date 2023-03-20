@@ -1,6 +1,6 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
-import Tooltip from "@material-ui/core/Tooltip";
+import TextField from "@mui/material/TextField";
+import Tooltip from "@mui/material/Tooltip";
 
 const CustomInput = (props) => {
   const shrink = props.shrink ? props.shrink.toString() : "false";

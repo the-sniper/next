@@ -26,6 +26,6 @@
   display: block !important;
 }
 
-#emailTemplateBlockToolbar .MuiButton-label .material-icons {
+#emailTemplateBlockToolbar .MuiButtonBase-root.MuiButton-root .material-icons {
   font-size: 20px;
 }

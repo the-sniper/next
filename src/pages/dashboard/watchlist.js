@@ -1,4 +1,4 @@
-import { Button, Drawer } from "@material-ui/core";
+import { Button, Drawer } from "@mui/material";
 import React, { useState, useContext, useEffect } from "react";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import ListView from "@/components/molecules/ProductCard/ListView";

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Dialog } from '@material-ui/core'
+import { Button, Dialog } from '@mui/material'
 
 const BackgroundColor = ({ template, setTemplate, index, colorPopup, bgColor }) => {
     const handleColorPopup = () => {

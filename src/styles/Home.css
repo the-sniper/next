@@ -27,7 +27,7 @@
   padding-right: 16px;
 }
 
-.home .homeTitle button .MuiButton-label {
+.home .homeTitle .MuiButton-root {
   font-size: 14px;
   text-transform: initial;
   font-family: var(--FuturaStdMedium);
@@ -160,7 +160,7 @@ button.sell-button {
   width: 150px;
 }
 
-.marketingInfo button .MuiButton-label {
+.marketingInfo .MuiButton-root {
   color: #6c438e;
   text-transform: initial;
 }
@@ -485,7 +485,7 @@ button.sell-button {
   border-color: var(--primColor);
 }
 
-.viewMoreBtn .MuiButton-label {
+.viewMoreBtn .MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
 }
 
@@ -1405,8 +1405,10 @@ button.sell-button {
   border-radius: 25px;
 }
 
-.viewPlanBtn .MuiButton-label {
+.viewPlanBtn.MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
+  color: #767676;
+  border-color: #b1b1b1;
 }
 
 .plansRadio .MuiFormControlLabel-root h4 {
@@ -1442,14 +1444,14 @@ button.sell-button {
   width: 100%;
 }
 
-.scheduleBtn .MuiButton-label {
+.scheduleBtn.MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
   font-size: 13px;
   justify-content: flex-start;
   color: #ac2f75;
 }
 
-.scheduleBtn .MuiButton-label .material-icons {
+.scheduleBtn.MuiButtonBase-root.MuiButton-root .material-icons {
   margin-right: 8px;
   font-size: 20px;
 }
@@ -1470,13 +1472,13 @@ button.sell-button {
   background: var(--primColor);
 }
 
-.subsActBtn .MuiButton-label {
+.subsActBtn.MuiButtonBase-root.MuiButton-root {
   color: #fff;
   text-transform: initial;
   font-size: 13px;
 }
 
-.subsActBtn .MuiButton-label .material-icons {
+.subsActBtn.MuiButtonBase-root.MuiButton-root .material-icons {
   margin-left: 8px;
   font-size: 20px;
 }

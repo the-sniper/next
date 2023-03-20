@@ -73,7 +73,7 @@
   margin-top: 20px;
 }
 
-.liveLots .lotMain > [class^='col-'] {
+.liveLots .lotMain > [class^="col-"] {
   padding-left: 5px !important;
   padding-right: 5px !important;
 }
@@ -147,7 +147,11 @@
   margin: 0 auto;
 }
 
-.liveLots .lotSection .upcomingLots .MuiButton-root .MuiButton-label {
+.liveLots
+  .lotSection
+  .upcomingLots
+  .MuiButton-root
+  .MuiButtonBase-root.MuiButton-root {
   font-family: var(--FuturaStdBold);
   color: #a2a2a2;
 }
@@ -167,7 +171,11 @@
   margin-left: unset;
   margin-right: unset;
 }
-.liveLots .lotSection .upcomingLots .ucImg.MuiButton-root .MuiButton-label {
+.liveLots
+  .lotSection
+  .upcomingLots
+  .ucImg.MuiButton-root
+  .MuiButtonBase-root.MuiButton-root {
   width: inherit;
   height: inherit;
 }
@@ -348,13 +356,13 @@
 }
 
 .upcomming-sliebar .upcomingLots .slick-next:before {
-  font-family: 'Material Icons';
-  content: 'chevron_right';
+  font-family: "Material Icons";
+  content: "chevron_right";
   font-size: 30px;
 }
 .upcomming-sliebar .upcomingLots .slick-prev:before {
-  font-family: 'Material Icons';
-  content: 'chevron_left';
+  font-family: "Material Icons";
+  content: "chevron_left";
   font-size: 30px;
 }
 
@@ -471,7 +479,7 @@
   border-radius: 0 100px 100px 0;
 }
 
-.liveLots .lotChangeButton button .MuiButton-label {
+.liveLots .lotChangeButton .MuiButton-root {
   display: flex;
   align-items: center;
   justify-content: space-between;

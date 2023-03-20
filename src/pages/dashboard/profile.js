@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button, Drawer } from "@material-ui/core";
+import { Button, Drawer } from "@mui/material";
 import DashboardLayout from "@/components/templates/DashboardLayout";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { mapData } from "@/common/components";

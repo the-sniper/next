@@ -4,7 +4,7 @@
   box-shadow: none;
 }
 
-.search-field button .MuiButton-label {
+.search-field .MuiButton-root {
   text-transform: capitalize;
   font-family: var(--FuturaStdMedium);
 }
@@ -29,7 +29,7 @@
 }
 .searchfilter-btn .MuiButton-containedPrimary,
 .searchfilter-btn .MuiButton-containedPrimary:hover {
-  background-color: var(--green);
+  background-color: var(--primColor);
 }
 .searchFieldLt,
 .searchFieldRt {
@@ -56,7 +56,7 @@
 }
 
 .theme-dark .searchFieldRt .searchBar input,
-.theme-dark .searchFieldRt .searchBar input::placeholder{
+.theme-dark .searchFieldRt .searchBar input::placeholder {
   color: var(--textColor);
 }
 

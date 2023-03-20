@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { google, outlook, office365, yahoo, ics } from "calendar-link";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import CustomDialog from "../../organisms/Dialog";
 
 function AddToCalendar(props) {

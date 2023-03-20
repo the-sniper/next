@@ -30,12 +30,11 @@
 .main-nav-list button .MuiBadge-badge {
   top: -8px;
 }
-.profile-button
-{
+.profile-button {
   background-color: #70a340;
   border-radius: 30px;
 }
-.profile-button span{
+.profile-button span {
   color: #fff;
 }
 .main-nav-list ul,
@@ -76,7 +75,7 @@
   transition: 300ms all ease-in-out;
 }
 .main-nav-list ul li a,
-.main-nav-list ul li button .MuiButton-label {
+.main-nav-list ul li .MuiButton-root {
   /* color: #2a3249; */
   /* color: white; */
   text-decoration: none;
@@ -88,7 +87,7 @@
 }
 
 .header .main-nav-list ul li a,
-.header .main-nav-list ul li button .MuiButton-label {
+.header .main-nav-list ul li .MuiButton-root {
   color: var(--textColor);
   /* font-family: var(--FuturaStdMedium); */
 }
@@ -99,12 +98,20 @@
 }
 
 .main-nav-list ul li .nav-icons,
-header.header .main-nav-list .toggleTheme .MuiButton-label span {
+header.header
+  .main-nav-list
+  .toggleTheme
+  .MuiButtonBase-root.MuiButton-root
+  span {
   color: #888a92;
 }
 
 .theme-dark .main-nav-list ul li .nav-icons,
-.theme-dark header.header .main-nav-list .toggleTheme .MuiButton-label {
+.theme-dark
+  header.header
+  .main-nav-list
+  .toggleTheme
+  .MuiButtonBase-root.MuiButton-root {
   color: #d8d8d8;
 }
 
@@ -231,7 +238,7 @@ header.header .main-nav-list .toggleTheme .MuiButton-label span {
   display: block;
 }
 
-.notificationMenu .clearNotif .MuiButton-label {
+.notificationMenu .clearNotif .MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
   color: #aaaaaa;
   font-size: 13px;
@@ -327,7 +334,7 @@ header.mainHeader {
   background: var(--primColor);
 }
 
-.headerSearchForm button .MuiButton-label span {
+.headerSearchForm .MuiButton-root span {
   color: #fff !important;
 }
 

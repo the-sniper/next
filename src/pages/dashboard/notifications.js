@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import DashboardLayout from "@/components/templates/DashboardLayout";
 import CheckBox from "@/components/atoms/CheckBox";
 import { useFormik } from "formik";

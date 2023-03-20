@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.addressCard .MuiButton-label {
+.addressCard .MuiButtonBase-root.MuiButton-root {
   flex-wrap: wrap !important;
   text-align: left;
   text-transform: initial;
@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-.theme-dark .addressCard.new h5{
+.theme-dark .addressCard.new h5 {
   color: var(--textColor);
 }
 

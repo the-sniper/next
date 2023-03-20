@@ -1,23 +1,23 @@
 import { useState, useEffect, useContext, useRef, useCallback } from "react";
-import { Breadcrumbs, Button } from "@material-ui/core";
+import { Breadcrumbs, Button } from "@mui/material";
 import Timer from "@/common/timer";
 import FavoriteCheckbox from "@/components/atoms/FavoriteCheckbox";
 import BiddingItem from "@/components/molecules/Bidding/BiddingItem";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import Slider from "react-slick";
 import { useMediaQuery } from "react-responsive";
-import { makeStyles } from "@material-ui/core/styles";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import makeStyles from '@mui/styles/makeStyles';
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   handleRedirectInternal,
   searchQueryParam,
@@ -32,7 +32,7 @@ import ProductContext from "@/context/product/productContext";
 import AuctionContext from "@/context/auction/auctionContext";
 import { socket } from "@/common/socket";
 import AuthContext from "@/context/auth/authContext";
-import CloseIcon from "@material-ui/icons/Close";
+import CloseIcon from "@mui/icons-material/Close";
 import UserContext from "@/context/user/userContext";
 import Popup from "@/components/organisms/Popup";
 import Loaders from "@/components/molecules/Loaders";

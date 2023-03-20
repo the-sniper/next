@@ -1,8 +1,8 @@
 import React from "react";
-import LocationOnTwoToneIcon from "@material-ui/icons/LocationOnTwoTone";
-import { Button, LinearProgress } from "@material-ui/core";
-import ArrowRightTwoToneIcon from "@material-ui/icons/ArrowRightTwoTone";
-import VisibilityIcon from "@material-ui/icons/Visibility";
+import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
+import { Button, LinearProgress } from "@mui/material";
+import ArrowRightTwoToneIcon from "@mui/icons-material/ArrowRightTwoTone";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import moment from "moment";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { useHistory, useLocation } from "react-router-dom";
 import ProductContext from "../../context/product/productContext";
 import { currencyFormat } from "../../common/components";

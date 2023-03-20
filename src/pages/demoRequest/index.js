@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { mapData, handleRedirectInternal } from "@/common/components";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import AlertContext from "@/context/alert/alertContext";
 import AuthContext from "@/context/auth/authContext";
 import HubspotContactForm from "@/components/organisms/HubSpotForm";

@@ -1,4 +1,4 @@
-import { Button, Drawer } from '@material-ui/core';
+import { Button, Drawer } from '@mui/material';
 import React, { useState, useEffect, useContext } from 'react';
 import GridView from '@/components/molecules/ProductCard/GridView';
 import ListView from '@/components/molecules/ProductCard/ListView';
@@ -7,7 +7,7 @@ import DashboardLayout from '@/components/templates/DashboardLayout';
 import UserContext from '@/context/user/userContext';
 import AuthContext from '@/context/auth/authContext';
 import ProductContext from '@/context/product/productContext';
-import { Pagination } from '@material-ui/lab';
+import { Pagination } from '@mui/material';
 
 function MyOrders() {
   const [auctionView, setAuctionView] = useState('Grid');

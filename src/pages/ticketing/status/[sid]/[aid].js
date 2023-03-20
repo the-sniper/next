@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import Slider from "@material-ui/core/Slider";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
+import Slider from "@mui/material/Slider";
+import withStyles from '@mui/styles/withStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import TextField from "@mui/material/TextField";
 import moment from "moment";
 import { useFormik } from "formik";
 import {
@@ -12,19 +13,19 @@ import {
 } from "@/common/components";
 
 import clsx from "clsx";
-import Button from "@material-ui/core/Button";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import Button from "@mui/material/Button";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import AuctionContext from "@/context/auction/auctionContext";
 import AlertContext from "@/context/alert/alertContext";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import AppBar from "@mui/material/AppBar";
 import AuthContext from "@/context/auth/authContext";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
 import SecondaryButton from "@/components/atoms/SecondaryButton";
@@ -33,7 +34,7 @@ import lookup from "country-code-lookup";
 import csc from "country-state-city";
 import * as Yup from "yup";
 import CommonContext from "@/context/common/commonContext";
-import { IconButton, Tooltip } from "@material-ui/core";
+import { IconButton, Tooltip } from "@mui/material";
 import Loaders from "@/components/molecules/Loaders";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -718,703 +719,559 @@ function Ticketing(props) {
     );
   }
 
-  return (
-    <>
-      {loading ? (
-        <Loaders name="home" isLoading={loading} />
-      ) : (
-        <>
-          {ticket_struture?.stagelist?.length > 0 ? (
-            <>
-              <div className="ticHdrBg">
-                <div className="customContainer">
-                  <div className="ticHdr">
-                    <div className="ticPic">
-                      <figure className="ticFig">
-                        <img
-                          src={getImages_url_check(auctionDetails.avatar, "")}
-                          alt="/assets/images/as.png"
-                        />
-                      </figure>
-                      <div className="ticDets">
-                        <h4 className="ticTit">
-                          {ticket_struture.stagelist[0].stage_name}{" "}
-                          <small onClick={handleClickOpen}>More Info</small>
-                        </h4>
-                        {auctionDetails?.date_added ? (
-                          <span className="ticTim">
-                            {moment(auctionDetails.date_added).format("dddd")} •{" "}
-                            {moment(auctionDetails.date_added).format("MMMM")}
-                            {""}
-                            {moment(auctionDetails.date_added).format(
-                              "D"
-                            )} •{" "}
-                            {moment(auctionDetails.date_added).format(
-                              "hh:mm A"
-                            )}
-                          </span>
-                        ) : (
-                          ""
-                        )}
-                        <Link href="#" className="ticLoc">
-                          {auctionDetails?.state ? auctionDetails.state : ""} ,
-                          {auctionDetails?.city ? auctionDetails.city : ""}
-                        </Link>
-                      </div>
+  return <>
+    {loading ? (
+      <Loaders name="home" isLoading={loading} />
+    ) : (
+      <>
+        {ticket_struture?.stagelist?.length > 0 ? (
+          <>
+            <div className="ticHdrBg">
+              <div className="customContainer">
+                <div className="ticHdr">
+                  <div className="ticPic">
+                    <figure className="ticFig">
+                      <img
+                        src={getImages_url_check(auctionDetails.avatar, "")}
+                        alt="/assets/images/as.png"
+                      />
+                    </figure>
+                    <div className="ticDets">
+                      <h4 className="ticTit">
+                        {ticket_struture.stagelist[0].stage_name}{" "}
+                        <small onClick={handleClickOpen}>More Info</small>
+                      </h4>
+                      {auctionDetails?.date_added ? (
+                        <span className="ticTim">
+                          {moment(auctionDetails.date_added).format("dddd")} •{" "}
+                          {moment(auctionDetails.date_added).format("MMMM")}
+                          {""}
+                          {moment(auctionDetails.date_added).format(
+                            "D"
+                          )} •{" "}
+                          {moment(auctionDetails.date_added).format(
+                            "hh:mm A"
+                          )}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                      <Link href="#" className="ticLoc">
+                        {auctionDetails?.state ? auctionDetails.state : ""} ,
+                        {auctionDetails?.city ? auctionDetails.city : ""}
+                      </Link>
                     </div>
-                    {/* <div className="ticInfo">
-                  <span className="ticInfospan">
-                    Important Event Info: Fouille obligatoire / caméras
-                    interdites <small onClick={handlemenuClickOpen}>more</small>
-                  </span>
-                </div> */}
                   </div>
+                  {/* <div className="ticInfo">
+                <span className="ticInfospan">
+                  Important Event Info: Fouille obligatoire / caméras
+                  interdites <small onClick={handlemenuClickOpen}>more</small>
+                </span>
+              </div> */}
                 </div>
               </div>
-              <div className="ticBdy">
-                <div className="ticbench">
-                  <div className="stadiumWrapper">
-                    <div className="stageWrapper">
-                      <p className="m-0">STAGE</p>
-                    </div>
-                    <form id="postform2">
-                      {/* <div className="row">
-                <div className="col-md-12">
-                  <TextField
-                    id="outlined-basic"
-                    label="Stage Name"
-                    variant="outlined"
-                  />
-                </div>
-              </div> */}
-                      <hr />
-                      {ticket_struture.stagelist[0].stage_obj.map((data) => (
-                        <>
-                          <div className="row flrPrcInfo">
-                            <div className="col-md-6">
-                              <p>
-                                Floor Name: <b>{data.floor_name}</b>
-                              </p>
-                            </div>
-                            <div className="col-md-6 text-right">
-                              <p>
-                                Price: <b>{currencyFormat(data.floor_price)}</b>
-                              </p>
-                            </div>
+            </div>
+            <div className="ticBdy">
+              <div className="ticbench">
+                <div className="stadiumWrapper">
+                  <div className="stageWrapper">
+                    <p className="m-0">STAGE</p>
+                  </div>
+                  <form id="postform2">
+                    {/* <div className="row">
+              <div className="col-md-12">
+                <TextField
+                  id="outlined-basic"
+                  label="Stage Name"
+                  variant="outlined"
+                />
+              </div>
+            </div> */}
+                    <hr />
+                    {ticket_struture.stagelist[0].stage_obj.map((data) => (
+                      <>
+                        <div className="row flrPrcInfo">
+                          <div className="col-md-6">
+                            <p>
+                              Floor Name: <b>{data.floor_name}</b>
+                            </p>
                           </div>
-                          <>
-                            {data.floor_type == "seat" &&
-                              data[data.array_name].map((val) => (
-                                <>
-                                  <div className="row">
-                                    <div className="col-md-12">
-                                      <div className="generalRowWrapper rm_floor_1_floor floor_1_seatadd">
-                                        <div className="chairGrid">
-                                          {val[val.array_name].map((val1) => (
-                                            <>
-                                              <LightTooltip
-                                                arrow
-                                                placement="top"
-                                                title={
-                                                  <>
-                                                    <div className="TicketTooltip">
-                                                      <div className="d-flex align-items-center justify-content-between">
-                                                        <div className="stIfoTxt">
-                                                          <label>Seat No</label>
-                                                          <p>
-                                                            {val1.seat_name}
-                                                          </p>
-                                                        </div>
-                                                        <div className="stIfoTxt text-right priceCont">
-                                                          <label>Price</label>
-                                                          <p>
-                                                            {currencyFormat(
-                                                              data.floor_price
-                                                            )}
-                                                          </p>
-                                                        </div>
+                          <div className="col-md-6 text-right">
+                            <p>
+                              Price: <b>{currencyFormat(data.floor_price)}</b>
+                            </p>
+                          </div>
+                        </div>
+                        <>
+                          {data.floor_type == "seat" &&
+                            data[data.array_name].map((val) => (
+                              <>
+                                <div className="row">
+                                  <div className="col-md-12">
+                                    <div className="generalRowWrapper rm_floor_1_floor floor_1_seatadd">
+                                      <div className="chairGrid">
+                                        {val[val.array_name].map((val1) => (
+                                          <>
+                                            <LightTooltip
+                                              arrow
+                                              placement="top"
+                                              title={
+                                                <>
+                                                  <div className="TicketTooltip">
+                                                    <div className="d-flex align-items-center justify-content-between">
+                                                      <div className="stIfoTxt">
+                                                        <label>Seat No</label>
+                                                        <p>
+                                                          {val1.seat_name}
+                                                        </p>
+                                                      </div>
+                                                      <div className="stIfoTxt text-right priceCont">
+                                                        <label>Price</label>
+                                                        <p>
+                                                          {currencyFormat(
+                                                            data.floor_price
+                                                          )}
+                                                        </p>
                                                       </div>
                                                     </div>
-                                                  </>
+                                                  </div>
+                                                </>
+                                              }
+                                            >
+                                              <label
+                                                style={
+                                                  selected_ticket_id.includes(
+                                                    val1.seat_id
+                                                  )
+                                                    ? { background: "orange" }
+                                                    : booked_seat.includes(
+                                                        val1.seat_id
+                                                      )
+                                                    ? {
+                                                        background: "#ff9898",
+                                                      }
+                                                    : {}
                                                 }
+                                                className={`chairContainer ${
+                                                  booked_seat.includes(
+                                                    val1.seat_id
+                                                  )
+                                                    ? "booked"
+                                                    : ""
+                                                }`}
+                                                htmlFor={val1.seat_id}
                                               >
-                                                <label
-                                                  style={
+                                                <span
+                                                  className="chk-span"
+                                                  tabindex="3"
+                                                ></span>
+                                                {val1.seat_name}
+                                                <input
+                                                  type="checkbox"
+                                                  className="floor_1 floor_1_A"
+                                                  value={JSON.stringify({
+                                                    ...val1,
+                                                    ...{
+                                                      price: data.floor_price,
+                                                      type: data.floor_type,
+                                                    },
+                                                  })}
+                                                  id={val1.seat_id}
+                                                  data-level="A"
+                                                  data-name=""
+                                                  data-type="seat"
+                                                  data-view="enable"
+                                                  disabled={true}
+                                                  checked={
                                                     selected_ticket_id.includes(
                                                       val1.seat_id
                                                     )
-                                                      ? { background: "orange" }
-                                                      : booked_seat.includes(
-                                                          val1.seat_id
-                                                        )
-                                                      ? {
-                                                          background: "#ff9898",
-                                                        }
-                                                      : {}
+                                                      ? true
+                                                      : false
                                                   }
-                                                  className={`chairContainer ${
-                                                    booked_seat.includes(
-                                                      val1.seat_id
-                                                    )
-                                                      ? "booked"
-                                                      : ""
-                                                  }`}
-                                                  htmlFor={val1.seat_id}
-                                                >
-                                                  <span
-                                                    className="chk-span"
-                                                    tabindex="3"
-                                                  ></span>
-                                                  {val1.seat_name}
-                                                  <input
-                                                    type="checkbox"
-                                                    className="floor_1 floor_1_A"
-                                                    value={JSON.stringify({
-                                                      ...val1,
-                                                      ...{
-                                                        price: data.floor_price,
-                                                        type: data.floor_type,
-                                                      },
-                                                    })}
-                                                    id={val1.seat_id}
-                                                    data-level="A"
-                                                    data-name=""
-                                                    data-type="seat"
-                                                    data-view="enable"
-                                                    disabled={true}
-                                                    checked={
-                                                      selected_ticket_id.includes(
-                                                        val1.seat_id
-                                                      )
-                                                        ? true
-                                                        : false
-                                                    }
-                                                    onClick={handleClick}
-                                                    data-parsley-multiple="A1"
-                                                  />
-                                                  <div className="chkWrpr">
-                                                    <span className="material-icons">
-                                                      check
-                                                    </span>
-                                                  </div>
-                                                </label>
-                                              </LightTooltip>
-                                            </>
-                                          ))}
-                                        </div>
+                                                  onClick={handleClick}
+                                                  data-parsley-multiple="A1"
+                                                />
+                                                <div className="chkWrpr">
+                                                  <span className="material-icons">
+                                                    check
+                                                  </span>
+                                                </div>
+                                              </label>
+                                            </LightTooltip>
+                                          </>
+                                        ))}
                                       </div>
                                     </div>
                                   </div>
-                                </>
-                              ))}
-                            {data.floor_type == "table" && (
-                              <>
-                                <div className="ticketTableGrid rm_floor_2_floor floor_2_tableadd">
-                                  {data[data.array_name].map((val) => (
-                                    <div>
-                                      <div className="tableWrapper">
-                                        {val[val.array_name].map(
-                                          (val1, index) => (
-                                            <div
-                                              className={`chair chair_${
-                                                index + 1
-                                              }`}
-                                            >
-                                              <LightTooltip
-                                                arrow
-                                                placement="top"
-                                                title={
-                                                  <>
-                                                    <div className="TicketTooltip">
-                                                      <div className="d-flex align-items-center justify-content-between">
-                                                        <div className="stIfoTxt">
-                                                          <label>Seat No</label>
-                                                          <p>
-                                                            {val1.seat_name}
-                                                          </p>
-                                                        </div>
-                                                        <div className="stIfoTxt text-right priceCont">
-                                                          <label>Price</label>
-                                                          <p>
-                                                            {currencyFormat(
-                                                              data.floor_price
-                                                            )}
-                                                          </p>
-                                                        </div>
+                                </div>
+                              </>
+                            ))}
+                          {data.floor_type == "table" && (
+                            <>
+                              <div className="ticketTableGrid rm_floor_2_floor floor_2_tableadd">
+                                {data[data.array_name].map((val) => (
+                                  <div>
+                                    <div className="tableWrapper">
+                                      {val[val.array_name].map(
+                                        (val1, index) => (
+                                          <div
+                                            className={`chair chair_${
+                                              index + 1
+                                            }`}
+                                          >
+                                            <LightTooltip
+                                              arrow
+                                              placement="top"
+                                              title={
+                                                <>
+                                                  <div className="TicketTooltip">
+                                                    <div className="d-flex align-items-center justify-content-between">
+                                                      <div className="stIfoTxt">
+                                                        <label>Seat No</label>
+                                                        <p>
+                                                          {val1.seat_name}
+                                                        </p>
+                                                      </div>
+                                                      <div className="stIfoTxt text-right priceCont">
+                                                        <label>Price</label>
+                                                        <p>
+                                                          {currencyFormat(
+                                                            data.floor_price
+                                                          )}
+                                                        </p>
                                                       </div>
                                                     </div>
-                                                  </>
+                                                  </div>
+                                                </>
+                                              }
+                                            >
+                                              <label
+                                                style={
+                                                  selected_ticket_id.includes(
+                                                    val1.seat_id
+                                                  )
+                                                    ? { background: "orange" }
+                                                    : booked_seat.includes(
+                                                        val1.seat_id
+                                                      )
+                                                    ? {
+                                                        background: "#ff9898",
+                                                      }
+                                                    : {}
                                                 }
+                                                className={`chairContainer ${
+                                                  booked_seat.includes(
+                                                    val1.seat_id
+                                                  )
+                                                    ? "booked"
+                                                    : ""
+                                                }`}
                                               >
-                                                <label
-                                                  style={
-                                                    selected_ticket_id.includes(
-                                                      val1.seat_id
-                                                    )
-                                                      ? { background: "orange" }
-                                                      : booked_seat.includes(
-                                                          val1.seat_id
-                                                        )
-                                                      ? {
-                                                          background: "#ff9898",
-                                                        }
-                                                      : {}
-                                                  }
-                                                  className={`chairContainer ${
+                                                {index + 1}
+                                                <input
+                                                  type="checkbox"
+                                                  className="floor_2 floor_2_t1_1"
+                                                  id={val1.seat_id}
+                                                  // value="t1-1"
+                                                  data-level="F2_t1"
+                                                  data-name="F2-T1-1"
+                                                  data-type="table"
+                                                  data-view="enable"
+                                                  value={JSON.stringify({
+                                                    ...val1,
+                                                    ...{
+                                                      price: data.floor_price,
+                                                      type: data.floor_type,
+                                                    },
+                                                  })}
+                                                  checked={true}
+                                                  onClick={handleClick}
+                                                  disabled={
                                                     booked_seat.includes(
                                                       val1.seat_id
                                                     )
-                                                      ? "booked"
-                                                      : ""
-                                                  }`}
-                                                >
-                                                  {index + 1}
-                                                  <input
-                                                    type="checkbox"
-                                                    className="floor_2 floor_2_t1_1"
-                                                    id={val1.seat_id}
-                                                    // value="t1-1"
-                                                    data-level="F2_t1"
-                                                    data-name="F2-T1-1"
-                                                    data-type="table"
-                                                    data-view="enable"
-                                                    value={JSON.stringify({
-                                                      ...val1,
-                                                      ...{
-                                                        price: data.floor_price,
-                                                        type: data.floor_type,
-                                                      },
-                                                    })}
-                                                    checked={true}
-                                                    onClick={handleClick}
-                                                    disabled={
-                                                      booked_seat.includes(
-                                                        val1.seat_id
-                                                      )
-                                                        ? true
-                                                        : false
-                                                    }
-                                                  />
-                                                  <div className="chkWrpr">
-                                                    <span className="material-icons">
-                                                      check
-                                                    </span>
-                                                  </div>
-                                                </label>
-                                              </LightTooltip>
-                                            </div>
-                                          )
-                                        )}
-                                        <div className="tableShp">
-                                          {val.array_name.toUpperCase()}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              </>
-                            )}
-                          </>
-                          <hr />
-                        </>
-                      ))}
-
-                      {/* <div>
-                    <div className="ticketTableGrid rm_floor_2_floor floor_2_tableadd">
-                      <div className="tableWrapper">
-                        <div className="chair chair_1">
-                          <label className="chairContainer">
-                            1
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_2">
-                          <label className="chairContainer">
-                            2
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_3">
-                          <label className="chairContainer">
-                            3
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_4">
-                          <label className="chairContainer">
-                            4
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_5">
-                          <label className="chairContainer">
-                            5
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_6">
-                          <label className="chairContainer">
-                            6
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_7">
-                          <label className="chairContainer">
-                            7
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="chair chair_8">
-                          <label className="chairContainer">
-                            8
-                            <input
-                              type="checkbox"
-                              className="floor_2 floor_2_t1_1"
-                              id="2t1-1"
-                              value="t1-1"
-                              data-level="F2_t1"
-                              data-name="F2-T1-1"
-                              data-type="table"
-                              data-view="enable"
-                            />
-                            <div className="chkWrpr">
-                              <span className="material-icons">check</span>
-                            </div>
-                          </label>
-                        </div>
-                        <div className="tableShp">F2-T1</div>
-                      </div>
-                    </div>
-                  </div> */}
-                    </form>
-                  </div>
-                </div>
-                <div className="ticFullInfo">
-                  {/* <div className="hdrPadd">
-                <div className="ticselectcard">
-                  <div className="ticCnt">
-                    {Object.values(mapData(ticketInfo))}
-                  </div>
-                  <div className="ticftr">
-                    {["right"].map((anchor) => (
-                      <React.Fragment key={anchor}>
-                        <Button onClick={toggleDrawer(anchor, true)}>
-                          <span className="material-icons-outlined">tune</span>{" "}
-                          Filter
-                        </Button>
-                      </React.Fragment>
-                    ))}
-                  </div>
-                </div>
-                <div className="ticRange">
-                  <div className="ticstartrange">
-                    <TextField
-                      id="outlined-basic"
-                      label=""
-                      variant="outlined"
-                    />
-                  </div>
-                  <div className="ticprogress">
-                    <AirbnbSlider
-                      getAriaLabel={(index) =>
-                        index === 0 ? "Minimum price" : "Maximum price"
-                      }
-                      defaultValue={[20, 40]}
-                    />
-                  </div>
-                  <div className="ticendrange">
-                    <TextField
-                      id="outlined-basic"
-                      label=""
-                      variant="outlined"
-                    />
-                  </div>
-                </div>
-              </div> */}
-                  <div className="ticTabvarient" ref={containerRef}>
-                    {/* {["right"].map((anchor) => (
-                  <SwipeableDrawer
-                    anchor={anchor}
-                    open={state[anchor]}
-                    className={classes.drawer}
-                    onClose={toggleDrawer(anchor, false)}
-                    onOpen={toggleDrawer(anchor, true)}
-                  >
-                    {list(anchor)}
-                  </SwipeableDrawer>
-                ))} */}
-                    <div>
-                      {/* <AppBar position="static" color="default">
-                    <Tabs
-                      value={value}
-                      indicatorColor="primary"
-                      textColor="primary"
-                      onChange={handleChange}
-                      aria-label="disabled tabs example"
-                    >
-                      <Tab label="Lowest Price" {...a11yProps(0)} />
-                      <Tab label="Best Seats" {...a11yProps(1)} />
-                    </Tabs>
-                  </AppBar> */}
-                      {parseInt(ticket_steps) == 0 ? (
-                        <div className="tabPanelminH">
-                          <TabPanel value={value} index={0}>
-                            {selected_ticket_details.length > 0 ? (
-                              <>
-                                <h4 className="stsHdr">Your Tickets</h4>
-                                {selected_ticket_details.map((data) => (
-                                  <div className="ticketInfo">
-                                    <IconButton
-                                      className="cancelBtn"
-                                      onClick={() => removeTicket(data)}
-                                    >
-                                      <span className="material-icons">
-                                        cancel
-                                      </span>
-                                    </IconButton>
-                                    <div className="seatsInfo">
-                                      <div className="stLtr">
-                                        <label>Seat Name</label>
-                                        <p>{data.seat_name.toUpperCase()}</p>
-                                      </div>
-                                      <div className="stLtr">
-                                        <label>
-                                          {data.type == "seat"
-                                            ? "Seat Row"
-                                            : "Table Name"}
-                                        </label>
-                                        <p>{data.seat_row.toUpperCase()}</p>
-                                      </div>
-                                      <div className="stLtr stPrcng">
-                                        <label>Price</label>
-                                        <p>{currencyFormat(data.price)}</p>
+                                                      ? true
+                                                      : false
+                                                  }
+                                                />
+                                                <div className="chkWrpr">
+                                                  <span className="material-icons">
+                                                    check
+                                                  </span>
+                                                </div>
+                                              </label>
+                                            </LightTooltip>
+                                          </div>
+                                        )
+                                      )}
+                                      <div className="tableShp">
+                                        {val.array_name.toUpperCase()}
                                       </div>
                                     </div>
                                   </div>
                                 ))}
-                                <div className="ttlPriceCntnr">
-                                  <p>
-                                    Total Ticket Price (
-                                    {selected_ticket_details.length}{" "}
-                                    {selected_ticket_details.length > 1
-                                      ? "Tickets"
-                                      : "Ticket"}
-                                    )
-                                  </p>
-                                  <h5 className="totlPcVl">
-                                    {currencyFormat(total_ticket_price)}
-                                  </h5>
-                                </div>
-                                <div className="tcktNxtBtn d-flex align-items-center justify-content-end">
-                                  <SecondaryButton
-                                    btnSize="small"
-                                    label="Next"
-                                    onClick={(e) => nextstep("next")}
-                                  />
-                                </div>
-                              </>
-                            ) : (
-                              <>
-                                <h4 className="stsHdr">Stage Details</h4>
-                                {ticket_struture.stagelist[0].stage_obj.map(
-                                  (data) => (
-                                    <div className="split-content">
-                                      <div className="split-content__primary">
-                                        <h5 className="quick-picks__item-desc">
-                                          Floor Name: {data.floor_name}
-                                        </h5>
-                                        <h5 className="quick-picks__item-desc">
-                                          Price:
-                                          {currencyFormat(data.floor_price)}
-                                        </h5>
-                                      </div>
-                                      {data.floor_type == "seat" ? (
-                                        <div className="split-content__secondary">
-                                          <h5 className="quick-picks__button">
-                                            Total Row
-                                            {data[data.array_name].length > 1
-                                              ? "s: "
-                                              : ": "}
-                                            {data[data.array_name].length}
-                                          </h5>
-                                          <h5 className="quick-picks__button">
-                                            Total Seats:
-                                            {data[data.array_name].length * 10}
-                                          </h5>
-                                        </div>
-                                      ) : (
-                                        <div className="split-content__secondary">
-                                          <h5 className="quick-picks__button">
-                                            Total Table
-                                            {data[data.array_name].length > 1
-                                              ? "s: "
-                                              : ": "}
-                                            {data[data.array_name].length}
-                                          </h5>
-                                          <h5 className="quick-picks__button">
-                                            Total Seats:
-                                            {data[data.array_name].length * 8}
-                                          </h5>
-                                        </div>
-                                      )}
-                                    </div>
-                                  )
-                                )}
-                                <h4 className="stsHdr">Seat Details</h4>
-                                <div className="booked-details-seller">
-                                  <p>
-                                    <b>
-                                      Total{" "}
-                                      {total_seats.length > 0
-                                        ? "Seats"
-                                        : "Seat"}
-                                      : {total_seats}
-                                    </b>
-                                  </p>
-                                </div>
-                                <div className="booked-details-seller">
-                                  <p>
-                                    <b>
-                                      Booked{" "}
-                                      {booked_seat.length > 1
-                                        ? "Seats"
-                                        : "Seat"}
-                                      : {booked_seat.length}
-                                    </b>
-                                  </p>
-                                </div>
-                                <div className="booked-details-seller">
-                                  <p>
-                                    <b>
-                                      Available{" "}
-                                      {total_seats - booked_seat.length > 0
-                                        ? "Seats"
-                                        : "Seat"}
-                                      : {total_seats - booked_seat.length}
-                                    </b>
-                                  </p>
-                                </div>
+                              </div>
+                            </>
+                          )}
+                        </>
+                        <hr />
+                      </>
+                    ))}
 
-                                <br></br>
-                              </>
-                            )}
-                          </TabPanel>
-                        </div>
-                      ) : parseInt(ticket_steps) == 1 ? (
-                        <div className="tabPanelminH">
-                          {/* <TabPanel value={value} index={0}> */}
+                    {/* <div>
+                  <div className="ticketTableGrid rm_floor_2_floor floor_2_tableadd">
+                    <div className="tableWrapper">
+                      <div className="chair chair_1">
+                        <label className="chairContainer">
+                          1
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_2">
+                        <label className="chairContainer">
+                          2
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_3">
+                        <label className="chairContainer">
+                          3
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_4">
+                        <label className="chairContainer">
+                          4
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_5">
+                        <label className="chairContainer">
+                          5
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_6">
+                        <label className="chairContainer">
+                          6
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_7">
+                        <label className="chairContainer">
+                          7
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="chair chair_8">
+                        <label className="chairContainer">
+                          8
+                          <input
+                            type="checkbox"
+                            className="floor_2 floor_2_t1_1"
+                            id="2t1-1"
+                            value="t1-1"
+                            data-level="F2_t1"
+                            data-name="F2-T1-1"
+                            data-type="table"
+                            data-view="enable"
+                          />
+                          <div className="chkWrpr">
+                            <span className="material-icons">check</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div className="tableShp">F2-T1</div>
+                    </div>
+                  </div>
+                </div> */}
+                  </form>
+                </div>
+              </div>
+              <div className="ticFullInfo">
+                {/* <div className="hdrPadd">
+              <div className="ticselectcard">
+                <div className="ticCnt">
+                  {Object.values(mapData(ticketInfo))}
+                </div>
+                <div className="ticftr">
+                  {["right"].map((anchor) => (
+                    <React.Fragment key={anchor}>
+                      <Button onClick={toggleDrawer(anchor, true)}>
+                        <span className="material-icons-outlined">tune</span>{" "}
+                        Filter
+                      </Button>
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+              <div className="ticRange">
+                <div className="ticstartrange">
+                  <TextField
+                    id="outlined-basic"
+                    label=""
+                    variant="outlined"
+                  />
+                </div>
+                <div className="ticprogress">
+                  <AirbnbSlider
+                    getAriaLabel={(index) =>
+                      index === 0 ? "Minimum price" : "Maximum price"
+                    }
+                    defaultValue={[20, 40]}
+                  />
+                </div>
+                <div className="ticendrange">
+                  <TextField
+                    id="outlined-basic"
+                    label=""
+                    variant="outlined"
+                  />
+                </div>
+              </div>
+            </div> */}
+                <div className="ticTabvarient" ref={containerRef}>
+                  {/* {["right"].map((anchor) => (
+                <SwipeableDrawer
+                  anchor={anchor}
+                  open={state[anchor]}
+                  className={classes.drawer}
+                  onClose={toggleDrawer(anchor, false)}
+                  onOpen={toggleDrawer(anchor, true)}
+                >
+                  {list(anchor)}
+                </SwipeableDrawer>
+              ))} */}
+                  <div>
+                    {/* <AppBar position="static" color="default">
+                  <Tabs
+                    value={value}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    onChange={handleChange}
+                    aria-label="disabled tabs example"
+                  >
+                    <Tab label="Lowest Price" {...a11yProps(0)} />
+                    <Tab label="Best Seats" {...a11yProps(1)} />
+                  </Tabs>
+                </AppBar> */}
+                    {parseInt(ticket_steps) == 0 ? (
+                      <div className="tabPanelminH">
+                        <TabPanel value={value} index={0}>
                           {selected_ticket_details.length > 0 ? (
                             <>
-                              <h4 className="stsHdr">
-                                Confirmed Ticket Details
-                              </h4>
+                              <h4 className="stsHdr">Your Tickets</h4>
                               {selected_ticket_details.map((data) => (
-                                <>
-                                  <div className="ticketInfo">
-                                    <div className="seatsInfo">
-                                      <div className="stLtr">
-                                        <label>Seat Name</label>
-                                        <p>{data.seat_name.toUpperCase()}</p>
-                                      </div>
-                                      <div className="stLtr">
-                                        <label>
-                                          {data.type == "seat"
-                                            ? "Seat Row"
-                                            : "Table Name"}
-                                        </label>
-                                        <p>{data.seat_row.toUpperCase()}</p>
-                                      </div>
-                                      <div className="stLtr stPrcng">
-                                        <label>Price</label>
-                                        <p>{currencyFormat(data.price)}</p>
-                                      </div>
+                                <div className="ticketInfo">
+                                  <IconButton className="cancelBtn" onClick={() => removeTicket(data)} size="large">
+                                    <span className="material-icons">
+                                      cancel
+                                    </span>
+                                  </IconButton>
+                                  <div className="seatsInfo">
+                                    <div className="stLtr">
+                                      <label>Seat Name</label>
+                                      <p>{data.seat_name.toUpperCase()}</p>
+                                    </div>
+                                    <div className="stLtr">
+                                      <label>
+                                        {data.type == "seat"
+                                          ? "Seat Row"
+                                          : "Table Name"}
+                                      </label>
+                                      <p>{data.seat_row.toUpperCase()}</p>
+                                    </div>
+                                    <div className="stLtr stPrcng">
+                                      <label>Price</label>
+                                      <p>{currencyFormat(data.price)}</p>
                                     </div>
                                   </div>
-                                </>
+                                </div>
                               ))}
                               <div className="ttlPriceCntnr">
                                 <p>
@@ -1429,226 +1286,365 @@ function Ticketing(props) {
                                   {currencyFormat(total_ticket_price)}
                                 </h5>
                               </div>
-                              <h4 className="stsHdr mt-4">Your Details</h4>
-                              {user_details.first_name != "" &&
-                                user_details.last_name != "" &&
-                                user_details.email != "" &&
-                                user_details.phone != "" && (
-                                  <div className="fnlDntnInfo">
-                                    <h4 className="usrNameVale">
-                                      {user_details.first_name +
-                                        " " +
-                                        user_details.last_name}
-                                    </h4>
-                                    <div className="usrCntctInfo d-flex align-items-center justify-content-start mt-4">
-                                      <p className="mr-4">
-                                        <span className="material-icons">
-                                          mail
-                                        </span>
-                                        <span className="usrEmail">
-                                          {user_details.email}
-                                        </span>
-                                      </p>
-
-                                      <p>
-                                        <span className="material-icons">
-                                          phone
-                                        </span>
-                                        {user_details.phone}
-                                      </p>
-                                    </div>
-                                  </div>
-                                )}
-                              {/* <div className="tcktNxtBtn d-flex align-items-center justify-content-between">
-                              <SecondaryButton
-                                btnSize="small"
-                                label="Back"
-                                onClick={(e) => nextstep("pre")}
-                              />
-                              <SecondaryButton
-                                btnSize="small"
-                                label="Next"
-                                onClick={(e) => nextstep("next")}
-                              />
-                            </div> */}
-                              <h4 className="stsHdr mt-4">Payment Details</h4>
-                              <div className="tabPanelminH">
-                                <div className="paymWrpr p-2">
-                                  {carddetails.length > 0 ? (
-                                    <div className="row">
-                                      <div className="col-4">
-                                        Use Existing Card details
-                                      </div>
-                                      <div className="col-8">
-                                        <CustomSelect
-                                          label={"Card Details"}
-                                          value={selected_card}
-                                          onChange={(e) =>
-                                            setSelectedCard(e.target.value)
-                                          }
-                                        >
-                                          <option value="">
-                                            {"Select Card"}
-                                          </option>
-                                          {carddetails.map((val) => (
-                                            <option value={val.id}>
-                                              {"XXXX XXXX XXXX XXXX " +
-                                                val.last4}
-                                            </option>
-                                          ))}
-                                        </CustomSelect>
-                                      </div>
-                                      {selected_card == "" ? (
-                                        <p className="text-center w-100">OR</p>
-                                      ) : (
-                                        ""
-                                      )}
-                                    </div>
-                                  ) : (
-                                    ""
-                                  )}
-                                  {selected_card == "" ? (
-                                    <div className="row">
-                                      {Object.values(mapData(paymentdetails))}
-                                    </div>
-                                  ) : (
-                                    ""
-                                  )}
-                                </div>
-                                <div className="tcktNxtBtn d-flex align-items-center justify-content-between">
-                                  <SecondaryButton
-                                    label="Back"
-                                    onClick={(e) => nextstep("pre")}
-                                  />
-                                  <PrimaryButton
-                                    disabled={donar_loading ? true : false}
-                                    label="Make Payment"
-                                    type="submit"
-                                    onClick={(e) => handleSubmit()}
-                                  />
-                                </div>
+                              <div className="tcktNxtBtn d-flex align-items-center justify-content-end">
+                                <SecondaryButton
+                                  btnSize="small"
+                                  label="Next"
+                                  onClick={(e) => nextstep("next")}
+                                />
                               </div>
                             </>
                           ) : (
-                            <p>Please Select Ticket Details</p>
+                            <>
+                              <h4 className="stsHdr">Stage Details</h4>
+                              {ticket_struture.stagelist[0].stage_obj.map(
+                                (data) => (
+                                  <div className="split-content">
+                                    <div className="split-content__primary">
+                                      <h5 className="quick-picks__item-desc">
+                                        Floor Name: {data.floor_name}
+                                      </h5>
+                                      <h5 className="quick-picks__item-desc">
+                                        Price:
+                                        {currencyFormat(data.floor_price)}
+                                      </h5>
+                                    </div>
+                                    {data.floor_type == "seat" ? (
+                                      <div className="split-content__secondary">
+                                        <h5 className="quick-picks__button">
+                                          Total Row
+                                          {data[data.array_name].length > 1
+                                            ? "s: "
+                                            : ": "}
+                                          {data[data.array_name].length}
+                                        </h5>
+                                        <h5 className="quick-picks__button">
+                                          Total Seats:
+                                          {data[data.array_name].length * 10}
+                                        </h5>
+                                      </div>
+                                    ) : (
+                                      <div className="split-content__secondary">
+                                        <h5 className="quick-picks__button">
+                                          Total Table
+                                          {data[data.array_name].length > 1
+                                            ? "s: "
+                                            : ": "}
+                                          {data[data.array_name].length}
+                                        </h5>
+                                        <h5 className="quick-picks__button">
+                                          Total Seats:
+                                          {data[data.array_name].length * 8}
+                                        </h5>
+                                      </div>
+                                    )}
+                                  </div>
+                                )
+                              )}
+                              <h4 className="stsHdr">Seat Details</h4>
+                              <div className="booked-details-seller">
+                                <p>
+                                  <b>
+                                    Total{" "}
+                                    {total_seats.length > 0
+                                      ? "Seats"
+                                      : "Seat"}
+                                    : {total_seats}
+                                  </b>
+                                </p>
+                              </div>
+                              <div className="booked-details-seller">
+                                <p>
+                                  <b>
+                                    Booked{" "}
+                                    {booked_seat.length > 1
+                                      ? "Seats"
+                                      : "Seat"}
+                                    : {booked_seat.length}
+                                  </b>
+                                </p>
+                              </div>
+                              <div className="booked-details-seller">
+                                <p>
+                                  <b>
+                                    Available{" "}
+                                    {total_seats - booked_seat.length > 0
+                                      ? "Seats"
+                                      : "Seat"}
+                                    : {total_seats - booked_seat.length}
+                                  </b>
+                                </p>
+                              </div>
+
+                              <br></br>
+                            </>
                           )}
-                          {/* </TabPanel> */}
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className="tckStatusWrpr">
-                  {/* <h4 className="">Ticket Status</h4> */}
-                  <div className="tcktStsGrid">
-                    <div className="stWrp">
-                      <div className="seatDiv avlblSeat"></div>
-                      <p className="m-0 ml-2">Available Seat</p>
-                    </div>
-                    {/* <div className="stWrp">
-                      <div className="seatDiv sltdSeat"></div>
-                      <p className="m-0 ml-2">Selected Seat</p>
-                    </div> */}
-                    <div className="stWrp">
-                      <div className="seatDiv bkdSeat"></div>
-                      <p className="m-0 ml-2">Booked Seat</p>
-                    </div>
+                        </TabPanel>
+                      </div>
+                    ) : parseInt(ticket_steps) == 1 ? (
+                      <div className="tabPanelminH">
+                        {/* <TabPanel value={value} index={0}> */}
+                        {selected_ticket_details.length > 0 ? (
+                          <>
+                            <h4 className="stsHdr">
+                              Confirmed Ticket Details
+                            </h4>
+                            {selected_ticket_details.map((data) => (
+                              <>
+                                <div className="ticketInfo">
+                                  <div className="seatsInfo">
+                                    <div className="stLtr">
+                                      <label>Seat Name</label>
+                                      <p>{data.seat_name.toUpperCase()}</p>
+                                    </div>
+                                    <div className="stLtr">
+                                      <label>
+                                        {data.type == "seat"
+                                          ? "Seat Row"
+                                          : "Table Name"}
+                                      </label>
+                                      <p>{data.seat_row.toUpperCase()}</p>
+                                    </div>
+                                    <div className="stLtr stPrcng">
+                                      <label>Price</label>
+                                      <p>{currencyFormat(data.price)}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            ))}
+                            <div className="ttlPriceCntnr">
+                              <p>
+                                Total Ticket Price (
+                                {selected_ticket_details.length}{" "}
+                                {selected_ticket_details.length > 1
+                                  ? "Tickets"
+                                  : "Ticket"}
+                                )
+                              </p>
+                              <h5 className="totlPcVl">
+                                {currencyFormat(total_ticket_price)}
+                              </h5>
+                            </div>
+                            <h4 className="stsHdr mt-4">Your Details</h4>
+                            {user_details.first_name != "" &&
+                              user_details.last_name != "" &&
+                              user_details.email != "" &&
+                              user_details.phone != "" && (
+                                <div className="fnlDntnInfo">
+                                  <h4 className="usrNameVale">
+                                    {user_details.first_name +
+                                      " " +
+                                      user_details.last_name}
+                                  </h4>
+                                  <div className="usrCntctInfo d-flex align-items-center justify-content-start mt-4">
+                                    <p className="mr-4">
+                                      <span className="material-icons">
+                                        mail
+                                      </span>
+                                      <span className="usrEmail">
+                                        {user_details.email}
+                                      </span>
+                                    </p>
+
+                                    <p>
+                                      <span className="material-icons">
+                                        phone
+                                      </span>
+                                      {user_details.phone}
+                                    </p>
+                                  </div>
+                                </div>
+                              )}
+                            {/* <div className="tcktNxtBtn d-flex align-items-center justify-content-between">
+                            <SecondaryButton
+                              btnSize="small"
+                              label="Back"
+                              onClick={(e) => nextstep("pre")}
+                            />
+                            <SecondaryButton
+                              btnSize="small"
+                              label="Next"
+                              onClick={(e) => nextstep("next")}
+                            />
+                          </div> */}
+                            <h4 className="stsHdr mt-4">Payment Details</h4>
+                            <div className="tabPanelminH">
+                              <div className="paymWrpr p-2">
+                                {carddetails.length > 0 ? (
+                                  <div className="row">
+                                    <div className="col-4">
+                                      Use Existing Card details
+                                    </div>
+                                    <div className="col-8">
+                                      <CustomSelect
+                                        label={"Card Details"}
+                                        value={selected_card}
+                                        onChange={(e) =>
+                                          setSelectedCard(e.target.value)
+                                        }
+                                      >
+                                        <option value="">
+                                          {"Select Card"}
+                                        </option>
+                                        {carddetails.map((val) => (
+                                          <option value={val.id}>
+                                            {"XXXX XXXX XXXX XXXX " +
+                                              val.last4}
+                                          </option>
+                                        ))}
+                                      </CustomSelect>
+                                    </div>
+                                    {selected_card == "" ? (
+                                      <p className="text-center w-100">OR</p>
+                                    ) : (
+                                      ""
+                                    )}
+                                  </div>
+                                ) : (
+                                  ""
+                                )}
+                                {selected_card == "" ? (
+                                  <div className="row">
+                                    {Object.values(mapData(paymentdetails))}
+                                  </div>
+                                ) : (
+                                  ""
+                                )}
+                              </div>
+                              <div className="tcktNxtBtn d-flex align-items-center justify-content-between">
+                                <SecondaryButton
+                                  label="Back"
+                                  onClick={(e) => nextstep("pre")}
+                                />
+                                <PrimaryButton
+                                  disabled={donar_loading ? true : false}
+                                  label="Make Payment"
+                                  type="submit"
+                                  onClick={(e) => handleSubmit()}
+                                />
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <p>Please Select Ticket Details</p>
+                        )}
+                        {/* </TabPanel> */}
+                      </div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               </div>
+              <div className="tckStatusWrpr">
+                {/* <h4 className="">Ticket Status</h4> */}
+                <div className="tcktStsGrid">
+                  <div className="stWrp">
+                    <div className="seatDiv avlblSeat"></div>
+                    <p className="m-0 ml-2">Available Seat</p>
+                  </div>
+                  {/* <div className="stWrp">
+                    <div className="seatDiv sltdSeat"></div>
+                    <p className="m-0 ml-2">Selected Seat</p>
+                  </div> */}
+                  <div className="stWrp">
+                    <div className="seatDiv bkdSeat"></div>
+                    <p className="m-0 ml-2">Booked Seat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <Dialog
-                open={open}
-                onClose={handleClose}
-                maxWidth="sm"
-                fullWidth={true}
-                aria-labelledby="form-dialog-title"
-              >
-                <DialogTitle id="form-dialog-title" className="diaglogTitle">
-                  More Info
-                  <span
-                    className="material-icons-outlined"
-                    onClick={handleClose}
-                  >
-                    close
-                  </span>
-                </DialogTitle>
+            <Dialog
+              open={open}
+              onClose={handleClose}
+              maxWidth="sm"
+              fullWidth={true}
+              aria-labelledby="form-dialog-title"
+            >
+              <DialogTitle id="form-dialog-title" className="diaglogTitle">
+                More Info
+                <span
+                  className="material-icons-outlined"
+                  onClick={handleClose}
+                >
+                  close
+                </span>
+              </DialogTitle>
 
-                <DialogContent dividers={"paper"}>
-                  <h3 className="mb-3">{auctionDetails.title}</h3>
-                  {/* <h5>
-                <b>Important Event Info: </b> Fouille obligatoire / caméras
-                interdites
-              </h5> */}
-                  <hr />
-                  <ul className="list-unstyled">
-                    <li>
-                      <b>Date</b> :{" "}
-                      {moment(auctionDetails.date_added).format("dddd")} •{" "}
-                      {moment(auctionDetails.date_added).format("MMMM")}
-                      {""}
-                      {moment(auctionDetails.date_added).format("D")} •{" "}
-                      {moment(auctionDetails.date_added).format("hh:mm A")}
-                    </li>
-                    <li>
-                      <b>Venue</b> :{" "}
-                      {auctionDetails?.state ? auctionDetails.state : ""} ,
-                      {auctionDetails?.city ? auctionDetails.city : ""}
-                    </li>
-                  </ul>
-                  <hr />
+              <DialogContent dividers={"paper"}>
+                <h3 className="mb-3">{auctionDetails.title}</h3>
+                {/* <h5>
+              <b>Important Event Info: </b> Fouille obligatoire / caméras
+              interdites
+            </h5> */}
+                <hr />
+                <ul className="list-unstyled">
+                  <li>
+                    <b>Date</b> :{" "}
+                    {moment(auctionDetails.date_added).format("dddd")} •{" "}
+                    {moment(auctionDetails.date_added).format("MMMM")}
+                    {""}
+                    {moment(auctionDetails.date_added).format("D")} •{" "}
+                    {moment(auctionDetails.date_added).format("hh:mm A")}
+                  </li>
+                  <li>
+                    <b>Venue</b> :{" "}
+                    {auctionDetails?.state ? auctionDetails.state : ""} ,
+                    {auctionDetails?.city ? auctionDetails.city : ""}
+                  </li>
+                </ul>
+                <hr />
 
-                  <h5>
-                    <b>Additional Info</b>
-                  </h5>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: auctionDetails.description,
-                    }}
-                  ></p>
-                  {/* <h5>
-                <b>Ticket Limits</b>
-              </h5> */}
-                  {/* <p>
-                Il y a une limite de 8 billets pour cet événement. There is an
-                overall 8 ticket limit for this event.
-              </p> */}
-                </DialogContent>
-              </Dialog>
+                <h5>
+                  <b>Additional Info</b>
+                </h5>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: auctionDetails.description,
+                  }}
+                ></p>
+                {/* <h5>
+              <b>Ticket Limits</b>
+            </h5> */}
+                {/* <p>
+              Il y a une limite de 8 billets pour cet événement. There is an
+              overall 8 ticket limit for this event.
+            </p> */}
+              </DialogContent>
+            </Dialog>
 
-              <Dialog
-                open={openmenu}
-                onClose={handlemenuClose}
-                maxWidth="sm"
-                fullWidth={true}
-                aria-labelledby="form-dialog-title"
-              >
-                <DialogTitle id="form-dialog-title" className="diaglogTitle">
-                  Important Event Info
-                  <span
-                    className="material-icons-outlined"
-                    onClick={handlemenuClose}
-                  >
-                    close
-                  </span>
-                </DialogTitle>
+            <Dialog
+              open={openmenu}
+              onClose={handlemenuClose}
+              maxWidth="sm"
+              fullWidth={true}
+              aria-labelledby="form-dialog-title"
+            >
+              <DialogTitle id="form-dialog-title" className="diaglogTitle">
+                Important Event Info
+                <span
+                  className="material-icons-outlined"
+                  onClick={handlemenuClose}
+                >
+                  close
+                </span>
+              </DialogTitle>
 
-                <DialogContent dividers={"paper"}>
-                  <h3 className="mb-3">
-                    Fouille obligatoire / caméras interdites
-                  </h3>
-                </DialogContent>
-              </Dialog>
-            </>
-          ) : (
-            ""
-          )}
-        </>
-      )}
-    </>
-  );
+              <DialogContent dividers={"paper"}>
+                <h3 className="mb-3">
+                  Fouille obligatoire / caméras interdites
+                </h3>
+              </DialogContent>
+            </Dialog>
+          </>
+        ) : (
+          ""
+        )}
+      </>
+    )}
+  </>;
 }
 
 export default Ticketing;

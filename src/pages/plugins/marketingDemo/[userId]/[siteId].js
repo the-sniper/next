@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepButton from "@material-ui/core/StepButton";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import makeStyles from '@mui/styles/makeStyles';
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepButton from "@mui/material/StepButton";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
 import {
   mapData,
@@ -22,13 +22,13 @@ import ProductContext from "@/context/product/productContext";
 import Geocode from "react-geocode";
 import CustomSelect from "@/components/atoms/Inputs/CustomSelect";
 import AlertContext from "@/context/alert/alertContext";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch from "@material-ui/core/Switch";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
 import csc from "country-state-city";
 import Loaders from "@/components/molecules/Loaders";
-import Tooltip from "@material-ui/core/Tooltip";
-import Dialog from "@material-ui/core/Dialog";
+import Tooltip from "@mui/material/Tooltip";
+import Dialog from "@mui/material/Dialog";
 import moment from "moment";
 import readXlsxFile from "read-excel-file";
 import { useRouter } from "next/router";

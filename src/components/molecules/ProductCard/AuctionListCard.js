@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
-import { Button, Fade, Tooltip } from "@material-ui/core";
+import { Button, Fade, Tooltip } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import CustomInput from "../../../components/atoms/Inputs/CustomInput";
 import PrimaryButton from "../../../components/atoms/PrimaryButton";
@@ -21,12 +21,12 @@ import {
 import AlertContext from "../../../context/alert/alertContext";
 import AuthContext from "../../../context/auth/authContext";
 import AuctionContext from "../../../context/auction/auctionContext";
-import VisibilityIcon from "@material-ui/icons/Visibility";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import moment from "moment";
 import BiddingItem from "../Bidding/BiddingItem";
-import ArrowRightTwoToneIcon from "@material-ui/icons/ArrowRightTwoTone";
+import ArrowRightTwoToneIcon from "@mui/icons-material/ArrowRightTwoTone";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 const AuctionListCard = ({ auction, auctionLotView, noTimer }) => {

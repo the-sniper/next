@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import ProductContext from "@/context/product/productContext";
 import Loaders from "@/components/molecules/Loaders";
 import { useRouter } from "next/router";

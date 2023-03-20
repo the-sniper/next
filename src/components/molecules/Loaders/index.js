@@ -1,6 +1,6 @@
 import React from "react";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { Fade } from "@material-ui/core";
+import CircularProgress from "@mui/material/CircularProgress";
+import { Fade } from "@mui/material";
 import GridViewSkeleton from "./ProductCardSkeletons/GridViewSkeleton";
 import ListViewSkeleton from "./ProductCardSkeletons/ListViewSkeleton";
 import CartSkeleton from "./CartSkeleton";

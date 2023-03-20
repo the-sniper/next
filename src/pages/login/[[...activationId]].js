@@ -1,4 +1,4 @@
-import { Divider } from "@material-ui/core";
+import { Divider } from "@mui/material";
 import React, { useState, useEffect, useContext } from "react";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
 import { useFormik } from "formik";

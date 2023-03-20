@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import PersonIcon from "@material-ui/icons/Person";
-import Tooltip from "@material-ui/core/Tooltip";
-import SwapCallsRoundedIcon from "@material-ui/icons/SwapCallsRounded";
-import MenuItem from "@material-ui/core/MenuItem";
-import Button from "@material-ui/core/Button";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import PersonIcon from "@mui/icons-material/Person";
+import Tooltip from "@mui/material/Tooltip";
+import SwapCallsRoundedIcon from "@mui/icons-material/SwapCallsRounded";
+import MenuItem from "@mui/material/MenuItem";
+import Button from "@mui/material/Button";
 import { LOGO, SITE_NAME } from "src/Utils";
 import HeaderSearch from "./HeaderSearch";
 import {
@@ -17,8 +17,8 @@ import {
 import AuthContext from "@/context/auth/authContext";
 import AlertContext from "@/context/alert/alertContext";
 import CommonContext from "@/context/common/commonContext";
-import Popover from "@material-ui/core/Popover";
-import { Badge, Divider, ListItem, SwipeableDrawer } from "@material-ui/core";
+import Popover from "@mui/material/Popover";
+import { Badge, Divider, ListItem, SwipeableDrawer } from "@mui/material";
 import UserContext from "@/context/user/userContext";
 import { setTheme } from "src/Utils/theme";
 import Popup from "../../organisms/Popup";

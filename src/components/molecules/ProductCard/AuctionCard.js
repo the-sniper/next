@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import moment from "moment";
 import { capitalize, noImageAvailable } from "../../../common/components";
 import PrimaryButton from "../../atoms/PrimaryButton";

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { handleRedirectInternal } from "@/common/components";
 import { useRouter } from "next/router";
 

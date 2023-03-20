@@ -3,10 +3,12 @@ import Script from "next/script";
 import Head from "next/head";
 import createEmotionCache from "../lib/material-ui/create-emotion-cache";
 import { CacheProvider } from "@emotion/react";
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import { theme } from "../lib/material-ui/theme";
+
 import "allsettled-polyfill";
-import { StylesProvider } from "@material-ui/core";
+import StylesProvider from "@mui/styles/StylesProvider";
 import { socket } from "@/common/socket";
 import { DefaultSeo } from "next-seo";
 
@@ -79,7 +81,7 @@ import Alerts from "@/common/alert";
 import BuyerState from "@/context/buyer/buyerState";
 import UserState from "@/context/user/userState";
 import { SnackbarProvider } from "notistack";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import StripeCardState from "@/context/stripe/card/cardState";
 import AuthState from "@/context/auth/authState";
 import { keepTheme } from "src/Utils/theme";
@@ -193,7 +195,10 @@ function App(props) {
                             </Button>
                           )}
                         >
-                          <StylesProvider injectFirst>
+                          {/* <StylesProvider injectFixrst> */}
+                          {/* <StyledEngineProvider injectFirst> */}
+                          <ThemeProvider theme={theme}>
+                            {/* <CssBaseline /> */}
                             <div className="App">
                               <Alerts />
                               {/* <InitialLoad /> */}
@@ -201,7 +206,9 @@ function App(props) {
                                 <Component {...pageProps} />
                               </CommonTemplate>
                             </div>
-                          </StylesProvider>
+                          </ThemeProvider>
+                          {/* </StyledEngineProvider> */}
+                          {/* </StylesProvider> */}
                         </SnackbarProvider>
                       </AlertState>
                     </StripeCardState>

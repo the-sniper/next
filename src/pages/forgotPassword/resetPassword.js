@@ -1,4 +1,4 @@
-import { Divider } from "@material-ui/core";
+import { Divider } from "@mui/material";
 import React, { useState, useEffect, useContext } from "react";
 import { LOGO, SITE_NAME } from "src/Utils";
 import PrimaryButton from "@/components/atoms/PrimaryButton";

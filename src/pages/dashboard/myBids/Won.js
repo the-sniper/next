@@ -5,7 +5,7 @@ import AuthContext from "@/context/auth/authContext";
 import AlertContext from "@/context/alert/alertContext";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import ListView from "@/components/molecules/ProductCard/ListView";
-import { Pagination } from "@material-ui/lab";
+import { Pagination } from '@mui/material';
 import PrimaryButton from "@/components/atoms/PrimaryButton";
 import { useRouter } from "next/router";
 

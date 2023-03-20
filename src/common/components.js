@@ -2,20 +2,16 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import axios from "axios";
 import { socket } from "./socket.js";
-import {
-  KeyboardDatePicker,
-  KeyboardDateTimePicker,
-  KeyboardTimePicker,
-} from "@material-ui/pickers";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch from "@material-ui/core/Switch";
+import { DatePicker, DateTimePicker, TimePicker } from "@mui/x-date-pickers";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
 
 import CustomSelect from "../components/atoms/Inputs/CustomSelect";
 import CustomMultiSelect from "../components/atoms/Inputs/CustomMultiSelect";
 import RadioBox from "../components/atoms/RadioBox";
 
-import MenuItem from "@material-ui/core/MenuItem";
+import MenuItem from "@mui/material/MenuItem";
 import CustomInput from "../components/atoms/Inputs/CustomInput";
 import GooglePlaceAutoComplete from "../components/atoms/Inputs/GooglePlaceAutoComplete";
 import CustomPhone from "../components/atoms/Inputs/CustomPhone.js";
@@ -26,10 +22,10 @@ import CustomTextArea from "../components/atoms/Inputs/CustomTextArea";
 import CKEditor from "ckeditor4-react";
 import Uploader from "../common/uploader";
 
-import FormHelperText from "@material-ui/core/FormHelperText";
+import FormHelperText from "@mui/material/FormHelperText";
 import CustomAutocomplete from "../components/atoms/Inputs/CustomAutocomplete.js";
-import { Checkbox } from "@material-ui/core";
-import { ListItemText } from "@material-ui/core";
+import { Checkbox } from "@mui/material";
+import { ListItemText } from "@mui/material";
 
 // import { CKEditor } from '@ckeditor/ckeditor5-react'
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
@@ -422,7 +418,7 @@ export const mapData = (page) => {
           </>
         ) : data.type === "date" ? (
           <>
-            <KeyboardDatePicker
+            <DatePicker
               margin="0"
               autoOk={true}
               showTodayButton={true}
@@ -473,7 +469,7 @@ export const mapData = (page) => {
           </>
         ) : data.type === "dateWithCustomPicker" ? (
           <>
-            <KeyboardDatePicker
+            <DatePicker
               margin="0"
               autoOk={true}
               showTodayButton={true}
@@ -527,7 +523,7 @@ export const mapData = (page) => {
           </>
         ) : data.type === "month" ? (
           <>
-            <KeyboardDatePicker
+            <DatePicker
               margin="0"
               autoOk={true}
               openTo="year"
@@ -569,7 +565,7 @@ export const mapData = (page) => {
           </>
         ) : data.type === "datetime" ? (
           <>
-            <KeyboardDateTimePicker
+            <DateTimePicker
               margin="0"
               autoOk={true}
               showTodayButton={true}
@@ -606,7 +602,7 @@ export const mapData = (page) => {
           </>
         ) : data.type === "time" ? (
           <>
-            <KeyboardTimePicker
+            <TimePicker
               margin="0"
               autoOk={true}
               id={data.name}

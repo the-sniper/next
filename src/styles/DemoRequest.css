@@ -86,7 +86,11 @@
   font-size: 16px;
 }
 
-.dmoWrpr .brwsrCntnr .frmContainer .gtStrBtn .MuiButton-label {
+.dmoWrpr
+  .brwsrCntnr
+  .frmContainer
+  .gtStrBtn
+  .MuiButtonBase-root.MuiButton-root {
   text-transform: none;
 }
 

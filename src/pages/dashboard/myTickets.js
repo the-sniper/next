@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import DashboardLayout from "../../components/templates/DashboardLayout";
 import CheckBox from "../../components/atoms/CheckBox";
 import { useFormik } from "formik";
@@ -12,9 +12,9 @@ import {
   handleRedirectInternal,
   dateFormatFront,
 } from "../../common/components";
-import { useHistory, Link } from "react-router-dom";
-import { Pagination } from "@material-ui/lab";
+import { Pagination } from "@mui/material";
 import NoRecordsFound from "@/components/atoms/NoRecordsFound";
+import { useRouter } from "next/router";
 function MyTickets() {
   const { getPreference, setPreference } = useContext(UserContext);
   const {
@@ -29,7 +29,7 @@ function MyTickets() {
   const [ticket_details, setBookedDetails] = useState([]);
   const [total_result, setTotalResult] = useState(0);
   const [page, setPage] = useState(1);
-  const history = useHistory();
+  const history = useRouter();
   useEffect(() => {
     if (user) {
       get_booked_tickets({ user_id: user.id, perpage: 10, page: 1 });
@@ -108,7 +108,7 @@ function MyTickets() {
                       className="tcktVw cursorDecoy"
                       onClick={() =>
                         history.push(
-                          `/auctionView?auctionId=${data.auction_id}`
+                          `/auctionView/${data.auction_id}?auctionId=${data.auction_id}`
                         )
                       }
                     >

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Button, Drawer } from "@material-ui/core";
+import { Button, Drawer } from "@mui/material";
 import DashboardLayout from "@/components/templates/DashboardLayout";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
 import UserContext from "@/context/user/userContext";

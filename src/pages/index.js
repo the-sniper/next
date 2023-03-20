@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import { Button, Drawer, Tooltip } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Button, Drawer, Tooltip } from "@mui/material";
 import AuctionCard from "@/components/molecules/ProductCard/AuctionCard";
 import GridView from "@/components/molecules/ProductCard/GridView";
 import ProductViewSlider from "@/components/organisms/ProductViewSlider";
@@ -23,15 +22,15 @@ import ReactPlayer from "react-player";
 import Fade from "react-reveal/Fade";
 import AOS from "aos";
 import PrimaryButton from "@/components/atoms/PrimaryButton";
-import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
-import Dialog from "@material-ui/core/Dialog";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import CloseIcon from "@material-ui/icons/Close";
-import Slide from "@material-ui/core/Slide";
-import { makeStyles } from "@material-ui/core/styles";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import Dialog from "@mui/material/Dialog";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CloseIcon from "@mui/icons-material/Close";
+import Slide from "@mui/material/Slide";
+import makeStyles from "@mui/styles/makeStyles";
 import Loaders from "@/components/molecules/Loaders";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -50,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
   },
   title: {
-    marginLeft: theme.spacing(2),
+    // marginLeft: theme.spacing(2),
     flex: 1,
   },
 }));
@@ -1132,6 +1131,7 @@ function Home() {
               color="inherit"
               onClick={handleClose}
               aria-label="close"
+              size="large"
             >
               <CloseIcon />
             </IconButton>

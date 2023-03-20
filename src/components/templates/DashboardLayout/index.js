@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import SideNav from "./SideNav";
 import { LOGO, SITE_NAME } from "../../../Utils";
-import { Badge, Divider, ListItem, SwipeableDrawer } from "@material-ui/core";
+import { Badge, Divider, ListItem, SwipeableDrawer } from "@mui/material";
 import { useRouter } from "next/router";
 import Link from "next/link";
 

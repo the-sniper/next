@@ -433,7 +433,12 @@
 }
 
 .productCardList .listActBtn .biddingCnt .customInput,
-.productCardList .listActBtn .biddingCnt .customInput .MuiInputBase-root fieldset,
+.productCardList
+  .listActBtn
+  .biddingCnt
+  .customInput
+  .MuiInputBase-root
+  fieldset,
 .productCardList .listActBtn .biddingCnt .primButton,
 .productCardList .listActBtn .biddingCnt .primButton button {
   width: 100%;
@@ -1095,7 +1100,7 @@
 }
 
 .bid-btn-area .MuiButton-root {
-  color: var(--green);
+  color: var(--primColor);
   background-color: transparent;
   box-shadow: none;
   padding: 0;
@@ -1103,7 +1108,7 @@
 
 .bid-btn-area .MuiButton-root:hover {
   background-color: transparent;
-  color: var(--green);
+  color: var(--primColor);
   box-shadow: none;
 }
 
@@ -1485,7 +1490,7 @@
 
   .auctionCard .auctionInfo h5,
   .product-loc-bid .location > p,
-  .bid-btn-area .MuiButton-label {
+  .bid-btn-area .MuiButtonBase-root.MuiButton-root {
     font-size: 13px;
   }
 }

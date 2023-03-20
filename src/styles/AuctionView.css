@@ -181,7 +181,7 @@
   margin-top: 10px;
 }
 
-.readMore .MuiButton-label {
+.readMore .MuiButtonBase-root.MuiButton-root {
   font-family: var(--sf-ui-semi-bold);
   color: var(--textColor);
 }
@@ -482,7 +482,7 @@
   margin-bottom: 60px;
 }
 
-.charityCnt .charityLt{
+.charityCnt .charityLt {
   position: sticky;
   top: 60px;
   height: max-content;
@@ -541,7 +541,7 @@
   color: var(--primColor);
 }
 
-.charityCnt .calBtn .MuiButton-label {
+.charityCnt .calBtn .MuiButtonBase-root.MuiButton-root {
   text-transform: initial;
 }
 
@@ -694,7 +694,7 @@
 }
 
 .donationPageWrapper {
-  background: url('../assets/images/donback.png');
+  background: url("../assets/images/donback.png");
   padding: 42px;
   background-size: cover;
   background-position: bottom;

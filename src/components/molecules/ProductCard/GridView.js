@@ -1,6 +1,6 @@
-import { Button, Fade, Tooltip } from "@material-ui/core";
+import { Button, Fade, Tooltip } from "@mui/material";
 import React, { useState, useRef, useEffect, useContext } from "react";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CustomInput from "../../../components/atoms/Inputs/CustomInput";
 import FavouriteCheckbox from "../../../components/atoms/FavoriteCheckbox";
 import PrimaryButton from "../../../components/atoms/PrimaryButton";

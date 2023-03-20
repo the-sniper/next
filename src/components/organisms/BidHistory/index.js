@@ -1,21 +1,21 @@
 import React, { useContext, useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Modal from "@material-ui/core/Modal";
-import Backdrop from "@material-ui/core/Backdrop";
-import Fade from "@material-ui/core/Fade";
+import makeStyles from "@mui/styles/makeStyles";
+import Modal from "@mui/material/Modal";
+import Backdrop from "@mui/material/Backdrop";
+import Fade from "@mui/material/Fade";
 import CommonContext from "../../../context/common/commonContext";
-import { Pagination } from "@material-ui/lab";
+import { Pagination } from "@mui/material";
 import ProductContext from "../../../context/product/productContext";
 import {
   currencyFormat,
   dateTimeFormatFunction,
 } from "../../../common/components";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 const useStyles = makeStyles((theme, maxWidth) => ({
   modal: {
     display: "flex",
-    padding: theme.spacing(1),
+    // padding: theme.spacing(1),
     alignItems: "center",
     justifyContent: "center",
   },

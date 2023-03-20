@@ -1,22 +1,24 @@
 import React, { useEffect, useState, useContext } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import { Link, NavLink, useHistory } from "react-router-dom";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import InputBase from "@material-ui/core/InputBase";
-import { fade, makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
+import AppBar from "@mui/material/AppBar";
+import { useHistory } from "react-router-dom";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import { alpha } from "@mui/material/styles";
+import makeStyles from "@mui/styles/makeStyles";
+import MenuIcon from "@mui/icons-material/Menu";
 import { LOGO, SITE_NAME } from "../../../Utils";
 import FilterPanel from "../../organisms/FilterPanel";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import PrimaryButton from "../../atoms/PrimaryButton";
-import { Badge, Divider, ListItem, SwipeableDrawer } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
+import { Badge, Divider, ListItem, SwipeableDrawer } from "@mui/material";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 import BuyerContext from "../../../context/buyer/buyerContext";
 import AlertContext from "../../../context/alert/alertContext";
+import Link from "next/link";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -34,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
     width: "100%",
@@ -60,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(1)}px)`,
+    paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
@@ -270,7 +272,7 @@ const SearchField = (props) => {
         >
           <div className="headRt respNav d-flex justify-content-start align-items-center">
             <div className="naLogoHead d-flex justify-content-between align-items-center">
-              <Link to="/">
+              <Link href="/">
                 <img src={LOGO} alt={SITE_NAME} />
               </Link>
               <Button

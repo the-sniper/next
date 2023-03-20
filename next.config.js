@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
+  transpilePackages: ["@material-ui/core", "@material-ui/icons"],
   images: {
     domains: [
       "localhost",
