@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="google-site-verification"
-            content="1LTXaoBSgOie_bZsP0kL2dfw4ltssl8I6KWtQ1Li1zU"
+            content="rpe-CLF8hUUMiCyb5XjdCmaafH5m3TVCTn9LgI3nATk"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
