@@ -8,6 +8,7 @@ module.exports = {
       "auction-io.ecommerce.auction",
       "forwardapidev.auctionsoftware.com",
       "auction.moblearn.net",
+      "next-seven-tawny.vercel.app",
     ],
     formats: ["image/avif", "image/webp"],
   },
