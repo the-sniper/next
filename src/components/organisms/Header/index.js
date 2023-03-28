@@ -122,7 +122,7 @@ const Header = () => {
   const handleSwitchUser = (email, site_id) => {
     setLoginAnchor(null);
     logout();
-    handleRedirectInternal(router, `autologin/${email}/${site_id}`);
+    handleRedirectInternal(router, `login/autologin/${email}/${site_id}`);
   };
   const notifOpen = Boolean(notifAnchor);
   const sellerOpen = Boolean(sellerAnchor);

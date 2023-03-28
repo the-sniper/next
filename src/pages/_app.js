@@ -12,6 +12,7 @@ import StylesProvider from "@mui/styles/StylesProvider";
 import { socket } from "@/common/socket";
 import { DefaultSeo } from "next-seo";
 
+import "../styles/Fonts.css";
 import "../styles/app.css";
 import "../index.css";
 import "../styles/Home.css";

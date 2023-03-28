@@ -25,7 +25,7 @@ function Login(props) {
   const [loading, setLoading] = useState(false);
 
   const accountActivator = async () => {
-    const res = await activateAccount({ id: router?.query.activationId });
+    const res = await activateAccount({ id: router?.query?.activationId[1] });
     if (res) {
       setAlert("Account Activated Successfully", "success");
     } else {
@@ -131,7 +131,7 @@ function Login(props) {
     ) {
       setLoad(true);
       setLoading(true);
-      let email = router?.query.login_email;
+      let email = router?.query?.activationId[1];
       let password = "12";
       let autologin = 1;
       let encrypt = window.location.pathname.includes("/auto-login") ? 1 : 0;
@@ -140,7 +140,7 @@ function Login(props) {
         password: password,
         autologin: autologin,
         encrypt: encrypt,
-        site_id: router?.query.site_id,
+        site_id: router?.query?.activationId[2],
       };
       // console.log("loginvalues", loginValues);
       if (!isAuthenticated) {
@@ -153,6 +153,7 @@ function Login(props) {
     <Loaders name="home" isLoading={loading} />
   ) : (
     <div className="login">
+      {console.log(router?.query, "router?.query")}
       <Link href="/">
         <img className="brandLogo" src={LOGO} alt={SITE_NAME} />
       </Link>

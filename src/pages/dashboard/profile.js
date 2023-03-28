@@ -90,7 +90,7 @@ function Profile(props) {
           (element) => element.name === profile.state
         );
         if (index) {
-          stateId = statesOfCountry[index].id;
+          stateId = statesOfCountry[index]?.id;
         }
       }
       setProfileInitialValues({

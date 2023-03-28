@@ -26,3 +26,12 @@ export function getAllStyles(elem) {
   }
   return styleNode;
 }
+
+export const titleFormatter = (title) => {
+  return title
+    ?.split(" ")
+    .join("-")
+    .replace(/&#34;/g, "-inches")
+    .replace(/&#39;/g, "-feet")
+    .replace(/\//g, "-");
+};
